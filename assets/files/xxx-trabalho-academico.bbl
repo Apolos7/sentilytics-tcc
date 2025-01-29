@@ -1,0 +1,41 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Alexandre 2016]{limarka}
+\abntrefinfo{Alexandre}{ALEXANDRE}{2016}
+{ALEXANDRE, E. de S.~M. \emph{Limarka}. 2016. Página do projeto.
+Dispon{\'\i}vel em: \url{https://github.com/abntex/limarka}. Acesso em: 5 de
+  set 2016.}
+
+\bibitem[Araujo 2015]{abntex2cite}
+\abntrefinfo{Araujo}{ARAUJO}{2015}
+{ARAUJO, L.~C. \emph{O pacote abntex2cite}: Estilos bibliogr{\'a}ficos
+  compat{\'\i}veis com a abnt nbr 6023.
+[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+
+\bibitem[Beltrano 2024]{beltrano}
+\abntrefinfo{Beltrano}{BELTRANO}{2024}
+{BELTRANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
+Dispon{\'\i}vel em:
+  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
+  Acesso em: 10 de set 2024.}
+
+\bibitem[Fulano 2024]{fulano}
+\abntrefinfo{Fulano}{FULANO}{2024}
+{FULANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
+Dispon{\'\i}vel em:
+  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
+  Acesso em: 10 de set 2024.}
+
+\bibitem[Sicrano 2024]{sicrano}
+\abntrefinfo{Sicrano}{SICRANO}{2024}
+{SICRANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
+Dispon{\'\i}vel em:
+  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
+  Acesso em: 10 de set 2024.}
+
+\end{thebibliography}
