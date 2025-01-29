@@ -1,0 +1,41 @@
+{
+  "Exemplo de sintaxe para criar quadros": {
+    "prefix": "lt:quadro",
+    "body": [
+      "Quadro nome_exemplo: $1",
+      "",
+      "|$2  |$3                             |$4                  | $5                    |",
+      "|:-: |:-----------------------------:|:------------------:|:---------------------:|",
+      "|1   |Ciência da Computação          |ShareLatex          |    Readme/Github      |",
+      "|2   |Engenharia da Computação       |Viu prof. utilizando|         -             |",
+      "|3   |Engenheiro elétrico (mestrando)|Utiliza para tudo   |         -             |",
+      "",
+      "Fonte: Autor",
+      ""
+    ],
+    "description": "Exemplo de sintaxe para criar Quadros"
+  },
+  "Exemplo de sintaxe para criar tabelas": {
+    "prefix": "lt:tabela",
+    "body": [
+      ": $1. \\label{mytable}",
+      "",
+      "| configuração         | descrição                                                                         |",
+      "|----------------------|-----------------------------------------------------------------------------------|",
+      "| fig.align            | Alinhamento de graficos e figura no documento final: 'left', 'right', or 'center' |",
+      "| out.height out.width | Escala de fargura e altura da figura no documento final. Pode ser \"%\", \"px\", \"cm\" |",
+      "",
+      "Fonte: Autor (2024)."
+    ],
+    "description": "Exemplo de sintaxe para criar tabelas"
+  },
+  "Exemplo de sintaxe para criar uma figura": {
+    "prefix": "lt:figura",
+    "body": [
+      "![$1](imagem.png){#id escala=0.3}",
+      "",
+      "Fonte: Autor (2024)."
+    ],
+    "description": "Exemplo de sintaxe para criar uma figura"
+  },
+}

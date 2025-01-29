@@ -1,0 +1,31 @@
+{
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true
+  },
+  "cSpell.language": "pt_BR,pt,en",
+  "cSpell.words": [
+    "abntex",
+    "bibtex",
+    "citeonline",
+    "limarka",
+    "Markdownlint",
+    "pmatrix"
+  ],
+  "cSpell.ignoreRegExpList": [
+    "@import\\('([^']+)'\\)",
+    "{#(\\w+)\\s+escala=(\\d+(\\.\\d+)?)}",
+    "\\\\ref\\{(\\w+)\\}",
+    "\\\\autoref\\{(\\w+)\\}",
+    "\\\\label\\{(\\w+)\\}",
+  ],
+  "cSpell.ignorePaths": [
+    ".vscode",
+    "templates",
+    "configuracao.yaml"
+  ],
+  "markdown.marp.themes": [
+    "https://raw.githubusercontent.com/reinanhs/marp-theme-academic/main/themes/academic.css"
+  ],
+  "markdown.marp.enableHtml": true
+}

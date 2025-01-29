@@ -1,0 +1,15 @@
+services:
+  limarka:
+    container_name: "limarka-app"
+    image: reinanhs/limarka-help:1.0.0
+    tty: true
+    command: "/bin/bash"
+    volumes:
+      - .:/usr/src/trabalho
+  markdownlint:
+    container_name: "markdownlint"
+    image: davidanson/markdownlint-cli2
+    tty: true
+    entrypoint: "/bin/sh"
+    volumes:
+      - .:/workdir
