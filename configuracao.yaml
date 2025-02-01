@@ -2,24 +2,24 @@
 #===============================================#
 # Informações principais
 #===============================================#
-instituicao: Universidade/Faculdade do Brasil
-author: Nome do autor
-title: Título do trabalho
-local: Cidade - UF
-date: '2024'
-titulacao: Minha-titulação
-curso: Meu-curso
-programa: Programa de Pós-Graduação em XXX
+instituicao: Instituto Federal de Educação, Ciência e Tecnologia de Sergipe
+author: José Alessandro Santos Santana
+title: 'Sentilytics: análise automatizada de sentimentos em redes sociais'
+local: Lagarto - SE
+date: '2025'
+titulacao: Bacharelado
+curso: Sistemas de Informação
+programa: ''
 area_de_concentracao: Computação
 linha_de_pesquisa: ''
-coorientador: 'Prof. Nome Do Coorientador'
-orientador: 'Prof. Dr. Nome Do Orientador'
-aprovacao_dia: 'xx de novembro de xxxx'
-avaliador1: 'Prof. Nome Do Convidado'
-avaliador2: 'Prof. Nome Do Convidado 2'
+coorientador: ''
+orientador: 'Prof. Gilson Pereira dos Santos Junior'
+aprovacao_dia: ''
+avaliador1: ''
+avaliador2: ''
 avaliador3: ''
 incluir_ficha_catalografica: false
-folha_de_aprovacao: true
+folha_de_aprovacao: false
 #===============================================#
 # Configurações de textos
 #===============================================#
@@ -79,10 +79,10 @@ page_render:
   published_time: '2024-09-06T00:35:50-03:00'
   instituicao_website: 'https://www.ifs.edu.br/'
   social_networks:
-    facebook: reinangabriel
-    instagram: reinanhs
-    twitter: ReinanGabriel9
-    github: reinanhs
+    facebook: ---
+    instagram: ---
+    twitter: Axltlemade
+    github: Apolos7
   pages_render:
     - resumo.md
     - agradecimentos.md

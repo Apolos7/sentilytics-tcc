@@ -1,21 +1,22 @@
-<!-- Capítulo 1: introdução -->
+<!-- Capítulo 1: Introdução -->
 # Introdução
 
-@import('article/introducao/contextualizacao.md')
-@import('article/introducao/objetivo.md')
-@import('article/introducao/metodologia.md')
 
-<!-- Capítulo 2: Fundamentação -->
-# Fundamentação teórica
+<!-- Capítulo 2: Fundamentação Teórica -->
+# Fundamentação Teórica
 
-@import('article/fundamentacao/fundamentacao-teorica.md')
 
-<!-- Capítulo 4: Melhorias -->
-# Exemplo
+<!-- Capítulo 3: Sentilytics -->
+# Sentilytics
 
-@import('article/desenvolvimento/main.md')
+@import('article/sentilytics/solucao-proposta.md')
+@import('article/sentilytics/tecnologias-ferramentas.md')
+@import('article/sentilytics/modelagem-solucao.md')
 
-<!-- Capítulo 5: Conclusão -->
-# Conclusão
 
-@import('article/conclusao/main.md')
+<!-- Capítulo 4: Sentilytics -->
+# Análise de sentimento da política atual com Sentilytics: um estudo de caso
+
+
+<!-- Capítulo 5: Sentilytics -->
+# Considerações Finais
