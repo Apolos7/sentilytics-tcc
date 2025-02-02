@@ -17,7 +17,7 @@ Com essa modelagem, busca-se garantir que a aplicação seja bem estruturada, es
 
 ### Requisitos Funcionais e Não Funcionais
 
-Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade, assegurando que a solução seja eficiente, escalável e de fácil manutenção.
+Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade.
 
 A seguir, são apresentados os requisitos funcionais e não funcionais que orientaram o desenvolvimento da solução proposta.
 
@@ -28,7 +28,7 @@ A seguir, são apresentados os requisitos funcionais e não funcionais que orien
 
 - RF03 - Configuração de Workflows: O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados;
 
-- RF04 - Pré-processamento de Dados: O sistema deve realizar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização;
+- RF04 - Pré-processamento de Dados: O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização;
 
 - RF05 - Análise de Sentimentos: O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta;
 
@@ -71,9 +71,9 @@ Os diagramas de sequência são utilizados para representar a interação entre 
 
 No contexto do Sentilytics, foram elaborados três diagramas de sequência que descrevem processos essenciais para o funcionamento da aplicação:
 
-Figura \ref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta de dados.
-Figura \ref{seq_cadastro_configuracao_workflow}: Cadastro e configuração do workflow.
-Figura \ref{seq_processamento_analise}: Sequência de processamento, incluindo o pré-processamento do workflow e da análise de sentimentos.
+- Figura \ref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta de dados.
+- Figura \ref{seq_cadastro_configuracao_workflow}: Cadastro e configuração do workflow.
+- Figura \ref{seq_processamento_analise}: Sequência de processamento, incluindo o pré-processamento do workflow e da análise de sentimentos.
 
 Cada um desses diagramas detalha a troca de informações entre os elementos do sistema, evidenciando os passos necessários para a execução dessas funcionalidades. A seguir, apresentam-se essas representações gráficas.
 
