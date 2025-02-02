@@ -5,4 +5,3 @@ A solução desenvolvida se diferencia por permitir personalização no workflow
 A aplicação se destaca das soluções já existentes no mercado por oferecer suporte à coleta de dados da rede social Bluesky, além da possibilidade de importação manual de postagens. Outro diferencial é a integração com o ChatGPT, que permite gerar insights detalhados sobre os sentimentos analisados, auxiliando na interpretação dos resultados e possibilitando uma compreensão mais aprofundada do contexto das postagens.
 
 Com essa abordagem, a solução proposta visa proporcionar uma ferramenta flexível e personalizável para a análise de sentimentos, permitindo que usuários de diferentes áreas, como marketing, pesquisa acadêmica, monitoramento de tendências e opinião publica, possam extrair informações valiosas a partir de textos publicados em redes sociais.
-

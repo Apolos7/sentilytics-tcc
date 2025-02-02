@@ -14,13 +14,11 @@ Por fim, as interfaces gráficas são apresentadas para demonstrar a experiênci
 
 Com essa modelagem, busca-se garantir que a aplicação seja bem estruturada, escalável e de fácil manutenção, possibilitando futuras melhorias e adaptações conforme novas necessidades forem identificadas.
 
-
 ### Requisitos Funcionais e Não Funcionais
 
 Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade.
 
 A seguir, são apresentados os requisitos funcionais e não funcionais que orientaram o desenvolvimento da solução proposta.
-
 
 - RF01 - Coleta de Dados: O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem;
 
@@ -42,18 +40,22 @@ A seguir, são apresentados os requisitos funcionais e não funcionais que orien
 
 - RF10 - Interface Web: O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.
 
-- RFN01 - Não funcional:
-
-
 ### Diagramas de Caso de Uso
 
 Os diagramas de caso de uso são representações gráficas que demonstram as interações entre os usuários e um sistema, destacando as principais funcionalidades disponíveis. Seu objetivo é ilustrar, de forma simples, como os diferentes atores interagem com o sistema em cenários específicos, auxiliando na compreensão dos requisitos e no planejamento da aplicação. A seguir, apresenta-se um caso de uso relevante do Sentilytics.
 
-![Diagrama de Casos de Uso do Sentilytics](imagens/sentilytics/diagramas/usecase.png){#usecase escala=0.1}
+![Diagrama de Casos de Uso do Sentilytics](imagens/sentilytics/diagramas/usecase.png){#usecase escala=0.3}
 
 Fonte: Autor (2025).
 
-Como podemos visualizar na figura \ref{usecase}, o usuário
+Como podemos visualizar na Figura \ref{usecase}, o diagrama apresenta as interações entre o usuário e o sistema Sentilytics, destacando as principais funcionalidades disponíveis. Cada caso de uso representa uma ação que pode ser realizada dentro da aplicação, organizando de forma clara os processos fundamentais do sistema.
+
+O usuário pode realizar operações relacionadas à gestão de pesquisas, como cadastrar, excluir e importar postagens diretamente via CSV e realizar a busca de postagens na plataforma Bluesky. Também há funcionalidades voltadas para a administração de workflows, permitindo o cadastro, configuração das tarefas de
+pré-processamento e seus parâmetros e exclusão desses componentes, que são essenciais para a organização do processamento das postagens.
+
+Ademais, o diagrama evidencia os processos de pré-processamento e análise de sentimentos, que representam etapas centrais para obtenção dos resultados. Após a execução do pré-processamento das postagens e em seguida a análise do sentimentos, o usuário pode visualizar os resultados gerados para aquele workflow processado, facilitando a interpretação e análise das informações processadas pelo Sentilytics.
+
+Esse diagrama proporciona uma visão geral das funcionalidades do sistema, auxiliando na compreensão das interações entre o usuário e os módulos principais da aplicação.
 
 ### BPMN
 
@@ -135,3 +137,5 @@ testando aqui o funcionamento dessa parte
 ### Interfaces gráfica
 
 Como já vimos, os diagramas auxiliam na construção
+
+<!-- Vale destacar que o usuário pode possuir mais de um workflow configurado, cada um pode possuir tarefas de pré-processamento distintas e consequentemente, resultam em resultados destintos. -->
