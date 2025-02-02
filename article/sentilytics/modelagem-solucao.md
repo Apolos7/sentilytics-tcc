@@ -21,23 +21,14 @@ Para garantir que a aplicação de análise de sentimentos em redes sociais aten
 A seguir, são apresentados os requisitos funcionais e não funcionais que orientaram o desenvolvimento da solução proposta.
 
 - RF01 - Coleta de Dados: O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem;
-
 - RF02 - Importação de dados via Arquivo CSV: O sistema deve permitir como forma alternativa a importação de postagens no formato CSV para análise de sentimentos, utilizando Spring Batch para processamento da importação;
-
 - RF03 - Configuração de Workflows: O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados;
-
 - RF04 - Pré-processamento de Dados: O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização;
-
 - RF05 - Análise de Sentimentos: O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta;
-
 - RF06 - Armazenamento de Resultados: O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos;
-
 - RF07 - Consulta de Resultados: O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante;
-
 - RF08 - Integração entre Módulos: O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ;
-
 - RF09 - Autenticação e Autorização: O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional;
-
 - RF10 - Interface Web: O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.
 
 ### Diagramas de Caso de Uso
@@ -61,11 +52,19 @@ Esse diagrama proporciona uma visão geral das funcionalidades do sistema, auxil
 
 A Business Process Model and Notation (BPMN) é uma notação padronizada para modelagem de processos de negócios, utilizada para representar o fluxo de atividades dentro de um sistema ou organização. Seu propósito é fornecer uma visão clara das etapas envolvidas em um processo, facilitando sua análise e compreensão. A seguir, apresenta-se um diagrama BPMN relacionado ao funcionamento do Sentilytics.
 
-![Modelagem BPMN](imagens/sentilytics/pesquisa_sentimentos.png){#bpmn_pesquisa escala=0.1}
+![Modelagem BPMN](imagens/sentilytics/pesquisa_sentimentos.png){#bpmn_pesquisa escala=0.3}
 
 Fonte: Autor (2025).
 
-Como podemos visualizar na figura \ref{bpmn_pesquisa}, o usuário
+A Figura \ref{bpmn_pesquisa} apresenta o fluxo principal para a realização de uma pesquisa completa no  Sentilytics, representado por meio do  Diagrama BPMN . Esse fluxo descreve as etapas envolvidas desde a criação da pesquisa até a visualização dos resultados da análise de sentimentos.
+
+O processo inicia-se quando o usuário decide realizar uma nova pesquisa, cadastrando-a e configurando os parâmetros necessários. Em seguida, é necessário definir o  método de coleta de dados , onde duas abordagens podem ser utilizadas de forma independente ou simultânea: importação de dados via arquivo CSV ou a busca automatizada de postagens na plataforma Bluesky .
+
+Após a coleta dos dados, o próximo passo envolve a criação de um workflow, que organiza o processamento dos textos coletados. O usuário, então, inicia a fase de  pré-processamento, na qual o sistema aplica as tarefas configuradas no workflow pelo usuário, preparando os dados para a análise.
+
+Com os dados pré-processados, o usuário pode acionar a  análise de sentimentos, permitindo que o sistema classifique os textos e gere os resultados. Após a execução desse processamento, os resultados são disponibilizados para visualização, possibilitando a interpretação dos dados analisados.
+
+Por fim, o fluxo se encerra quando o usuário finaliza a pesquisa, consolidando os resultados obtidos.
 
 ### Diagrama de Sequência/Atividades do pré-processamento e análise de sentimentos
 
@@ -79,19 +78,27 @@ No contexto do Sentilytics, foram elaborados três diagramas de sequência que d
 
 Cada um desses diagramas detalha a troca de informações entre os elementos do sistema, evidenciando os passos necessários para a execução dessas funcionalidades. A seguir, apresentam-se essas representações gráficas.
 
-![Diagrama pesquisa](imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png){#seq_pesquisa_coleta_dados escala=0.1}
+![Diagrama pesquisa](imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png){#seq_pesquisa_coleta_dados escala=0.3}
 
 Fonte: Autor (2025).
 
-O diagrama na figura \ref{seq_pesquisa_coleta_dados} mostra o processo de cadastro e coleta de dados, abaixo o diagrama exibe os próximos passos.
+A Figura \ref{seq_pesquisa_coleta_dados} apresenta o **Diagrama de Sequência** que descreve o fluxo de criação de uma pesquisa de análise de sentimentos e a coleta de dados a partir da plataforma  **Bluesky** . Esse diagrama detalha a interação entre o usuário e os principais componentes do sistema durante esse processo.
 
-![Diagrama pesquisa](imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png){#seq_cadastro_configuracao_workflow escala=0.1}
+O fluxo se inicia quando o **usuário** solicita a criação de uma nova pesquisa. Essa requisição é recebida pelo  **PesquisaAnaliseSentimentoController** , que encaminha os dados para o  **PesquisaAnaliseSentimentoService** , responsável pelo gerenciamento da lógica de negócio associada à pesquisa.
+
+Em seguida, o serviço aciona o  **BlueskyService** , que realiza a busca de postagens na **API do Bluesky** com base nos parâmetros definidos na pesquisa. Os dados coletados são então enviados de volta ao serviço principal, que procede ao armazenamento das postagens. Para isso, a lista de postagens é encaminhada ao  **PostRepository** , que realiza a persistência das informações no banco de dados.
+
+Após a conclusão do armazenamento, o **PostRepository** confirma a operação, retornando uma notificação ao  **PesquisaAnaliseSentimentoService** . O serviço, por sua vez, informa ao **controller** que a pesquisa e os posts foram armazenados com sucesso. Por fim, o usuário recebe uma confirmação da criação da pesquisa, sinalizando que o processo foi concluído corretamente.
+
+Esse diagrama ilustra de forma clara a sequência de interações entre os componentes do sistema, destacando como a pesquisa é cadastrada e os dados são coletados e armazenados para posterior análise.
+
+![Diagrama pesquisa](imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png){#seq_cadastro_configuracao_workflow escala=0.3}
 
 Fonte: Autor (2025).
 
 O diagrama da figura \ref{seq_cadastro_configuracao_workflow} descreve o processo de cadastro e configuração do workflow, abaixo o diagrama exibe os próximos passos.
 
-![Diagrama da sequencia](imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png){#seq_processamento_analise escala=0.1}
+![Diagrama da sequencia](imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png){#seq_processamento_analise escala=0.3}
 
 Fonte: Autor (2025).
 
@@ -107,7 +114,7 @@ O Diagrama Entidade-Relacionamento (DER) é uma representação visual da estrut
 
 Complementando a modelagem do banco de dados, o Dicionário de Dados fornece uma descrição detalhada das tabelas, colunas, tipos de dados e restrições existentes. Esse recurso facilita a documentação do sistema, servindo como referência para o desenvolvimento e manutenção do banco de dados. Assim como o DER, o Dicionário de Dados do Sentilytics foi elaborado no Vertabelo, permitindo a exportação e documentação estruturada dos elementos do banco.
 
-![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.1}
+![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.3}
 
 Fonte: Autor (2025).
 
@@ -128,9 +135,9 @@ No contexto do Sentilytics, o diagrama de componentes apresenta os serviços ess
 
 A Figura \ref{diagrama_componentes} a seguir apresenta a estrutura desses componentes e suas interações dentro da arquitetura do Sentilytics.
 
-![Diagrama de Componentes da Solução](imagens/sentilytics/diagramas/diagrama_componentes.png){#diagrama_componentes escala=0.1}
+![Diagrama de Componentes da Solução](imagens/sentilytics/diagramas/diagrama_componentes.png){#diagrama_componentes escala=0.3}
 
-Fonte: Autor (2024).
+Fonte: Autor (2025).
 
 testando aqui o funcionamento dessa parte
 
