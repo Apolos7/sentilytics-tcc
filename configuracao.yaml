@@ -36,22 +36,10 @@ capa_pdf_caminho: ''
 # Informações importantes
 #===============================================#
 siglas:
-  - s: ABNT
-    d: Associação Brasileira de Normas Técnicas
   - s: API
     d: Application Programming Interface
-  - s: BSI
-    d: Bacharelado em Sistemas de Informação
-  - s: CD
-    d: Continuous Deployment/Delivery
-  - s: CI
-    d: Continuous Integration
-  - s: CLI
-    d: Command Line Interface
-  - s: CSS
-    d: Cascading Style Sheets
-  - s: VS Code
-    d: Visual Studio Code
+  - s: BPMN
+    d: Business Process Model and Notation
 simbolos:
 graduacao: true
 especializacao: false
@@ -67,8 +55,8 @@ lista_ilustracoes: true
 lista_quadros: false
 lista_tabelas: false
 referencias_caminho: config/referencias.bib
-palavras_chave: 'Limarka, Markdown, Automação, Marp, Ferramenta, Aprimoramento e Produtividade'
-keywords: 'Limarka, Markdown, Automation, Marp, Tool, Improvement and Productivity'
+palavras_chave: ''
+keywords: ''
 palabras_clave: ''
 mots_cles: ''
 #===============================================#
@@ -79,8 +67,8 @@ page_render:
   published_time: '2024-09-06T00:35:50-03:00'
   instituicao_website: 'https://www.ifs.edu.br/'
   social_networks:
-    facebook: ---
-    instagram: ---
+    facebook: ''
+    instagram: ''
     twitter: Axltlemade
     github: Apolos7
   pages_render:

@@ -192,7 +192,7 @@ Cada repositório representa uma interface que permite a consulta, inserção, a
 - PromptAIRepository e PromptResultadoAnaliseRepository: Permitem a recuperação e exclusão de prompts de IA e seus respectivos resultados de análise, utilizados na interpretação automática dos textos processados.
 - TarefaPesquisaRepository e TarefaPreProcessamentoRepository: Fornecem métodos para gerenciamento das tarefas do workflow, permitindo a exclusão de tarefas e a listagem das configurações associadas ao processo de pré-processamento.
 - UsuarioRepository: Responsável pela recuperação das informações de usuários, permitindo buscas por identificador descentralizado (DID) ou login.
-ValorParametroTarefaRepository: Manipula os parâmetros personalizados das tarefas do workflow, possibilitando consultas e exclusões de valores associados às configurações definidas pelo usuário.
+- ValorParametroTarefaRepository: Manipula os parâmetros personalizados das tarefas do workflow, possibilitando consultas e exclusões de valores associados às configurações definidas pelo usuário.
 
 A separação da camada Repository garante que a lógica de persistência dos dados fique desacoplada das demais partes do sistema, facilitando a manutenção e reutilização do código.
 
@@ -213,6 +213,7 @@ As classes de serviço estendem a classe BaseService, que fornece funcionalidade
 - TarefaPreProcessamentoService: Implementa as regras para gerenciamento das tarefas dentro dos workflows, permitindo o cadastro, atualização e exclusão de funções que compõem o pré-processamento de textos.
 - UsuarioService: Gerencia a autenticação de usuários e a integração com Bluesky, permitindo que os usuários recuperem perfis e autentiquem suas sessões.
 - Interfaces de Comunicação: Além dos serviços internos, a camada inclui interfaces, como BlueskyService (para comunicação com a API externa do Bluesky), MessageBrokerProducer (para publicar mensagens no RabbitMQ) e MessageBrokerConsumer (para processar eventos de mensagens recebidas).
+
 A camada de serviços é essencial para garantir que a lógica da aplicação esteja desacoplada da camada de persistência e dos controladores, promovendo organização, reusabilidade e escalabilidade.
 
 Para expor essas funcionalidades aos usuários e ao frontend da aplicação, a camada Service se conecta diretamente com a Camada Controller, que será abordada a seguir. O próximo diagrama apresentará os controladores da API, responsáveis por receber requisições, validar os dados de entrada e encaminhar as chamadas aos serviços apropriados.
@@ -268,7 +269,109 @@ Cada um dos componentes desempenha um papel essencial dentro da arquitetura do S
 
 ### Interfaces gráfica
 
-Como já vimos, os diagramas auxiliam na construção
+A interface gráfica é um dos principais pontos de interação entre os usuários e a aplicação, sendo responsável por garantir uma experiência intuitiva na utilização do Sentilytics. Para o desenvolvimento da interface, foi utilizado o framework Angular.
 
-<!-- Vale destacar que o usuário pode possuir mais de um workflow configurado, cada um pode possuir tarefas de pré-processamento distintas e consequentemente, resultam em resultados destintos. -->
+A interface foi projetada para oferecer um fluxo de navegação claro e acessível, permitindo que os usuários cadastrem e configurem pesquisas, acompanhem o processamento dos dados e analisem os resultados da análise de sentimentos.
 
+Nesta seção, são apresentadas as telas e componentes principais da interface do Sentilytics, detalhando a funcionalidade de cada interface e a forma como os usuários interagem com o sistema.
+
+O primeiro ponto de contato do usuário com a aplicação ocorre na tela de login, que possibilita a autenticação no sistema. A seguir, é apresentada essa interface, destacando seus principais componentes e funcionalidades.
+
+![Tela de Login do Sentilytics](imagens/sentilytics/interface-grafica/tela-login.png){#tela_login escala=0.2}
+
+Fonte: Autor (2025).
+
+A tela de login é a porta de entrada para o acesso ao Sentilytics, permitindo apenas a autenticação. Para manter a segurança e a simplicidade no gerenciamento de contas, o sistema utiliza o serviço do Bluesky como principal método de autenticação. Dessa forma, toda a criação ou administração de contas ocorre diretamente no Bluesky.
+
+Ao inserir as credenciais corretas, o sistema valida as informações diretamente com a API do Bluesky, garantindo a autenticação segura. Caso as credenciais sejam inválidas, o usuário recebe um aviso para revisar os dados informados.
+
+Essa abordagem proporciona uma experiência simplificada para o usuário, eliminando a necessidade de criar e lembrar novas senhas, ao mesmo tempo em que mantém um padrão seguro e confiável de autenticação. Após a autenticação, o usuário é direcionado para a tela de listagem de pesquisas, onde pode visualizar todas as análises de sentimentos já criadas.
+
+![Tela de Listagem de Pesquisas](imagens/sentilytics/interface-grafica/listagem-pesquisas.png){#tela_listagem_pesquisas escala=0.2}
+
+Fonte: Autor (2025).
+
+Após a autenticação, o usuário é direcionado para a tela de listagem de pesquisas, onde pode visualizar todas as pesquisas de análise de sentimentos já criadas.
+
+Nesta tela, o usuário tem a opção de cadastrar ou deletar uma pesquisa, onde ao clicar no botão "Cadastrar Pesquisa", uma janela modal é exibida solicitando o nome da pesquisa e a query inicial de busca. Após a confirmação do cadastro, a nova pesquisa é adicionada à lista.
+
+Para acessar os detalhes de uma pesquisa já cadastrada, o usuário pode selecioná-la na listagem, sendo automaticamente redirecionado para a tela de visualização da pesquisa, onde poderá acompanhar e gerenciar os dados coletados.
+
+![Tela de Exibição da Pesquisa](imagens/sentilytics/interface-grafica/dados-pesquisa.png){#tela_dados_pesquisa escala=0.2}
+
+Fonte: Autor (2025).
+
+A tela da pesquisa mostrada na figura \ref{tela_dados_pesquisa} é a interface central para o gerenciamento de uma análise de sentimentos dentro do Sentilytics. Essa tela organiza o fluxo do usuário em quatro etapas, representadas por botões dispostos em sequência:
+
+1. Dados da Pesquisa
+2. Coleta de Dados
+3. Pré-processamento
+4. Resultados
+
+Cada etapa pode ser clicada para alternar os elementos exibidos abaixo, permitindo que o usuário navegue entre as diferentes fases do processo de análise. Para facilitar a visualização do progresso, as etapas são coloridas conforme seu estado atual:
+
+- Verde – Etapa concluída, indicando que todas as ações necessárias foram realizadas.
+- Amarelo – Etapa pendente, sinalizando que há ações a serem executadas antes de avançar.
+- Cinza – Etapa inacessível, indicando que ainda há pré-requisitos a serem cumpridos antes de prosseguir.
+
+No primeiro acesso, o usuário visualiza a aba "Dados da Pesquisa", onde pode configurar ou alterar as informações utilizadas na busca de postagens, caso a coleta de dados via Bluesky seja ativada.
+
+Cada uma das próximas etapas é liberada de acordo com a sequência do fluxo, garantindo que o usuário siga um processo estruturado para a realização da pesquisa.
+
+A etapa atual exibida na figura \ref{tela_dados_pesquisa} é a "Dados da Pesquisa", nesse momento o usuário pode visualizar e modificar as informações da pesquisa. Esses dados serão utilizados caso o usuário opte por realizar a coleta automática de postagens através da rede social Bluesky. Essa configuração permite definir os critérios de busca que serão aplicados na obtenção dos posts, garantindo que a análise de sentimentos seja realizada com base em conteúdos relevantes.
+
+Após definir os dados da pesquisa, o próximo passo é a coleta de postagens, onde o usuário pode importar dados manualmente ou realizar a busca automática via Bluesky.
+
+![Etapa de Coleta de Dados](imagens/sentilytics/interface-grafica/coleta-dados.png){#tela_coleta_dados_pesquisa escala=0.2}
+
+Fonte: Autor (2025).
+
+Na figura \ref{tela_coleta_dados_pesquisa} é mostrada a etapa de coleta dos dados, nessa fase o usuário pode gerenciar as postagens que serão analisadas no Sentilytics. O usuário pode visualizar os posts já armazenados no sistema e optar por adicionar novos dados por meio de duas opções de coleta:
+
+- Busca automática no Bluesky – O sistema realiza uma pesquisa na rede social Bluesky, coletando postagens conforme os critérios definidos na etapa anterior.
+- Importação via CSV – O usuário pode carregar um arquivo contendo postagens previamente coletadas. Para auxiliar nesse processo, a interface exibe um tutorial explicativo, orientando como preparar o arquivo corretamente.
+
+Além da adição de novos posts, a tela também oferece a opção de excluir postagens específicas, permitindo ao usuário refinar os dados que serão utilizados na análise.
+
+Com os posts devidamente coletados e organizados, o usuário pode avançar para a próxima etapa: o processamento, onde os textos serão preparados para a análise de sentimentos.
+
+![Etapa de Processamento](imagens/sentilytics/interface-grafica/processamento.png){#tela_processamento escala=0.2}
+
+Fonte: Autor (2025).
+
+A figura \ref{tela_processamento} mostra a etapa de processamento, onde o usuário pode configurar e executar as etapas necessárias para preparar e analisar as postagens coletadas. Nessa passo, o usuário pode criar um workflow, que define a sequência de tarefas de pré-processamento aplicadas aos textos antes da análise de sentimentos.
+
+As principais ações disponíveis nesta etapa incluem:
+
+- Criar um workflow – O usuário pode definir um novo fluxo de pré-processamento, adicionando as tarefas que serão aplicadas às postagens antes da análise de sentimentos.
+- Excluir um workflow – Caso um workflow não seja mais necessário, ele pode ser removido do sistema.
+- Executar o pré-processamento – Após a criação do workflow, o usuário pode iniciar o pré-processamento, que realiza transformações nos textos coletados, como normalização e remoção de elementos indesejados.
+- Executar a análise de sentimentos – Quando o pré-processamento é concluído, o usuário pode prosseguir com a análise de sentimentos, onde as postagens processadas são classificadas de acordo com suas emoções ou polaridade textual.
+
+O pré-processamento e a análise de sentimentos podem ser repetidos quantas vezes forem necessárias dentro de um workflow, permitindo ajustes na configuração e refinamento dos resultados.
+
+É importante pontuar que caso novas postagens sejam adicionadas após um workflow já ter sido executado, elas não serão automaticamente refletidas nos resultados anteriores. Para incluir as novas postagens na análise, o workflow precisa ser processado novamente, garantindo que todas as postagens passem pelas etapas de pré-processamento e análise de sentimentos.
+
+Com o workflow finalizado, o usuário pode avançar para a última etapa do processo: a visualização dos resultados, onde os insights extraídos das postagens processadas são apresentados de forma estruturada.
+
+![Etapa de Resultados](imagens/sentilytics/interface-grafica/resultado-graficos.png){#etapa_resultados escala=0.2}
+
+Fonte: Autor (2025).
+
+A etapa de resultados mostrado na figura \ref{etapa_resultados} permite ao usuário visualizar e interpretar os dados processados a partir da análise de sentimentos. Para acessar essa etapa, é necessário selecionar um workflow que já tenha passado pelo processo completo de pré-processamento e análise de sentimentos. Após a seleção do workflow, o restante do conteúdo da tela é exibido, oferecendo três abas principais para exploração dos resultados:
+
+1. Aba de Gráficos
+Essa aba apresenta quatro gráficos interativos, que auxiliam na compreensão da distribuição dos sentimentos e do impacto das postagens analisadas:
+
+- Quantidade de Comentários por Sentimentos – Um gráfico de pizza que exibe a porcentagem e o número total de postagens classificadas em cada sentimento.
+- Média de Engajamento por Sentimentos – Um gráfico de barras verticais que relaciona a média de curtidas, reposts, respostas e citações para cada tipo de sentimento identificado.
+- Total de Engajamento por Sentimentos – Um gráfico de barras verticais que exibe o total acumulado de interações (likes, reposts, respostas e citações) para cada sentimento.
+- Análise Temporal de Sentimentos – Um gráfico que acompanha a variação dos sentimentos ao longo do tempo, permitindo identificar tendências e padrões emocionais nos dados coletados.
+
+2. Aba de Nuvem de Palavras
+Nesta aba, é exibida uma nuvem de palavras gerada a partir dos textos processados. Essa visualização destaca as palavras mais frequentes nas postagens analisadas, permitindo uma análise rápida dos termos mais relevantes dentro do contexto dos dados.
+
+3. Aba de Top Posts Engajados
+Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no número de curtidas, respostas, reposts e citações. Além disso, há um filtro por sentimento, permitindo que o usuário explore os posts de acordo com suas classificações emocionais.
+
+Cada post exibido nesta listagem pode ser visualizado em sua forma original e após o pré-processamento, permitindo que o usuário compreenda como as transformações realizadas impactaram o conteúdo analisado.
