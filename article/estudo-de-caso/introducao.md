@@ -1,0 +1,5 @@
+A jornada de trabalho é um dos principais temas debatidos no contexto organizacional, influenciando diretamente a qualidade de vida dos trabalhadores e a produtividade das empresas. Entre os modelos de escalas mais utilizados, a escala 6x1 (seis dias de trabalho seguidos por um dia de descanso) é amplamente adotada em diversos setores, como comércio, indústria e serviços.
+
+A rotina dessa escala gera debates sobre sua eficácia e os impactos na saúde física e mental dos trabalhadores, além da influência na satisfação e no desempenho profissional. Com a crescente digitalização das relações trabalhistas e a disseminação de opiniões nas redes sociais, é possível analisar como os trabalhadores percebem essa jornada de trabalho por meio de ferramentas de análise de sentimentos.
+
+O presente estudo tem como objetivo aplicar a ferramenta Sentilytics para realizar uma análise de sentimentos sobre a escala 6x1, utilizando dados extraídos da rede social Bluesky, que já possui integração com a ferramenta. O foco será examinar a polaridade dos sentimentos (positivo, negativo ou neutro) relacionados às experiências e percepções da população sobre esse regime de trabalho.

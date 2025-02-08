@@ -108,7 +108,7 @@ Quando o usuário finaliza a configuração, o WorkflowProcessamentoController e
 
 Esse diagrama demonstra a estrutura do processo de cadastro e configuração do workflow, garantindo que o sistema ofereça flexibilidade na definição das etapas de processamento. Dessa forma, os usuários podem ajustar o fluxo de análise de acordo com suas necessidades específicas.
 
-![Diagrama de sequência do pré-processamento e análise](imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png){#seq_processamento_analise escala=0.3}
+![Diagrama de sequência do pré-processamento e análise](imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png){#seq_processamento_analise escala=0.2}
 
 Fonte: Autor (2025).
 
@@ -138,7 +138,7 @@ Os diagramas são organizados da seguinte forma:
 
 A seguir, cada diagrama será apresentado e analisado individualmente, detalhando a estrutura e os relacionamentos das classes dentro de cada camada do sistema.
 
-![Diagrama de classes com visão geral dos pacotes](imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png){#diagrama_classe_geral escala=0.3}
+![Diagrama de classes com visão geral dos pacotes](imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png){#diagrama_classe_geral escala=0.2}
 
 Fonte: Autor (2025).
 
@@ -177,7 +177,7 @@ As relações entre essas entidades são fundamentais para garantir a integridad
 
 Para possibilitar a manipulação e persistência dessas entidades no banco de dados, são utilizados repositórios, que fornecem uma interface para a realização de operações como inserção, consulta, atualização e remoção de dados. A seguir, será apresentado o Diagrama do pacote Repository, que detalha esses componentes responsáveis pelo acesso aos dados da aplicação.
 
-![Diagrama de classes da camada Repository](imagens/sentilytics/diagramas/classes/repository-classes.png){#diagram_repository escala=0.3}
+![Diagrama de classes da camada Repository](imagens/sentilytics/diagramas/classes/repository-classes.png){#diagram_repository escala=0.2}
 
 Fonte: Autor (2025).
 
@@ -198,7 +198,7 @@ A separação da camada Repository garante que a lógica de persistência dos da
 
 Para processar os dados e aplicar as regras de negócio da aplicação, os repositórios são utilizados pela camada Service, que implementa a lógica necessária para a manipulação dessas informações. A seguir, será apresentado o Diagrama da Camada Service, detalhando os serviços responsáveis pelo processamento e gestão das regras de negócio do Sentilytics.
 
-![Diagrama de classes do pacote Services](imagens/sentilytics/diagramas/classes/service-classes.png){#diagram_service escala=0.3}
+![Diagrama de classes do pacote Services](imagens/sentilytics/diagramas/classes/service-classes.png){#diagram_service escala=0.2}
 
 Fonte: Autor (2025).
 
@@ -218,7 +218,7 @@ A camada de serviços é essencial para garantir que a lógica da aplicação es
 
 Para expor essas funcionalidades aos usuários e ao frontend da aplicação, a camada Service se conecta diretamente com a Camada Controller, que será abordada a seguir. O próximo diagrama apresentará os controladores da API, responsáveis por receber requisições, validar os dados de entrada e encaminhar as chamadas aos serviços apropriados.
 
-![Diagrama de classes do pacote controllers](imagens/sentilytics/diagramas/classes/controller-classes.png){#diagram_controller escala=0.3}
+![Diagrama de classes do pacote controllers](imagens/sentilytics/diagramas/classes/controller-classes.png){#diagram_controller escala=0.2}
 
 Fonte: Autor (2025).
 
@@ -254,7 +254,7 @@ No Sentilytics, a solução é composta por diferentes serviços que atuam de fo
 
 A Figura \ref{diagrama_componentes} a seguir apresenta a organização e a comunicação entre esses componentes.
 
-![Diagrama de Componentes da Solução](imagens/sentilytics/diagramas/diagrama_componentes.png){#diagrama_componentes escala=0.3}
+![Diagrama de Componentes da Solução](imagens/sentilytics/diagramas/diagrama_componentes.png){#diagrama_componentes escala=0.4}
 
 Fonte: Autor (2025).
 

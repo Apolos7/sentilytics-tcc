@@ -1,0 +1,4 @@
+("reforma tributária" OR "cortes de gastos" OR "reforma fiscal") OR
+("Bolsonaro" AND ("golpe de Estado" OR "acusação" OR "Polícia Federal")) OR
+("Brasil" AND "Opep+") OR
+("proibição de celulares" AND "escolas")

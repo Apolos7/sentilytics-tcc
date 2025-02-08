@@ -12,7 +12,7 @@ O pré-processamento envolve etapas como remoção de stopwords, normalização,
 
 Esse serviço foi integrado à arquitetura da aplicação utilizando o RabbitMQ, permitindo que o Python receba mensagens com os textos a serem processados e envie os resultados após a execução do fluxo de análise. Dessa forma, a análise ocorre de maneira assíncrona e escalável, garantindo um processamento eficiente mesmo diante de grandes volumes de dados.
 
-[^python]: A documentação do Spring Boot está disponível no link: <https://www.python.org/>
+[^python]: O site do python está disponível no link: <https://www.python.org/>
 
 ### Spring Boot
 
@@ -158,7 +158,7 @@ O Postman foi utilizado para testar e validar todas as APIs desenvolvidas no Sen
 
 A seguir, apresentamos um diagrama que agrupa as tecnologias e ferramentas utilizadas no projeto em suas respectivas categorias. Essa organização facilita a visualização dos principais componentes tecnológicos empregados, permitindo uma compreensão clara da diversidade de soluções adotadas.
 
-![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.3}
+![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.4}
 
 Fonte: Autor (2025).
 
