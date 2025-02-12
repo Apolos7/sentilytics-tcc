@@ -1,4 +1,6 @@
-No Brasil, as redes sociais se consolidaram como uma ferramenta poderosa para compreender a opinião pública, desempenhando um papel crucial não apenas como meio de comunicação, mas também como um espaço de articulação política (citação aqui?). Nessas plataformas, os usuários expressam suas percepções e sentimentos sobre temas variados, desde questões cotidianas até debates complexos de relevância nacional, como mudanças trabalhistas ou propostas legislativas. A análise desses sentimentos é essencial para compreender tendências, identificar polarizações e auxiliar na tomada de decisões estratégicas em áreas como comunicação, política e negócios.
+No Brasil, as redes sociais se consolidaram como uma ferramenta poderosa para compreender a opinião pública, desempenhando um papel crucial não apenas como meio de comunicação, mas também como um espaço de articulação política. Nessas plataformas, os usuários expressam suas percepções e sentimentos sobre temas variados, desde questões cotidianas até debates complexos de relevância nacional, como mudanças trabalhistas ou propostas legislativas.
+
+Além de seu papel na articulação política, as redes sociais também exercem um impacto significativo na economia e no comportamento das novas gerações. No campo econômico, essas plataformas têm sido utilizadas por empresas para monitorar tendências de mercado, analisar a receptividade de produtos e serviços, e engajar diretamente com consumidores, moldando estratégias de marketing e consumo. Por outro lado, para os jovens, as redes sociais representam não apenas um canal de entretenimento, mas também um espaço de mobilização e conscientização social. Essas ferramentas permitem que eles se envolvam ativamente em discussões sobre temas globais, como mudanças climáticas, direitos humanos e questões trabalhistas, como o debate em torno da escala 6x1, ampliando o alcance e a visibilidade dessas pautas. A análise desses sentimentos é essencial para compreender tendências, identificar polarizações e auxiliar na tomada de decisões estratégicas em áreas como comunicação, política e negócios.
 
 Entretanto, a análise de sentimentos em redes sociais apresenta desafios significativos. Muitas ferramentas existentes não oferecem uma solução integrada e intuitiva para o processamento completo, desde a coleta de dados até a classificação dos sentimentos. Frequentemente, esses processos exigem que os usuários utilizem terminais e comandos técnicos para aplicar funções básicas, o que pode dificultar o uso por parte de profissionais ou pesquisadores com pouca familiaridade técnica. Além disso, essas ferramentas muitas vezes não permitem personalização ou integração direta com redes sociais.
 
@@ -8,13 +10,15 @@ Para demonstrar a ferramenta, foi realizado um estudo de caso utilizando o Senti
 
 ## Objetivo Geral
 
-Aqui precis descrever o objetivo geral: Devo apresentar de forma clara o que o trabalho pretende alcançar. (Preciso alinhar esse cara com a questão central do problema)
+O presente trabalho tem como objetivo geral desenvolver uma solução integrada, denominada Sentilytics, capaz de realizar a análise de sentimentos de forma automatizada em redes sociais. A ferramenta busca oferecer um fluxo completo, desde a coleta de dados até a análise dos sentimentos, com funcionalidades personalizáveis e acessíveis, permitindo a criação de workflows configuráveis para atender diferentes necessidades analíticas.
+
+**Aqui precisa descrever o objetivo geral: Devo apresentar de forma clara o que o trabalho pretende alcançar. (Preciso alinhar esse cara com a questão central do problema)**
 
 - Usar verbo no infinitivo, exemplo: "Desenvolver"
 
 ## Objetivos Específicos
 
-Aqui preciso colocar os objetivos especificos: São etapas ou metas menores que ajudam a alcançar o objetivo geral. Eles detalham as ações ncessárias para atingir o propósito do estudo.
+**Aqui preciso colocar os objetivos especificos: São etapas ou metas menores que ajudam a alcançar o objetivo geral. Eles detalham as ações ncessárias para atingir o propósito do estudo.**
 
 - Formular de 3 a 5 objetivos específicos (**Verbo no infinitivo!!**)
 
