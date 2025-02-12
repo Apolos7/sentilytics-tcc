@@ -12,15 +12,16 @@ Para demonstrar a ferramenta, foi realizado um estudo de caso utilizando o Senti
 
 O presente trabalho tem como objetivo geral desenvolver uma solução integrada, denominada Sentilytics, capaz de realizar a análise de sentimentos de forma automatizada em redes sociais. A ferramenta busca oferecer um fluxo completo, desde a coleta de dados até a análise dos sentimentos, com funcionalidades personalizáveis e acessíveis, permitindo a criação de workflows configuráveis para atender diferentes necessidades analíticas.
 
-**Aqui precisa descrever o objetivo geral: Devo apresentar de forma clara o que o trabalho pretende alcançar. (Preciso alinhar esse cara com a questão central do problema)**
-
-- Usar verbo no infinitivo, exemplo: "Desenvolver"
-
 ## Objetivos Específicos
 
-**Aqui preciso colocar os objetivos especificos: São etapas ou metas menores que ajudam a alcançar o objetivo geral. Eles detalham as ações ncessárias para atingir o propósito do estudo.**
+Para alcançar o objetivo geral proposto, o presente trabalho foi estruturado em etapas especificas necessárias para a construção e validação da solução desenvolvida. A seguir, são apresentados os objetivos específicos que direcionaram o desenvolvimento da solução e realização do estudo de caso.
 
-- Formular de 3 a 5 objetivos específicos (**Verbo no infinitivo!!**)
+- Implementar funcionalidades de coleta automatizada de dados em redes sociais integradas à aplicação.
+- Desenvolver um módulo de pré-processamento customizável, permitindo que o usuário configure workflows com diferentes tarefas, como normalização e remoção de stopwords.
+- Integrar a aplicação com o modelo de análise de sentimentos VADER para classificar sentimentos em positivo, neutro e negativo.
+- Criar mecanismos para exibir os resultados da análise de forma visual, como gráficos, tabelas e nuvens de palavras, facilitando a interpretação dos dados.
+- Realizar um estudo de caso para validar o Sentilytics, analisando sentimentos relacionados ao debate sobre o fim da escala 6x1.
+- Identificar as limitações da aplicação e propor melhorias para futuras versões, como a inclusão de modelos mais avançados para análise de sentimentos em português.
 
 ## Relevância do trabalho
 
