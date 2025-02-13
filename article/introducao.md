@@ -25,11 +25,13 @@ Para alcançar o objetivo geral proposto, o presente trabalho foi estruturado em
 
 ## Relevância do trabalho
 
-Texto aqui
+A análise de sentimentos é um campo de pesquisa em constante crescimento, especialmente no contexto das redes sociais, que são ricas em dados emocionais e opinativos. Este trabalho contribui para a área acadêmica ao propor uma solução integrada e automatizada, o Sentilytics, que possibilita a coleta de dados diretamente do Bluesky, uma alternativa viável em um cenário onde muitas plataformas tornaram o acesso aos dados mais restrito ou pago. Além disso, a criação de workflows configuráveis oferecem uma abordagem prática para superar as limitações técnicas frequentemente enfrentadas por pesquisadores, simplificando etapas complexas e manuais.
 
-- Quais lacunas ele preenche em relação aos trabalho atuais?
+O desenvolvimento do Sentilytics introduz uma abordagem modular da arquitetura, construída com tecnologias como Spring Boot, RabbitMQ e PostgreSQL, garante escalabilidade e flexibilidade para a incorporação de novos modelos de análise de sentimentos ou tarefas de pré-processamento, evidenciando o potencial de expansão da ferramenta para diferentes contextos.
 
-- Quais os impactos gerados pelo desenvolvimento da aplicação Sentilytics?
+No contexto das redes sociais, que hoje são fundamentais para a formação de opiniões e debates públicos, a análise de sentimentos desempenha um papel central na compreensão de tendências e polarizações. Este trabalho contribui diretamente para esse campo ao oferecer uma ferramenta que possibilita a análise automatizada de dados emocionais expressos em postagens. O Sentilytics pode ser utilizado para identificar sentimentos predominantes, compreender padrões de engajamento e fornecer informações úteis para tomadores de decisão, pesquisadores e organizações que desejam entender a dinâmica social em torno de temas complexos.
+
+A relevância deste trabalho vai além de seu impacto imediato, demonstrando como soluções tecnológicas inovadoras podem ser aplicadas para explorar questões sociais e emocionais em um ambiente digital cada vez mais complexo. A flexibilidade e escalabilidade do Sentilytics abrem espaço para sua aplicação em diferentes áreas, como marketing, economia, política, psicologia social e ciência de dados, tornando-o uma ferramenta promissora tanto para estudos acadêmicos quanto para aplicações práticas.
 
 ## Estrutura do Trabalho
 
