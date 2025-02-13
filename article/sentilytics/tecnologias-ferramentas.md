@@ -1,16 +1,24 @@
 ## Tecnologias e Ferramentas
 
-O desenvolvimento da aplicação de análise de sentimentos envolveu o uso de diversas tecnologias e ferramentas que possibilitaram a implementação eficiente da solução. A seguir, são apresentadas as principais tecnologias utilizadas, bem como as ferramentas empregadas no processo de desenvolvimento.
+O desenvolvimento da aplicação de análise de sentimentos contou com o uso de diversas tecnologias e ferramentas, as quais foram essenciais para a implementação eficiente da solução. A seguir, são descritas as principais tecnologias empregadas e os respectivos papéis que desempenharam na construção da aplicação.
 
 ### Python
 
 O Python[^python] é uma linguagem de programação amplamente utilizada para tarefas de Processamento de Linguagem Natural (PLN) devido à sua sintaxe acessível e ao amplo suporte de bibliotecas voltadas para esse domínio. Entre os recursos disponíveis, destacam-se ferramentas como o *Natural Language Toolkit* (NLTK), que fornece funcionalidades para tokenização, remoção de *stopwords*, *stemming* e lematização, e o Enelvo, uma biblioteca voltada para a normalização de textos em português \cite{bertaglia2016exploring}. Essas bibliotecas possibilitam a manipulação eficiente de textos, sendo frequentemente aplicadas em soluções que envolvem análise automática de conteúdos.
 
-No desenvolvimento do Sentilytics, o Python foi utilizado para construir o serviço responsável por realizar o pré-processamento e a análise de sentimentos das postagens coletadas. Esse serviço recebe os textos brutos e aplica uma sequência de transformações antes da análise final, garantindo que os dados estejam devidamente preparados para a classificação de sentimentos.
+No desenvolvimento do Sentilytics, o Python foi utilizado para implementar o serviço responsável pelo pré-processamento e pela análise de sentimentos das postagens coletadas. Esse serviço é projetado para funcionar de forma assíncrona e escalável, utilizando o RabbitMQ como sistema de mensageria para gerenciar os processos. Dessa forma, é possível processar grandes volumes de dados de maneira organizada.
 
-O pré-processamento envolve etapas como remoção de stopwords, normalização, lematização e correção ortográfica, garantindo que o conteúdo analisado seja mais estruturado e livre de ruídos. Após essa etapa, o serviço pode ser acionado novamente para classificar os sentimentos das postagens, atribuindo escores que indicam a polaridade emocional do texto.
+O pré-processamento é iniciado quando o serviço recebe uma mensagem pelo RabbitMQ, indicando que deve buscar na base de dados os textos brutos e as tarefas de pré-processamento configuradas pelo usuário. Após essa busca, o serviço aplica as tarefas selecionadas aos textos coletados. Essas tarefas podem incluir:
 
-Esse serviço foi integrado à arquitetura da aplicação utilizando o RabbitMQ, permitindo que o Python receba mensagens com os textos a serem processados e envie os resultados após a execução do fluxo de análise. Dessa forma, a análise ocorre de maneira assíncrona e escalável, garantindo um processamento eficiente mesmo diante de grandes volumes de dados.
+- Remoção de stopwords: Eliminação de palavras irrelevantes para a análise, como "de", "o", "para".
+- Normalização e lematização: Ajuste dos textos para uniformidade e redução de palavras à sua forma base.
+- Correção ortográfica: Identificação e ajuste de erros ortográficos nos textos.
+
+Essas etapas garantem que os dados sejam limpos e livres de ruídos, tornando-os adequados para a análise de sentimentos. Após o término do pré-processamento, o texto resultante é salvo na base de dados e uma mensagem é enviada via RabbitMQ, notificando o término do processo.
+
+A análise de sentimentos também é gerenciada por meio do RabbitMQ, que envia uma mensagem para iniciar o processo. A partir dessa notificação, o serviço recupera as postagens pré-processadas da base de dados e aplica o modelo de análise de sentimentos VADER, fornecido pela biblioteca NLTK. Esse modelo, por sua leveza e facilidade de implementação, foi escolhido para esta versão do Sentilytics. Após a análise, os resultados são armazenados na base de dados, e uma mensagem é enviada pelo RabbitMQ informando o término do processo.
+
+Embora atualmente apenas o VADER esteja integrado à solução, a arquitetura do Sentilytics foi projetada para permitir futuras expansões. Isso inclui a possibilidade de integrar novos modelos de análise de sentimentos e oferecer ao usuário a opção de selecionar o modelo desejado, da mesma forma como ocorre com a configuração das tarefas de pré-processamento.
 
 [^python]: O site do python está disponível no link: <https://www.python.org/>
 
@@ -22,11 +30,12 @@ Além do suporte para APIs REST, o Spring Boot conta com o Spring Batch, uma ext
 
 No desenvolvimento do Sentilytics, o Spring Boot foi utilizado para construir dois serviços principais, cada um desempenhando um papel fundamental na arquitetura da aplicação:
 
-1. Web API (Spring Boot REST API) – Esse serviço atua como o núcleo de comunicação da aplicação, centralizando todas as operações e integrando os diferentes módulos do sistema. Ele expõe os endpoints REST que permitem a interação entre o frontend Angular, os serviços de pré-processamento e análise de sentimentos em Python, o RabbitMQ para mensageria, além do banco de dados PostgreSQL para persistência das informações.
-A API também é responsável por gerenciar os workflows, armazenar os resultados das análises e coordenar as operações realizadas dentro da plataforma, garantindo que cada requisição seja processada corretamente.
+1. Web API (Spring Boot REST API) – Esse serviço atua como o núcleo de comunicação da aplicação, centralizando todas as operações e integrando os diferentes módulos do sistema. Ele expõe os endpoints REST que permitem a interação com o frontend em Angular e gerencia a inicialização dos serviços oferecidos pelo módulo em Python, como o pré-processamento e a análise de sentimentos, utilizando o RabbitMQ para troca de mensagens.
+Além disso, a API é responsável pela coleta de dados no Bluesky, lidando com a autenticação necessária e garantindo a ingestão segura das postagens na base de dados PostgreSQL. A escolha do Bluesky como rede social integrada se deu principalmente devido à política de gratuidade na coleta de postagens, o que viabilizou a realização deste estudo de caso. Apesar de o Bluesky ainda não ser amplamente utilizado no Brasil, sua estrutura e acessibilidade tornam-no uma escolha viável para a demonstração das funcionalidades do Sentilytics.
+A API também gerencia os workflows e coordena as operações realizadas dentro da plataforma, garantindo que cada requisição seja processada de maneira consistente.
 
-2. Spring Batch – A segunda aplicação desenvolvida com Spring Boot foi um serviço baseado no Spring Batch, utilizado para importação e processamento de dados a partir de arquivos CSV. Esse serviço possibilita a ingestão de postagens de forma estruturada, permitindo que o usuário carregue grandes volumes de dados para serem analisados pelo sistema.
-O Spring Batch garante que a importação ocorra de maneira eficiente, validando e processando os dados antes de armazená-los no banco de dados. Essa abordagem permite que o sistema lide com grandes quantidades de postagens sem comprometer o desempenho da plataforma.
+2. Spring Batch – A segunda aplicação desenvolvida com Spring Boot foi um serviço baseado no Spring Batch, utilizado para a importação e processamento de dados a partir de arquivos CSV. Esse recurso permite que os usuários superem a limitação atual de depender exclusivamente do Bluesky como fonte de dados, possibilitando a análise de qualquer conjunto de textos formatados em arquivos CSV. Dessa forma, a plataforma se torna mais versátil e capaz de atender a diferentes necessidades analíticas, independentemente da origem dos dados.
+O Spring Batch garante que a solução lide com grandes quantidades de postagens sem comprometer o desempenho da plataforma, validando e processando os dados de forma eficiente antes de armazená-los no banco de dados.
 
 A utilização do Spring Boot no projeto possibilitou uma estrutura modular, escalável e organizada, facilitando a manutenção e a expansão do sistema conforme novas funcionalidades forem incorporadas.
 
