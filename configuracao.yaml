@@ -55,8 +55,8 @@ lista_ilustracoes: true
 lista_quadros: false
 lista_tabelas: false
 referencias_caminho: config/referencias.bib
-palavras_chave: ''
-keywords: ''
+palavras_chave: 'Análise de Sentimentos'
+keywords: 'Sentiment Analysis'
 palabras_clave: ''
 mots_cles: ''
 #===============================================#

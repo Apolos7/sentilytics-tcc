@@ -8,3 +8,4 @@
 % Referências bibliográficas
 % ----------------------------------------------------------
 \bibliography{xxx-referencias}
+\bibliographystyle{abntex2-alf.bst}

@@ -4,7 +4,8 @@
 
 <!-- Capítulo 2: Fundamentação Teórica -->
 # Fundamentação Teórica
-@import('article/fundamentacao-teorica.md')
+@import('article/fundamentacao-teorica/introducao.md')
+@import('article/fundamentacao-teorica/fundamentacao-teorica.md')
 
 <!-- Capítulo 3: Sentilytics -->
 # Sentilytics

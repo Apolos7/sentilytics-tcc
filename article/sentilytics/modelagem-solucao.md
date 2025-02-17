@@ -375,3 +375,9 @@ Nesta aba, é exibida uma nuvem de palavras gerada a partir dos textos processad
 Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no número de curtidas, respostas, reposts e citações. Além disso, há um filtro por sentimento, permitindo que o usuário explore os posts de acordo com suas classificações emocionais.
 
 Cada post exibido nesta listagem pode ser visualizado em sua forma original e após o pré-processamento, permitindo que o usuário compreenda como as transformações realizadas impactaram o conteúdo analisado.
+
+![QRCode com link para o vídeo](imagens/sentilytics/qr_code.png){#qrcode escala=0.5}
+
+Fonte: Autor (2025).
+
+Para complementar o entendimento do processo descrito, a \autoref{qrcode} apresenta um QR Code que direciona para um vídeo demonstrativo. Nesse vídeo, é possível acompanhar de forma prática e detalhada todas as etapas para a criação de uma pesquisa de análise de sentimentos utilizando a aplicação Sentilytics, desde a autenticação até a visualização dos resultados.
