@@ -16,20 +16,26 @@ Com essa modelagem, busca-se garantir que a aplicação seja bem estruturada, es
 
 ### Requisitos Funcionais e Não Funcionais
 
-Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade.
+Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade. A \autoref{requisitos_funcionais} apresenta os principais requisitos funcionais que orientaram o desenvolvimento da solução proposta.
 
-A seguir, são apresentados os requisitos funcionais e não funcionais que orientaram o desenvolvimento da solução proposta.
+: Requisitos funcionais. \label{requisitos_funcionais}
 
-- RF01 - Coleta de Dados: O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem;
-- RF02 - Importação de dados via Arquivo CSV: O sistema deve permitir como forma alternativa a importação de postagens no formato CSV para análise de sentimentos, utilizando Spring Batch para processamento da importação;
-- RF03 - Configuração de Workflows: O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados;
-- RF04 - Pré-processamento de Dados: O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização;
-- RF05 - Análise de Sentimentos: O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta;
-- RF06 - Armazenamento de Resultados: O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos;
-- RF07 - Consulta de Resultados: O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante;
-- RF08 - Integração entre Módulos: O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ;
-- RF09 - Autenticação e Autorização: O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional;
-- RF10 - Interface Web: O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.
+| Código | Requisito                                                                                                                                                                                                            |
+|--------|----------------------------------------------------------------------------------------------------------------------------|
+| RF01   | O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem.                                              |
+| RF02   | O sistema deve permitir como forma alternativa a importação de postagens no formato CSV para análise de sentimentos, utilizando Spring Batch para processamento da importação. |
+| RF03   | O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados.                                              |
+| RF04   | O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização.                                                   |
+| RF05   | O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta.                      |
+| RF06   | O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos.         |
+| RF07   | O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante.                                                  |
+| RF08   | O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.                                                |
+| RF09   | O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional.                                        |
+| RF10   | O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.                                                 |
+
+Fonte: Autor (2025).
+
+Com os requisitos funcionais definidos, podemos visualizar como os usuário interagem com o sistema e quais as funcionalidades deveram estar disponíveis para o usuário. Para isso, vamos utilizar o diagrama de casos de uso.
 
 ### Diagramas de Caso de Uso
 
@@ -46,7 +52,7 @@ pré-processamento e seus parâmetros e exclusão desses componentes, que são e
 
 Ademais, o diagrama evidencia os processos de pré-processamento e análise de sentimentos, que representam etapas centrais para obtenção dos resultados. Após a execução do pré-processamento das postagens e em seguida a análise do sentimentos, o usuário pode visualizar os resultados gerados para aquele workflow processado, facilitando a interpretação e análise das informações processadas pelo Sentilytics.
 
-Esse diagrama proporciona uma visão geral das funcionalidades do sistema, auxiliando na compreensão das interações entre o usuário e os módulos principais da aplicação.
+Com o diagrama de casos de uso definido, foi criada a modelagem do principal processo da aplicação para estabelecer quais passos o usuário deve seguir para criar uma pesquisa de análise de sentimentos.
 
 ### BPMN
 
@@ -64,9 +70,27 @@ Após a coleta dos dados, o próximo passo envolve a criação de um workflow, q
 
 Com os dados pré-processados, o usuário pode acionar a  análise de sentimentos naquele workflow já pré-processado, permitindo que o sistema classifique os textos e gere os resultados. Após a execução desse processamento, os resultados são disponibilizados para visualização, possibilitando a interpretação dos dados analisados.
 
-Vale notar que o usuário está livre para cadastrar diversos workflows, cada um com suas particularidades na configuração, possuindo diferentes tarefas de pré-processamento e parâmetros.
+Vale notar que o usuário está livre para cadastrar diversos workflows, cada um com suas particularidades na configuração, possuindo diferentes tarefas de pré-processamento e parâmetros. Por fim, o fluxo se encerra quando o usuário finaliza a pesquisa, consolidando os resultados obtidos.
 
-Por fim, o fluxo se encerra quando o usuário finaliza a pesquisa, consolidando os resultados obtidos.
+Com o processo definido, foi necessário estruturar a modelagem dos dados. Para isso, foi elaborado o Diagrama Entidade-Relacionamento (DER), que representa a estrutura do banco de dados e suas interações com os elementos do sistema. Além disso, foi desenvolvido um dicionário de dados para detalhar cada entidade e sua finalidade dentro da aplicação.
+
+### Diagrama Entidade-Relacionamento (DER) e Dicionário de dados
+
+O Diagrama Entidade-Relacionamento (DER) é uma representação visual da estrutura do banco de dados, destacando as entidades, seus atributos e os relacionamentos entre elas. Ele permite compreender a organização dos dados e a forma como as informações são armazenadas e manipuladas dentro do sistema. No Sentilytics, o DER foi desenvolvido utilizando a ferramenta Vertabelo, garantindo uma modelagem estruturada e alinhada com os requisitos do sistema.
+
+![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.4}
+
+Fonte: Autor (2025).
+
+A \autoref{der} apresenta o Diagrama Entidade-Relacionamento, demonstrando a estrutura do banco de dados da aplicação. A modelagem foi desenvolvida com base nos requisitos funcionais e processos definidos, garantindo que a estrutura de dados suporte corretamente as funcionalidades do sistema.
+
+Complementando essa modelagem, o Dicionário de Dados fornece uma descrição detalhada das tabelas, colunas, tipos de dados e restrições aplicadas, servindo como uma referência essencial para o desenvolvimento e manutenção do banco de dados. Esse recurso documenta a estrutura do banco de forma organizada, facilitando a compreensão da modelagem e assegurando a consistência dos dados ao longo do ciclo de vida da aplicação.
+
+![Dicionário de Dados](imagens/sentilytics/diagramas/dicionario_dados.png){#dicionario_dados escala=0.3}
+
+Fonte: Autor (2025).
+
+Assim como o DER, o Dicionário de Dados do Sentilytics foi gerado na ferramenta Vertabelo, que permite a exportação e documentação estruturada dos elementos do banco. A \autoref{dicionario_dados} apresenta esse documento, refletindo a modelagem realizada e consolidando a documentação do banco de dados. Após a modelagem da base de dados, foi possível avançar com os diagramas de sequência/atividade dos principais fluxos que foram mostrados nos requisitos.
 
 ### Diagrama de Sequência/Atividades do pré-processamento e análise de sentimentos
 
@@ -234,18 +258,6 @@ Os controladores seguem a estrutura RESTful, organizando os endpoints de acordo 
 - UsuarioController: Gerencia a autenticação de usuários e a integração com a plataforma Bluesky, possibilitando o login e a recuperação de perfis.
 Os controladores utilizam ResponseEntity para padronizar as respostas da API, garantindo que cada requisição retorne um código de status adequado, além dos dados processados.
 
-### Diagrama Entidade-Relacionamento (DER) e Dicionário de dados
-
-O Diagrama Entidade-Relacionamento (DER) é uma representação visual da estrutura do banco de dados, destacando as entidades, seus atributos e os relacionamentos entre elas. Ele permite compreender a organização dos dados e a forma como as informações são armazenadas e manipuladas dentro do sistema. No Sentilytics, o DER foi desenvolvido utilizando a ferramenta Vertabelo, garantindo uma modelagem estruturada e alinhada com os requisitos do sistema.
-
-Complementando a modelagem do banco de dados, o Dicionário de Dados fornece uma descrição detalhada das tabelas, colunas, tipos de dados e restrições existentes. Esse recurso facilita a documentação do sistema, servindo como referência para o desenvolvimento e manutenção do banco de dados. Assim como o DER, o Dicionário de Dados do Sentilytics foi elaborado no Vertabelo, permitindo a exportação e documentação estruturada dos elementos do banco.
-
-![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.4}
-
-Fonte: Autor (2025).
-
-A Figura \ref{der} apresenta o Diagrama Entidade-Relacionamento, demonstrando a estrutura do banco de dados da aplicação.
-
 ### Diagrama de Componentes
 
 O Diagrama de Componentes é uma representação da estrutura da aplicação, destacando os principais serviços que a compõem e suas interações. Ele permite visualizar a separação dos módulos, auxiliando na manutenção e na compreensão da arquitetura do sistema.
@@ -380,4 +392,4 @@ Cada post exibido nesta listagem pode ser visualizado em sua forma original e ap
 
 Fonte: Autor (2025).
 
-Para complementar o entendimento do processo descrito, a \autoref{qrcode} apresenta um QR Code que direciona para um vídeo demonstrativo. Nesse vídeo, é possível acompanhar de forma prática e detalhada todas as etapas para a criação de uma pesquisa de análise de sentimentos utilizando a aplicação Sentilytics, desde a autenticação até a visualização dos resultados.
+Para complementar o entendimento do processo descrito, a \autoref{qrcode} apresenta um QR Code que direciona para um vídeo demonstrativo. No vídeo, é possível acompanhar de forma prática e detalhada todas as etapas da criação de uma pesquisa de análise de sentimentos no Sentilytics, desde a autenticação até a visualização dos resultados.

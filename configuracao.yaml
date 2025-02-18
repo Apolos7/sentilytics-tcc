@@ -53,7 +53,7 @@ errata: false
 referencias_sistema: alf
 lista_ilustracoes: true
 lista_quadros: false
-lista_tabelas: false
+lista_tabelas: true
 referencias_caminho: config/referencias.bib
 palavras_chave: 'Análise de Sentimentos'
 keywords: 'Sentiment Analysis'

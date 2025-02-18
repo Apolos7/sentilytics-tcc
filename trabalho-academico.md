@@ -9,8 +9,7 @@
 
 <!-- Capítulo 3: Sentilytics -->
 # Sentilytics
-
-@import('article/sentilytics/solucao-proposta.md')
+@import('article/sentilytics/introducao.md')
 @import('article/sentilytics/tecnologias-ferramentas.md')
 @import('article/sentilytics/modelagem-solucao.md')
 
@@ -24,3 +23,4 @@
 
 <!-- Capítulo 5: Sentilytics -->
 # Considerações Finais
+@import('article/conclusao.md')
