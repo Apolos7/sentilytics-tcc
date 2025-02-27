@@ -4,7 +4,7 @@
 #===============================================#
 instituicao: Instituto Federal de Sergipe
 author: José Alessandro Santos Santana
-title: 'Sentilytics: análise automatizada de sentimentos em redes sociais'
+title: 'Sentilytics: Análise Automatizada de Sentimentos em Redes Sociais'
 local: Lagarto - SE
 date: '2025'
 titulacao: Bacharelado
@@ -40,6 +40,30 @@ siglas:
     d: Application Programming Interface
   - s: BPMN
     d: Business Process Model and Notation
+  - s: CSV
+    d: Comma-Separated Values
+  - s: BERT
+    d: Bidirectional Encoder Representations from Transformers
+  - s: GPT
+    d: Generative Pre-trained Transformer
+  - s: AMQP
+    d: Advanced Message Queuing Protocol
+  - s: NLTK
+    d: Natural Language Toolkit
+  - s: VS Code
+    d: Visual Studio Code
+  - s: SSE
+    d: Server-Sent Events
+  - s: SQL
+    d: Structured Query Language
+  - s: JSON
+    d: JavaScript Object Notation
+  - s: AI
+    d: Artificial Intelligence
+  - s: VADER
+    d: Valence Aware Dictionary and sEntiment Reasoner
+  - s: XML
+    d: Extensible Markup Language
 simbolos:
 graduacao: true
 especializacao: false
@@ -55,8 +79,8 @@ lista_ilustracoes: true
 lista_quadros: false
 lista_tabelas: true
 referencias_caminho: config/referencias.bib
-palavras_chave: 'Análise de Sentimentos'
-keywords: 'Sentiment Analysis'
+palavras_chave: 'Análise de Sentimentos, Processamento de Linguagem Natural, Redes Sociais, Bluesky'
+keywords: 'Sentiment Analysis, Natural Language Processing, Social Networks, Bluesky'
 palabras_clave: ''
 mots_cles: ''
 #===============================================#

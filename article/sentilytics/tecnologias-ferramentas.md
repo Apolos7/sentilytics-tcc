@@ -167,7 +167,7 @@ O Postman foi utilizado para testar e validar todas as APIs desenvolvidas no Sen
 
 A seguir, apresentamos um diagrama que agrupa as tecnologias e ferramentas utilizadas no projeto em suas respectivas categorias. Essa organização facilita a visualização dos principais componentes tecnológicos empregados, permitindo uma compreensão clara da diversidade de soluções adotadas.
 
-![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.4}
+![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.5}
 
 Fonte: Autor (2025).
 

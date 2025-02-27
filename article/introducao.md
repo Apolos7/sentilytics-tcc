@@ -1,4 +1,4 @@
-As redes sociais é o ambiente, no meio digital, em que os indivíduos expressam suas percepções e sentimentos sobre temas variados, desde questões cotidianas até debates complexos de relevância nacional, como mudanças trabalhistas ou propostas legislativas. É um espaço que possibilita diferentes formas de socialização, no qual os participantes são emissores e receptores no processo de comunicação. No Brasil, as redes sociais desempenham um papel crucial como meio de comunicação e tem se resignificado como um espaço ativo para compreensão da opinião pública e articulação política.
+As redes sociais é o ambiente, no meio digital, em que os indivíduos expressam suas percepções e sentimentos sobre temas variados, desde questões cotidianas até debates complexos de relevância nacional, como mudanças trabalhistas ou propostas legislativas. É um espaço que possibilita diferentes formas de socialização, no qual os participantes são emissores e receptores no processo de comunicação. No Brasil, as redes sociais desempenham um papel crucial como meio de comunicação e tem se resignificado como um espaço ativo para compreensão da opinião pública e articulação política. De acordo com \citeonline{pompei2021redes}, as redes sociais digitais são um meio dinâmico e multifacetado de interação, que possibilita o engajamento social e a formação de identidades em um ambiente marcado pela diversidade e pela troca constante de informações.
 
 Além de seu papel na articulação política, as redes sociais também exercem um impacto significativo na economia e no comportamento das novas gerações. No campo econômico, esses espaços têm sido utilizados por empresas para monitorar tendências de mercado, analisar a receptividade de produtos e serviços, e engajar diretamente com consumidores, moldando estratégias de marketing e consumo. Por outro lado, para os jovens, as redes sociais representam não apenas um canal de entretenimento, mas também um espaço de mobilização e conscientização social. Esses espaços permitem que eles se envolvam ativamente em discussões sobre temas globais, como mudanças climáticas, direitos humanos e questões trabalhistas, como o debate em torno da escala 6x1, ampliando o alcance e a visibilidade dessas pautas.
 
@@ -14,17 +14,17 @@ Para validar a aplicação, foi realizado um estudo de caso utilizando o Sentily
 
 ## Objetivo Geral
 
-O presente trabalho tem como objetivo geral desenvolver uma aplicação para automatizar o processo de análise de sentimentos personalizada em redes sociais, denominada Sentilytics. A aplicação busca oferecer um fluxo completo, desde a coleta de dados até a análise dos sentimentos, com funcionalidades personalizáveis e acessíveis, permitindo a criação de *workflows* configuráveis para atender diferentes necessidades analíticas.
+Analisar sentimentos de forma automatizada em redes sociais por meio de uma solução integrada denominada Sentilytics.
 
 ## Objetivos Específicos
 
 Para alcançar o objetivo geral proposto, o presente trabalho foi estruturado em etapas especificas necessárias para a construção e validação da solução desenvolvida. A seguir, são apresentados os objetivos específicos que direcionaram o desenvolvimento da solução e realização do estudo de caso.
 
-- Implementar funcionalidades de coleta automatizada de dados em redes sociais integradas à aplicação.
-- Desenvolver um módulo de pré-processamento customizável, permitindo que o usuário configure *workflows* com diferentes tarefas, como normalização e remoção de *stopwords*.
-- Integrar a aplicação com o modelo de análise de sentimentos VADER para classificar sentimentos em positivo, neutro e negativo.
-- Criar mecanismos para exibir os resultados da análise de forma visual, como gráficos, tabelas e nuvens de palavras, facilitando a interpretação dos dados.
-- Realizar um estudo de caso para validar o Sentilytics, analisando sentimentos relacionados ao debate sobre o fim da escala 6x1.
+- Implementar a coleta automatizada de dados em redes sociais integradas à aplicação.
+- Desenvolver um módulo de pré-processamento customizável para normalização e remoção de stopwords.
+- Integrar o modelo de análise de sentimentos VADER à aplicação para classificar sentimentos.
+- Exibir os resultados da análise de sentimentos por meio de gráficos, tabelas e nuvens de palavras.
+- Avaliar a aplicação por meio de um estudo de caso sobre o debate do fim da escala 6x1.
 
 ## Relevância do trabalho
 

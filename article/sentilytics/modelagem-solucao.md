@@ -78,7 +78,7 @@ Com o processo definido, foi necessário estruturar a modelagem dos dados. Para 
 
 O Diagrama Entidade-Relacionamento (DER) é uma representação visual da estrutura do banco de dados, destacando as entidades, seus atributos e os relacionamentos entre elas. Ele permite compreender a organização dos dados e a forma como as informações são armazenadas e manipuladas dentro do sistema. No Sentilytics, o DER foi desenvolvido utilizando a ferramenta Vertabelo, garantindo uma modelagem estruturada e alinhada com os requisitos do sistema.
 
-![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.4}
+![Diagrama Entidade Relacionamento](imagens/sentilytics/diagramas/DER-sentilytics.png){#der escala=0.5}
 
 Fonte: Autor (2025).
 
@@ -104,7 +104,7 @@ No contexto do Sentilytics, foram elaborados três diagramas de sequência que d
 
 Cada um desses diagramas detalha a troca de informações entre os elementos do sistema, evidenciando os passos necessários para a execução dessas funcionalidades. A seguir, apresentam-se essas representações gráficas.
 
-![Diagrama de sequência do cadastro da pesquisa e coleta de dados](imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png){#seq_pesquisa_coleta_dados escala=0.3}
+![Diagrama de sequência do cadastro da pesquisa e coleta de dados](imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png){#seq_pesquisa_coleta_dados escala=0.4}
 
 Fonte: Autor (2025).
 
@@ -118,7 +118,7 @@ Após a conclusão do armazenamento, o PostRepository confirma a operação, ret
 
 Esse diagrama ilustra de forma clara a sequência de interações entre os componentes do sistema, destacando como a pesquisa é cadastrada e os dados são coletados e armazenados para posterior análise.
 
-![Diagrama de sequência do cadastro e configuração do workflow](imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png){#seq_cadastro_configuracao_workflow escala=0.3}
+![Diagrama de sequência do cadastro e configuração do workflow](imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png){#seq_cadastro_configuracao_workflow escala=0.4}
 
 Fonte: Autor (2025).
 
@@ -364,7 +364,7 @@ O pré-processamento e a análise de sentimentos podem ser repetidos quantas vez
 
 É importante pontuar que caso novas postagens sejam adicionadas após um workflow já ter sido executado, elas não serão automaticamente refletidas nos resultados anteriores. Para incluir as novas postagens na análise, o workflow precisa ser processado novamente, garantindo que todas as postagens passem pelas etapas de pré-processamento e análise de sentimentos.
 
-Com o workflow finalizado, o usuário pode avançar para a última etapa do processo: a visualização dos resultados, onde os insights extraídos das postagens processadas são apresentados de forma estruturada.
+Com o workflow finalizado, o usuário pode avançar para a última etapa do processo: a visualização dos resultados, onde os *insights* extraídos das postagens processadas são apresentados de forma estruturada.
 
 ![Etapa de Resultados](imagens/sentilytics/interface-grafica/resultado-graficos.png){#etapa_resultados escala=0.2}
 
@@ -388,7 +388,7 @@ Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no
 
 Cada post exibido nesta listagem pode ser visualizado em sua forma original e após o pré-processamento, permitindo que o usuário compreenda como as transformações realizadas impactaram o conteúdo analisado.
 
-![QRCode com link para o vídeo](imagens/sentilytics/qr_code.png){#qrcode escala=0.5}
+![QRCode com link para o vídeo](imagens/sentilytics/qr_code.png){#qrcode escala=0.6}
 
 Fonte: Autor (2025).
 

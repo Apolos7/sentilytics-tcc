@@ -5,26 +5,23 @@ paginate: true
 math: katex
 ---
 
-<!-- _class: lead -->
+# **Sentilytics**
+## Análise Automatizada de Sentimentos em Redes Sociais
 
-## Limarka Template TCC
-
-**AUTOR: Nome do autor**
-**ORIENTADOR**: Nome do orientador
-
-<!-- _footer: '01 de setembro de 2024' -->
+Autor: José Alessandro Santos Santana
+**Bacharelado em Sistemas de Informação**
+Orientador: Prof. Dr. Gilson Pereira dos Santos Júnior
 
 ---
 
 <!-- _header: Sumário -->
 
-- Contextualização do tema
-- Problema de pesquisa
-- Objetivo geral
-- Objetivos específicos
-- Justificativa
-- Referencial teórico
-- Metodologia da pesquisa
+- Introdução
+- Problema e Motivação
+- Objetivos
+- Metodologia
+- Solução proposta
+- Recursos e Funcionalidades
 - Resultados da pesquisa
 - Conclusão
 - Principais referências

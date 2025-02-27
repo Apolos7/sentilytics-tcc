@@ -1,6 +1,6 @@
 ## Análise gráfica e textual do Sentilytics
 
-Nesta seção, são apresentados os principais resultados obtidos com o Sentilytics na análise de sentimentos sobre temas políticos no Bluesky. A ferramenta gerou diferentes representações visuais, incluindo gráficos de distribuição de sentimentos, nuvens de palavras e os posts mais engajados. Além disso, insights gerados por inteligência artificial auxiliaram na interpretação dos dados, fornecendo resumos e tendências detectadas automaticamente. A seguir, cada gráfico é analisado individualmente, seguido de uma discussão geral sobre os padrões observados e suas possíveis implicações.
+Nesta seção, são apresentados os principais resultados obtidos com o Sentilytics na análise de sentimentos sobre temas políticos no Bluesky. A ferramenta gerou diferentes representações visuais, incluindo gráficos de distribuição de sentimentos, nuvens de palavras e os posts mais engajados. Além disso, *insights* gerados por inteligência artificial auxiliaram na interpretação dos dados, fornecendo resumos e tendências detectadas automaticamente. A seguir, cada gráfico é analisado individualmente, seguido de uma discussão geral sobre os padrões observados e suas possíveis implicações.
 
 ![Gráfico de Número de Comentários por Sentimentos](imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.png){#grafico_numero_comentarios_por_sentimento escala=0.3}
 
@@ -56,9 +56,9 @@ Os termos "contra" (894 ocorrências) e "pra" (982 ocorrências) sugerem uma opo
 
 A presença de palavras como "governo" (257 ocorrências), "direita" (230 ocorrências) e "esquerda" (256 ocorrências) sugere que o debate não é apenas técnico ou econômico, mas também politizado, com diferentes ideologias influenciando as percepções públicas sobre o tema.
 
-Por fim, termos como "luta" (243 ocorrências) e "vida" (253 ocorrências) reforçam o caráter emocional do discurso, destacando que essa proposta é vista como algo que impacta diretamente a qualidade de vida e as condições de trabalho da população. Diante desse cenário, a análise gerada por IA (Inteligência Artificial) na aplicação oferece uma interpretação dos dados, ajudando a contextualizar esses padrões e fornecendo insights sobre como o público está reagindo ao debate.
+Por fim, termos como "luta" (243 ocorrências) e "vida" (253 ocorrências) reforçam o caráter emocional do discurso, destacando que essa proposta é vista como algo que impacta diretamente a qualidade de vida e as condições de trabalho da população. Diante desse cenário, a análise gerada por IA (Inteligência Artificial) na aplicação oferece uma interpretação dos dados, ajudando a contextualizar esses padrões e fornecendo *insights* sobre como o público está reagindo ao debate.
 
-![Top posts Engajados](imagens/sentilytics/estudo-caso/top_posts_engajados.png){#top_posts_engajados escala=0.3}
+![Top posts Engajados](imagens/sentilytics/estudo-caso/top_posts_engajados.png){#top_posts_engajados escala=0.2}
 
 Fonte: Autor (2025).
 
