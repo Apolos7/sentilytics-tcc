@@ -315,10 +315,10 @@ Fonte: Autor (2025).
 
 A tela da pesquisa mostrada na figura \ref{tela_dados_pesquisa} é a interface central para o gerenciamento de uma análise de sentimentos dentro do Sentilytics. Essa tela organiza o fluxo do usuário em quatro etapas, representadas por botões dispostos em sequência:
 
-1. Dados da Pesquisa
-2. Coleta de Dados
-3. Pré-processamento
-4. Resultados
+1. Dados da Pesquisa;
+1. Coleta de Dados;
+1. Pré-processamento;
+1. Resultados;
 
 Cada etapa pode ser clicada para alternar os elementos exibidos abaixo, permitindo que o usuário navegue entre as diferentes fases do processo de análise. Para facilitar a visualização do progresso, as etapas são coloridas conforme seu estado atual:
 
@@ -380,10 +380,10 @@ Essa aba apresenta quatro gráficos interativos, que auxiliam na compreensão da
 - Total de Engajamento por Sentimentos – Um gráfico de barras verticais que exibe o total acumulado de interações (likes, reposts, respostas e citações) para cada sentimento.
 - Análise Temporal de Sentimentos – Um gráfico que acompanha a variação dos sentimentos ao longo do tempo, permitindo identificar tendências e padrões emocionais nos dados coletados.
 
-2. Aba de Nuvem de Palavras
+1. Aba de Nuvem de Palavras
 Nesta aba, é exibida uma nuvem de palavras gerada a partir dos textos processados. Essa visualização destaca as palavras mais frequentes nas postagens analisadas, permitindo uma análise rápida dos termos mais relevantes dentro do contexto dos dados.
 
-3. Aba de Top Posts Engajados
+1. Aba de Top Posts Engajados
 Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no número de curtidas, respostas, reposts e citações. Além disso, há um filtro por sentimento, permitindo que o usuário explore os posts de acordo com suas classificações emocionais.
 
 Cada post exibido nesta listagem pode ser visualizado em sua forma original e após o pré-processamento, permitindo que o usuário compreenda como as transformações realizadas impactaram o conteúdo analisado.

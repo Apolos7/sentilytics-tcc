@@ -3,11 +3,11 @@
 Após a coleta, os textos das postagens passaram por uma sequência de tarefas de pré-processamento para garantir maior qualidade na análise. O pipeline de processamento incluiu as seguintes etapas:
 
 1. Lowercase: Transformação de todo o texto para minúsculas, garantindo uniformidade;
-2. Remove URLs: Remove URLs do texto;
-3. Enelvo Normaliser: Normalização do texto para corrigir erros ortográficos e abreviações comuns;
-4. Word Tokenizer: Segmentação do texto em palavras individuais (tokens);
-5. Stopwords Remover: Remoção de palavras irrelevantes que não contribuem para a análise do sentimento;
-6. Join Tokens: Os tokens são unidos novamente formando uma frase novamente com os tokens separados por um espaço em branco.
+1. Remove URLs: Remove URLs do texto;
+1. Enelvo Normaliser: Normalização do texto para corrigir erros ortográficos e abreviações comuns;
+1. Word Tokenizer: Segmentação do texto em palavras individuais (tokens);
+1. Stopwords Remover: Remoção de palavras irrelevantes que não contribuem para a análise do sentimento;
+1. Join Tokens: Os tokens são unidos novamente formando uma frase novamente com os tokens separados por um espaço em branco.
 
 ### Análise de Sentimentos
 

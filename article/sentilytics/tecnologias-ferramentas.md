@@ -88,8 +88,8 @@ No desenvolvimento do Sentilytics, o Git foi utilizado para versionamento e cont
 Além do controle de versão, o GitHub Actions foi empregado para automatizar a geração e armazenamento de imagens Docker dos serviços do sistema. Esse processo nas seguintes etapas:
 
 1. Monitoramento de alterações – Sempre que novas mudanças são enviadas para o repositório em uma branch especifica, um workflow do GitHub Actions é acionado automaticamente.
-2. Geração da imagem Docker – O código atualizado é processado para criar uma nova versão da imagem do serviço correspondente.
-3. Armazenamento no GitHub Container Registry – Após a construção da imagem, ela é enviada e armazenada no GitHub Container Registry, garantindo que os serviços estivessem sempre prontos para implantação.
+1. Geração da imagem Docker – O código atualizado é processado para criar uma nova versão da imagem do serviço correspondente.
+1. Armazenamento no GitHub Container Registry – Após a construção da imagem, ela é enviada e armazenada no GitHub Container Registry, garantindo que os serviços estivessem sempre prontos para implantação.
 
 O uso do Git, GitHub e GitHub Actions possibilitou um fluxo contínuo de integração (CI), facilitando a manutenção e a implantação do Sentilytics.
 
@@ -98,9 +98,9 @@ O uso do Git, GitHub e GitHub Actions possibilitou um fluxo contínuo de integra
 
 ### Docker e Docker Compose
 
-O Docker é uma plataforma que permite a criação, distribuição e execução de containers, que são ambientes isolados que contêm todas as dependências necessárias para a execução de uma aplicação. Ao invés de instalar diretamente os serviços no sistema operacional, o Docker encapsula tudo em imagens, garantindo portabilidade, consistência e facilidade na implantação dos sistemas em diferentes ambientes.
+O Docker[^docker] é uma plataforma que permite a criação, distribuição e execução de containers, que são ambientes isolados que contêm todas as dependências necessárias para a execução de uma aplicação. Ao invés de instalar diretamente os serviços no sistema operacional, o Docker encapsula tudo em imagens, garantindo portabilidade, consistência e facilidade na implantação dos sistemas em diferentes ambientes.
 
-O Docker Compose é uma ferramenta complementar ao Docker que permite a orquestração de múltiplos containers de maneira simplificada. Ele utiliza um arquivo de configuração no formato YAML para definir quais serviços devem ser executados, suas interações e configurações específicas, permitindo a inicialização conjunta de diferentes componentes de um sistema.
+O Docker Compose[^dockercompose] é uma ferramenta complementar ao Docker que permite a orquestração de múltiplos containers de maneira simplificada. Ele utiliza um arquivo de configuração no formato YAML para definir quais serviços devem ser executados, suas interações e configurações específicas, permitindo a inicialização conjunta de diferentes componentes de um sistema.
 
 No desenvolvimento do Sentilytics, o Docker foi utilizado para criar imagens Docker de todos os componentes do sistema, garantindo que cada serviço fosse executado de forma isolada e sem dependências externas diretas. Com isso, cada parte do sistema pôde ser facilmente distribuída e implantada, independentemente do ambiente em que fosse executada.
 
