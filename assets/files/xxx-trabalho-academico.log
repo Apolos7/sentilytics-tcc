@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.9.18)  29 JAN 2025 13:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.9.18)  28 FEB 2025 03:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,9 +610,7 @@ Package: xparse 2020-02-14 L3 Experimental document command parser
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
-)) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2020/01/14 v1.40 Bibliographical back referencing
-) (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2cite.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2cite.sty
 Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
 (/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip262
@@ -631,16 +629,52 @@ LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks27
 )
-Package color Info: Redefining color blue on input line 131.
+
+! LaTeX Error: Command \backrefpagesname undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 \renewcommand{\backrefpagesname}
+                                     {Citado na(s) página(s):~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \backref undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 \renewcommand{\backref}
+                            {}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \backrefalt undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \renewcommand*{\backrefalt}
+                                [4]{
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Package color Info: Redefining color blue on input line 132.
 (/usr/share/texlive/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 148.
+(hyperref)                removing `\newline' on input line 149.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 148.
+Package hyperref Info: Option `colorlinks' set `false' on input line 149.
 \c@quadro=\count332
 \c@loqdepth=\count333
 \cftbeforequadroskip=\skip265
@@ -709,37 +743,36 @@ Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
 Package: boldline 2008/02/04 v0.2 Adjust line width in tables
 ) (./latexcustomizacao.sty
 Package: latexcustomizacao 2017 Criacao desta customizacao do abnTeX2
-Package: latexcustomizacao 2017 Criacao desta customizacao do abnTeX2
 ) (./xxx-trabalho-academico.aux)
 \openout1 = `xxx-trabalho-academico.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 242.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 243.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-42.
+43.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 242.
-LaTeX Font Info:    ... okay on input line 242.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 243.
+LaTeX Font Info:    ... okay on input line 243.
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring OFF on input line 242.
+Package hyperref Info: Link coloring OFF on input line 243.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -751,16 +784,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 242.
-LaTeX Info: Redefining \ref on input line 242.
-LaTeX Info: Redefining \pageref on input line 242.
-LaTeX Info: Redefining \nameref on input line 242.
+LaTeX Info: Redefining \nameref on input line 243.
+LaTeX Info: Redefining \ref on input line 243.
+LaTeX Info: Redefining \pageref on input line 243.
+LaTeX Info: Redefining \nameref on input line 243.
 \myptabbox=\box60
 \myptabboxwidth=\skip275
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 242.
-LaTeX Info: Redefining \microtypecontext on input line 242.
+(lastpage)             ! on input line 243.
+LaTeX Info: Redefining \microtypecontext on input line 243.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -776,8 +809,8 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 )
-File: imagens/logo.png Graphic file (type bmp)
-<imagens/logo.png>
+File: imagens/logo-ifs.png Graphic file (type bmp)
+<imagens/logo-ifs.png>
 [1
 
 ] (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
@@ -785,142 +818,263 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 273.
+(Font)              <12> on input line 275.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 273.
+(Font)              <8> on input line 275.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 273.
+(Font)              <6> on input line 275.
 [1
 
 
 
-] [2
-
-
-] [3
-
+]
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf, page 1>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf, page 1>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf, page 1>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf, page 1>
+File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
+<use imagens/ficha-catalografica.pdf, page 1>
+[2] [3
 
 ] [4
 
+
 ] [5
 
-] (./xxx-trabalho-academico.lof) [6
+] [6
 
-] [7
+] (./xxx-trabalho-academico.lof) [7
 
-
-] (./xxx-trabalho-academico.toc) [8
+] (./xxx-trabalho-academico.lot) [8
 
 ] [9
 
 
-] [10] [11] [12] [13
+] (./xxx-trabalho-academico.toc [10
 
-] [14] [15] [16
+]) [11]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 572.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 572.
+[12
+
 
 ]
-File: imagens/passaro.jpg Graphic file (type bmp)
-<imagens/passaro.jpg>
-File: imagens/R/historgrama.pdf Graphic file (type pdf)
-<use imagens/R/historgrama.pdf>
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 85
-6.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `pcr' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[17
-
-] [18]
-File: imagens/R/pizza-grafico.pdf Graphic file (type pdf)
-<use imagens/R/pizza-grafico.pdf>
-File: imagens/R/dois-graficos.pdf Graphic file (type pdf)
-<use imagens/R/dois-graficos.pdf>
-
-Overfull \hbox (4.24286pt too wide) in paragraph at lines 901--902
-[]\T1/ptm/m/n/12 Duração|  
- []
-
-
-Overfull \hbox (4.24286pt too wide) in paragraph at lines 911--912
-[]\T1/ptm/m/n/12 Duração|  
- []
-
-
-Overfull \hbox (2.82721pt too wide) in paragraph at lines 916--917
-[]\T1/ptm/m/n/12 Enfermagem|  
- []
-
-
-Overfull \hbox (5.71922pt too wide) in paragraph at lines 930--931
-[]\T1/ptm/m/n/12 Agropecuária|  
- []
-
-[19]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-85.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 6
+05.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [20]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.994 \begin{array}{c|c}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.998 \end{array}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[21] [22
-
-] (./xxx-trabalho-academico.bbl (./xxx-trabalho-academico.brf)
-\tf@brf=\write5
-\openout5 = `xxx-trabalho-academico.brf'.
-
-[23]
-bibitemlist
-) 
-AED: lastpage setting LastPage
-[24
+) [13] [14] [15
 
 ]
-\tf@lof=\write6
-\openout6 = `xxx-trabalho-academico.lof'.
+Missing character: There is no ​ in font ptmr8t!
+[16] [17] [18]
+File: imagens/processo_analise_sentimentos.png Graphic file (type bmp)
+<imagens/processo_analise_sentimentos.png>
+[19] [20]
+
+Package hyperref Warning: Suppressing empty link on input line 1049.
+
+[21]
+File: imagens/google_colab.png Graphic file (type bmp)
+<imagens/google_colab.png>
+[22] [23] [24
+
+]
+Overfull \hbox (24.67207pt too wide) in paragraph at lines 1214--1219
+\T1/ptm/m/n/12 bitMQ, in-di-cando que deve bus-car na base de da-dos os tex-tos
+ bru-tos e as ta-re-fas de pré-processamento
+ []
+
+[25] [26] [27] [28] [29] [30] [31]
+File: imagens/sentilytics/diagramas/tecnologias-ferramentas.png Graphic file (t
+ype bmp)
+<imagens/sentilytics/diagramas/tecnologias-ferramentas.png>
+[32] [33]
+Overfull \hbox (8.0409pt too wide) in paragraph at lines 1695--1696
+[]\T1/ptm/m/n/12 Código|  
+ []
+
+
+Overfull \hbox (8.0409pt too wide) in paragraph at lines 1703--1704
+[]\T1/ptm/m/n/12 Código|  
+ []
+
+[34]
+File: imagens/sentilytics/diagramas/usecase.png Graphic file (type bmp)
+<imagens/sentilytics/diagramas/usecase.png>
+[35]
+File: imagens/sentilytics/pesquisa_sentimentos.png Graphic file (type bmp)
+<imagens/sentilytics/pesquisa_sentimentos.png>
+
+Overfull \hbox (41.92944pt too wide) in paragraph at lines 1830--1830
+ [] 
+ []
+
+[36]
+File: imagens/sentilytics/diagramas/DER-sentilytics.png Graphic file (type bmp)
+
+<imagens/sentilytics/diagramas/DER-sentilytics.png>
+File: imagens/sentilytics/diagramas/dicionario_dados.png Graphic file (type bmp
+)
+<imagens/sentilytics/diagramas/dicionario_dados.png>
+[37] [38]
+File: imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.pn
+g Graphic file (type bmp)
+<imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png>
+
+Overfull \hbox (20.36757pt too wide) in paragraph at lines 1965--1965
+ [] 
+ []
+
+[39]
+File: imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.pn
+g Graphic file (type bmp)
+<imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png>
+[40]
+File: imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentime
+ntos.png Graphic file (type bmp)
+<imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.
+png>
+[41] [42]
+File: imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes
+.png Graphic file (type bmp)
+<imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png>
+
+[43]
+File: imagens/sentilytics/diagramas/classes/model-classes.png Graphic file (typ
+e bmp)
+<imagens/sentilytics/diagramas/classes/model-classes.png>
+[44]
+File: imagens/sentilytics/diagramas/classes/repository-classes.png Graphic file
+ (type bmp)
+<imagens/sentilytics/diagramas/classes/repository-classes.png>
+[45]
+Overfull \hbox (1.14005pt too wide) in paragraph at lines 2291--2296
+[]\T1/ptm/m/n/12 WorkflowProcessamentoRepository: Res-pon-sá-vel pelo ar-ma-ze-
+na-mento e re-cu-pe-ra-ção dos
+ []
+
+[46]
+File: imagens/sentilytics/diagramas/classes/service-classes.png Graphic file (t
+ype bmp)
+<imagens/sentilytics/diagramas/classes/service-classes.png>
+[47]
+File: imagens/sentilytics/diagramas/classes/controller-classes.png Graphic file
+ (type bmp)
+<imagens/sentilytics/diagramas/classes/controller-classes.png>
+
+Overfull \hbox (7.51979pt too wide) in paragraph at lines 2405--2405
+ [] 
+ []
+
+[48]
+Overfull \hbox (5.67636pt too wide) in paragraph at lines 2430--2436
+[]\T1/ptm/m/n/12 WorkflowProcessamentoController: Con-trola a exe-cu-ção dos wo
+rk-flows de pro-ces-sa-mento,
+ []
+
+[49]
+File: imagens/sentilytics/diagramas/diagrama_componentes.png Graphic file (type
+ bmp)
+<imagens/sentilytics/diagramas/diagrama_componentes.png>
+[50]
+File: imagens/sentilytics/interface-grafica/tela-login.png Graphic file (type b
+mp)
+<imagens/sentilytics/interface-grafica/tela-login.png>
+[51]
+File: imagens/sentilytics/interface-grafica/listagem-pesquisas.png Graphic file
+ (type bmp)
+<imagens/sentilytics/interface-grafica/listagem-pesquisas.png>
+File: imagens/sentilytics/interface-grafica/dados-pesquisa.png Graphic file (ty
+pe bmp)
+<imagens/sentilytics/interface-grafica/dados-pesquisa.png>
+[52]
+File: imagens/sentilytics/interface-grafica/coleta-dados.png Graphic file (type
+ bmp)
+<imagens/sentilytics/interface-grafica/coleta-dados.png>
+[53]
+File: imagens/sentilytics/interface-grafica/processamento.png Graphic file (typ
+e bmp)
+<imagens/sentilytics/interface-grafica/processamento.png>
+[54]
+File: imagens/sentilytics/interface-grafica/resultado-graficos.png Graphic file
+ (type bmp)
+<imagens/sentilytics/interface-grafica/resultado-graficos.png>
+[55] [56]
+File: imagens/sentilytics/qr_code.png Graphic file (type bmp)
+<imagens/sentilytics/qr_code.png>
+[57] [58
+
+] [59]
+Missing character: There is no 𝛼 in font ptmr8t!
+File: imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.pn
+g Graphic file (type bmp)
+<imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.png>
+[60]
+Overfull \hbox (0.11267pt too wide) in paragraph at lines 3022--3028
+[]\T1/ptm/m/n/12 Esse re-sul-tado su-gere que, ape-sar da pre-do-mi-nân-cia de 
+co-men-tá-rios neu-tros, ainda existe
+ []
+
+File: imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png Grap
+hic file (type bmp)
+<imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png>
+[61]
+File: imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png Grap
+hic file (type bmp)
+<imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png>
+File: imagens/sentilytics/estudo-caso/analise_temporal_sentimentos.png Graphic 
+file (type bmp)
+<imagens/sentilytics/estudo-caso/analise_temporal_sentimentos.png>
+[62]
+File: imagens/sentilytics/estudo-caso/bag_of_words.png Graphic file (type bmp)
+<imagens/sentilytics/estudo-caso/bag_of_words.png>
+[63] [64]
+File: imagens/sentilytics/estudo-caso/top_posts_engajados.png Graphic file (typ
+e bmp)
+<imagens/sentilytics/estudo-caso/top_posts_engajados.png>
+[65] [66] [67
+
+] (./xxx-trabalho-academico.bbl [68]
+bibitemlist
+[69
+
+]) 
+AED: lastpage setting LastPage
+[70]
+\tf@lof=\write5
+\openout5 = `xxx-trabalho-academico.lof'.
+
+\tf@lot=\write6
+\openout6 = `xxx-trabalho-academico.lot'.
 
 \tf@toc=\write7
 \openout7 = `xxx-trabalho-academico.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1177.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1177.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3373.
 (./xxx-trabalho-academico.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1177.
-
-Package rerunfilecheck Info: File `xxx-trabalho-academico.brf' has not changed.
-
-(rerunfilecheck)             Checksum: 5E98CEE72D5DDD73D17705838E13197A;1037.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1177.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3373.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3373.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3373.
  ) 
 Here is how much of TeX's memory you used:
- 17478 strings out of 481788
- 267870 string characters out of 5937331
- 729035 words of memory out of 5000000
- 34195 multiletter control sequences out of 15000+600000
- 554522 words of font info for 50 fonts, out of 8000000 for 9000
+ 17541 strings out of 481788
+ 276240 string characters out of 5937331
+ 731035 words of memory out of 5000000
+ 34236 multiletter control sequences out of 15000+600000
+ 557420 words of font info for 51 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 42i,12n,45p,279b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,45p,568b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on xxx-trabalho-academico.xdv (25 pages, 82456 bytes).
+Output written on xxx-trabalho-academico.xdv (71 pages, 262996 bytes).

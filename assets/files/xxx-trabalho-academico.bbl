@@ -5,37 +5,103 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[Alexandre 2016]{limarka}
-\abntrefinfo{Alexandre}{ALEXANDRE}{2016}
-{ALEXANDRE, E. de S.~M. \emph{Limarka}. 2016. Página do projeto.
-Dispon{\'\i}vel em: \url{https://github.com/abntex/limarka}. Acesso em: 5 de
-  set 2016.}
+\bibitem[Bertaglia e Nunes 2016]{bertaglia2016exploring}
+\abntrefinfo{Bertaglia e Nunes}{BERTAGLIA; NUNES}{2016}
+{BERTAGLIA, T. F.~C.; NUNES, M. d. G.~V. Exploring word embeddings for
+  unsupervised textual user-generated content normalization. In:
+  \emph{Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT)}.
+  [S.l.: s.n.], 2016. p. 112--120.}
 
-\bibitem[Araujo 2015]{abntex2cite}
-\abntrefinfo{Araujo}{ARAUJO}{2015}
-{ARAUJO, L.~C. \emph{O pacote abntex2cite}: Estilos bibliogr{\'a}ficos
-  compat{\'\i}veis com a abnt nbr 6023.
-[S.l.], 2015. Dispon{\'\i}vel em: \url{http://www.abntex.net.br/}.}
+\bibitem[Bilo 2023]{bilo2023ferramenta}
+\abntrefinfo{Bilo}{BILO}{2023}
+{BILO, H.~A. Ferramenta para an{\'a}lise de sentimentos em postagens no moodle.
+2023.}
 
-\bibitem[Beltrano 2024]{beltrano}
-\abntrefinfo{Beltrano}{BELTRANO}{2024}
-{BELTRANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
-Dispon{\'\i}vel em:
-  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
-  Acesso em: 10 de set 2024.}
+\bibitem[Carvalho 2020]{de2020democracia}
+\abntrefinfo{Carvalho}{CARVALHO}{2020}
+{CARVALHO, L. B.~d. D. A democracia frustrada: fake news, pol{\'\i}tica e
+  liberdade de express{\~a}o nas redes sociais.
+\emph{Internet e Sociedade,[S. l.]}, v.~1, n.~1, p. 172--199, 2020.}
 
-\bibitem[Fulano 2024]{fulano}
-\abntrefinfo{Fulano}{FULANO}{2024}
-{FULANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
-Dispon{\'\i}vel em:
-  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
-  Acesso em: 10 de set 2024.}
+\bibitem[Gamallo e Garcia 2017]{gamallo2017linguakit}
+\abntrefinfo{Gamallo e Garcia}{GAMALLO; GARCIA}{2017}
+{GAMALLO, P.; GARCIA, M. Linguakit: uma ferramenta multilingue para a
+  an{\'a}lise lingu{\'\i}stica e a extra{\c{c}}{\~a}o de informa{\c{c}}{\~a}o.
+\emph{Linguam{\'a}tica}, v.~9, n.~1, p. 19--28, 2017.}
 
-\bibitem[Sicrano 2024]{sicrano}
-\abntrefinfo{Sicrano}{SICRANO}{2024}
-{SICRANO, E. \emph{Exemplo de referência}. 2024. Página do projeto.
-Dispon{\'\i}vel em:
-  \url{https://reinanhs.github.io/limarka-template-docs/guia-elementos/bibliografias-e-referencias}.
-  Acesso em: 10 de set 2024.}
+\bibitem[Jesus e Ferreira 2020]{deaplicando}
+\abntrefinfo{Jesus e Ferreira}{JESUS; FERREIRA}{2020}
+{JESUS, E.~L. de; FERREIRA, D. C.~M. Aplicando pln para an{\'a}lise de
+  sentimentos do twitter.
+2020.}
+
+\bibitem[Lima et al. 2021]{lima2021redes}
+\abntrefinfo{Lima et al.}{LIMA et al.}{2021}
+{LIMA, P. R.~S. et al. Redes sociais como ferramentas de transpar{\^e}ncia em
+  tempos de covid-19: uma an{\'a}lise das publica{\c{c}}{\~o}es dos boletins
+  epidemiol{\'o}gicos do estado de alagoas.
+\emph{Logeion: Filosofia da Informa{\c{c}}{\~a}o}, v.~7, n.~2, p. 88--107,
+  2021.}
+
+\bibitem[Lopes 2024]{lopes2024otimizaccao}
+\abntrefinfo{Lopes}{LOPES}{2024}
+{LOPES, A.~C. Otimiza{\c{c}}{\~a}o de aplica{\c{c}}{\~o}es de processamento de
+  linguagem natural para an{\'a}lise de sentimentos.
+Universidade Estadual Paulista (Unesp), 2024.}
+
+\bibitem[Malheiros 2014]{malheiros2014emotte}
+\abntrefinfo{Malheiros}{MALHEIROS}{2014}
+{MALHEIROS, Y. Emotte: Uma ferramenta de an{\'a}lise de sentimentos para o
+  twitter. In:  SBC. \emph{Anais Estendidos do XX Simp{\'o}sio Brasileiro de
+  Sistemas Multim{\'\i}dia e Web}. [S.l.], 2014. p. 62--65.}
+
+\bibitem[Malheiros e Lima 2013]{malheiros2013ferramenta}
+\abntrefinfo{Malheiros e Lima}{MALHEIROS; LIMA}{2013}
+{MALHEIROS, Y.; LIMA, G. Uma ferramenta para an{\'a}lise de sentimentos em
+  redes sociais utilizando o senticnet. In:  SBC. \emph{Simp{\'o}sio Brasileiro
+  de Sistemas de Informa{\c{c}}{\~a}o (SBSI)}. [S.l.], 2013. p. 517--522.}
+
+\bibitem[Miguel e Barbosa]{dosferramenta}
+\abntrefinfo{Miguel e Barbosa}{MIGUEL; BARBOSA}{}
+{MIGUEL, R. dos S.; BARBOSA, Y. d. A.~M. Uma ferramenta para an{\'a}lise de
+  sentimentos de tweets em portugu{\^e}s.}
+
+\bibitem[Moreira et al. 2024]{moreira2024analise}
+\abntrefinfo{Moreira et al.}{MOREIRA et al.}{2024}
+{MOREIRA, B.~G. et al. An{\'a}lise de sentimentos e emo{\c{c}}{\~o}es com o uso
+  da ferramenta orange datamining: uma avalia{\c{c}}{\~a}o a partir da
+  tradu{\c{c}}{\~a}o dos textos do portugu{\^e}s.
+\emph{Anais do Computer on the Beach}, v.~15, p. 352--354, 2024.}
+
+\bibitem[Pompei, Gouveia e RAMOS 2021]{pompei2021redes}
+\abntrefinfo{Pompei, Gouveia e RAMOS}{POMPEI; GOUVEIA; RAMOS}{2021}
+{POMPEI, T.; GOUVEIA, L. M.~B.; RAMOS, P. F. M. d.~S. Redes sociais:
+  influ{\^e}ncia, identidade e diferen{\c{c}}a na contemporaneidade.
+\emph{Revista em Sociedade, Belo Horizonte}, v.~3, n.~2, p. 93--111, 2021.}
+
+\bibitem[Santana e Freitas 2023]{santana2023capitulo}
+\abntrefinfo{Santana e Freitas}{SANTANA; FREITAS}{2023}
+{SANTANA, B.~S.; FREITAS, L.~A. de. Cap{\'\i}tulo 23 pln em redes sociais.
+2023.}
+
+\bibitem[Silva 2010]{da2010bestchoice}
+\abntrefinfo{Silva}{SILVA}{2010}
+{SILVA, N. G.~R. da.
+\emph{Bestchoice}: Classifica{\c{c}}{\~a}o de sentimento em ferramentas de
+  express{\~a}o de opini{\~a}o.
+Tese (Doutorado) --- Tese de gradua{\c{c}}{\~a}o, Universidade Federal de
+  Pernambuco, Recife, 2010. 7, 17, 2010.}
+
+\bibitem[Siqueira et al. 2024]{siqueira2024impacto}
+\abntrefinfo{Siqueira et al.}{SIQUEIRA et al.}{2024}
+{SIQUEIRA, L.~F. et al. O impacto das m{\'i}dias sociais na sa{\'u}de mental de
+  adolescentes e jovens adultos.
+\emph{Brazilian Journal of Implantology and Health Sciences}, v.~6, n.~10, p.
+  1384--1390, 2024.}
+
+\bibitem[Vaillant 2022]{vaillant2022ferramenta}
+\abntrefinfo{Vaillant}{VAILLANT}{2022}
+{VAILLANT, E.~B. Ferramenta de an{\'a}lise de sentimentos de tweets.
+Cachoeiro de Itapemirim, 2022.}
 
 \end{thebibliography}

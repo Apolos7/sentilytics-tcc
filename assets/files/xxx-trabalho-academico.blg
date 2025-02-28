@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: xxx-trabalho-academico.aux
-The style file: abntex2-alf.bst
+The style file: abntex2-alf.bst.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -22,44 +22,44 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 6 entries,
+You've used 17 entries,
             6714 wiz_defined-function locations,
-            1221 strings with 9843 characters,
-and the built_in function-call counts, 10317 in all, are:
-= -- 1445
-> -- 75
-< -- 336
-+ -- 407
-- -- 25
-* -- 566
-:= -- 1303
-add.period$ -- 28
-call.type$ -- 6
-change.case$ -- 38
-chr.to.int$ -- 6
-cite$ -- 5
-duplicate$ -- 1146
-empty$ -- 325
-format.name$ -- 115
-if$ -- 1957
+            1286 strings with 12909 characters,
+and the built_in function-call counts, 13294 in all, are:
+= -- 1067
+> -- 462
+< -- 26
++ -- 216
+- -- 141
+* -- 952
+:= -- 1840
+add.period$ -- 55
+call.type$ -- 17
+change.case$ -- 176
+chr.to.int$ -- 35
+cite$ -- 16
+duplicate$ -- 624
+empty$ -- 962
+format.name$ -- 673
+if$ -- 3103
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 92
-newline$ -- 33
-num.names$ -- 25
-pop$ -- 118
+missing$ -- 286
+newline$ -- 85
+num.names$ -- 80
+pop$ -- 395
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 65
 quote$ -- 0
-skip$ -- 1238
+skip$ -- 736
 stack$ -- 1
-substring$ -- 482
-swap$ -- 397
-text.length$ -- 5
+substring$ -- 586
+swap$ -- 294
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 3
 warning$ -- 0
-while$ -- 37
+while$ -- 124
 width$ -- 0
-write$ -- 87
+write$ -- 253

@@ -13,7 +13,12 @@ Latexmk: Run number 1 of rule 'bibtex xxx-trabalho-academico'
 Latexmk: Run number 2 of rule 'xelatex'
 Latexmk: Run number 2 of rule 'bibtex xxx-trabalho-academico'
 Latexmk: Run number 3 of rule 'xelatex'
+Latexmk: Run number 3 of rule 'bibtex xxx-trabalho-academico'
+Latexmk: Run number 4 of rule 'xelatex'
 Latexmk: Run number 1 of rule 'xdvipdfmx'
+Latexmk: Summary of warnings from last run of (pdf)latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
 Collected error summary (may duplicate other messages):
   xelatex: Command for 'xelatex' gave return code 1
       Refer to 'xxx-trabalho-academico.log' for details

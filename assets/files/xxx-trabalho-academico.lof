@@ -1,6 +1,31 @@
 \babel@toc {brazil}{}
 \babel@toc {brazil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Pássaro com as cores da bandeira do Brasil}}{18}{figure.4.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de histograma}}{18}{figure.4.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de geração de gráfico R}}{19}{figure.4.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemplo de geração dois gráficos R, lado a lado}}{19}{figure.4.4}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Processo realizado para análise de sentimentos}}{19}{figure.2.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Goggle Colab com algoritmo python para criação de um dataframe}}{22}{figure.2.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Diagrama das Tecnologias e ferramentas utilizadas}}{32}{figure.3.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Casos de Uso do Sentilytics}}{35}{figure.3.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Modelagem BPMN do Processo de Pesquisa no Sentilytics}}{36}{figure.3.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Diagrama Entidade Relacionamento}}{38}{figure.3.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Dicionário de Dados}}{39}{figure.3.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de sequência do cadastro da pesquisa e coleta de dados}}{40}{figure.3.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de sequência do cadastro e configuração do workflow}}{41}{figure.3.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de sequência do pré-processamento e análise}}{41}{figure.3.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de classes com visão geral dos pacotes}}{43}{figure.3.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de classes da camada Model}}{45}{figure.3.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de classes da camada Repository}}{46}{figure.3.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes do pacote Services}}{48}{figure.3.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de classes do pacote controllers}}{49}{figure.3.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Componentes da Solução}}{50}{figure.3.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Tela de Login do Sentilytics}}{51}{figure.3.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela de Listagem de Pesquisas}}{52}{figure.3.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Tela de Exibição da Pesquisa}}{53}{figure.3.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Etapa de Coleta de Dados}}{54}{figure.3.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Etapa de Processamento}}{55}{figure.3.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Etapa de Resultados}}{56}{figure.3.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces QRCode com link para o vídeo}}{57}{figure.3.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Gráfico de Número de Comentários por Sentimentos}}{61}{figure.4.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Gráfico da Média de Engajamento por Sentimentos}}{62}{figure.4.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Gráfico da Total de Engajamento por Sentimentos}}{63}{figure.4.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Gráfico da Análise Temporal de Sentimentos}}{63}{figure.4.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Nuvem de Palavras}}{64}{figure.4.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Top posts Engajados}}{65}{figure.4.29}%
