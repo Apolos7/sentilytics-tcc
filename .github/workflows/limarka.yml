@@ -3,6 +3,12 @@ name: Limarka Workflow
 on:
   push:
     branches: ["master"]
+  workflow_dispatch:
+    inputs:
+      enable_deploy:
+        description: "Habilitar a implantação? (true/false)"
+        required: true
+        default: "false"
 
 jobs:
   markdown-lint:
@@ -26,7 +32,7 @@ jobs:
       image: docker://reinanhs/limarka-help:1.0.0
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Run Commands
         run: |
@@ -37,7 +43,7 @@ jobs:
           mv build/* ./dist/
           ls ./dist
       - name: Archive limarka artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-limarka
           path: dist
@@ -49,7 +55,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Ensure build dir exists
         run: mkdir -p dist-slide
@@ -82,45 +88,83 @@ jobs:
           LANG: "pt_BR.UTF-8"
 
       - name: Archive marp artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dist-marp
           path: dist-slide
           retention-days: 1
 
-  build-page:
+  optimization-files:
     needs: [build-limarka, build-marp]
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       - name: Download a single artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-limarka
 
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-marp
+
       - name: Instalação do ghostscript
         run: |
-            sudo apt-get update
-            sudo apt-get install -y ghostscript
+          sudo apt-get update
+          sudo apt-get install -y ghostscript
 
-      - name: Debug
-        run: ls -al
-
-      - name: Otimização do arquivo em PDF
+      - name: Otimização do arquivo do Limarka
         run: ps2pdf -dPDFSETTINGS=/printer xxx-trabalho-academico.pdf xxx-trabalho-academico-printer.pdf
+
+      - name: Otimização do arquivo do Marp
+        run: ps2pdf -dPDFSETTINGS=/printer xxx-slide.pdf xxx-slide-printer.pdf
+
+      - name: Arquivos para publicação
+        uses: actions/upload-artifact@v4
+        with:
+          name: optimization-files
+          path: |
+            xxx-trabalho-academico-printer.pdf
+            xxx-slide-printer.pdf
+            xxx-slide.pptx
+          retention-days: 90
+          compression-level: 8
+
+  build-page:
+    if: ${{ github.event.inputs.enable_deploy == 'true' }}
+    needs: [build-limarka, build-marp, optimization-files]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-limarka
+
+      - name: Download slide artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-marp
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: optimization-files
 
       - name: Otimização do arquivo em PDF
         run: |
           echo "Comparação inicial" && ls -al | grep .pdf
           rm xxx-trabalho-academico.pdf
+          rm xxx-slide.pdf
           mv xxx-trabalho-academico-printer.pdf xxx-trabalho-academico.pdf
+          mv xxx-slide-printer.pdf xxx-slide.pdf
           echo "Comparação final" && ls -al | grep .pdf
 
-      - name: Download slide artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist-marp
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
@@ -142,30 +186,37 @@ jobs:
             mkdir -p data/build
             cp build_local/* data/build -r
       - name: Alteração do nome dos botões
+        env:
+          GITHUB_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPO: ${{ github.event.repository.name }}
         run: |
           ls -al build
           sudo sed -i '0,/Visualizar PDF/s//Visualizar Slide/' build/index.html
           sudo sed -i '0,/Visualizar PDF/s//Visualizar Artigo/' build/index.html
-          sudo sed -i "s|location.href = 'https://reinanhs.github.io/limarka-template-tcc/assets/files/xxx-slide.pdf'|location.href = 'https://reinanhs.github.io/limarka-template-tcc/slide'|" build/index.html
+          sudo sed -i "s|location.href = 'https://${GITHUB_OWNER}.github.io/${GITHUB_REPO}/assets/files/xxx-slide.pdf'|location.href = 'https://${GITHUB_OWNER}.github.io/${GITHUB_REPO}/slide'|" build/index.html
       - name: Archive limarka artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build-page
           path: build
           retention-days: 1
+
   deploy:
+    if: ${{ github.event.inputs.enable_deploy == 'true' }}
     needs: build-page
-    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Download build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build-page
           path: build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
+          folder: build
