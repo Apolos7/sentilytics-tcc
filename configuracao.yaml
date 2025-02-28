@@ -14,12 +14,12 @@ area_de_concentracao: Computação
 linha_de_pesquisa: ''
 coorientador: ''
 orientador: 'Prof. Dr. Gilson Pereira dos Santos Júnior'
-aprovacao_dia: ''
-avaliador1: ''
-avaliador2: ''
+aprovacao_dia: '12/03/2025'
+avaliador1: 'Prof. Me. George Leite Junior'
+avaliador2: 'Prof. Me. Gustavo da Silva Quirino'
 avaliador3: ''
-incluir_ficha_catalografica: false
-folha_de_aprovacao: false
+incluir_ficha_catalografica: true
+folha_de_aprovacao: true
 #===============================================#
 # Configurações de textos
 #===============================================#
@@ -93,7 +93,7 @@ page_render:
   social_networks:
     facebook: ''
     instagram: ''
-    twitter: Axltlemade
+    twitter: ''
     github: Apolos7
   pages_render:
     - resumo.md
