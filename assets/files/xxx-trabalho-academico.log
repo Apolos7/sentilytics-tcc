@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.9.18)  28 FEB 2025 03:01
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2022.9.18)  3 MAR 2025 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -853,7 +853,7 @@ File: imagens/ficha-catalografica.pdf Graphic file (type pdf)
 
 ] (./xxx-trabalho-academico.lof) [7
 
-] (./xxx-trabalho-academico.lot) [8
+] (./xxx-trabalho-academico.loq) [8
 
 ] [9
 
@@ -880,148 +880,139 @@ Missing character: There is no ​ in font ptmr8t!
 [16] [17] [18]
 File: imagens/processo_analise_sentimentos.png Graphic file (type bmp)
 <imagens/processo_analise_sentimentos.png>
-[19] [20]
-
-Package hyperref Warning: Suppressing empty link on input line 1049.
-
-[21]
+[19] [20] [21]
 File: imagens/google_colab.png Graphic file (type bmp)
 <imagens/google_colab.png>
-[22] [23] [24
+[22] [23] [24] [25
 
 ]
-Overfull \hbox (24.67207pt too wide) in paragraph at lines 1214--1219
+Overfull \hbox (24.67207pt too wide) in paragraph at lines 1234--1239
 \T1/ptm/m/n/12 bitMQ, in-di-cando que deve bus-car na base de da-dos os tex-tos
  bru-tos e as ta-re-fas de pré-processamento
  []
 
-[25] [26] [27] [28] [29] [30] [31]
+[26] [27] [28] [29] [30] [31] [32]
 File: imagens/sentilytics/diagramas/tecnologias-ferramentas.png Graphic file (t
 ype bmp)
 <imagens/sentilytics/diagramas/tecnologias-ferramentas.png>
-[32] [33]
-Overfull \hbox (8.0409pt too wide) in paragraph at lines 1695--1696
-[]\T1/ptm/m/n/12 Código|  
+[33] [34]
+Overfull \hbox (3.48645pt too wide) in paragraph at lines 1716--1717
+ []\T1/ptm/m/n/12 Código| 
  []
 
-
-Overfull \hbox (8.0409pt too wide) in paragraph at lines 1703--1704
-[]\T1/ptm/m/n/12 Código|  
- []
-
-[34]
+[35]
 File: imagens/sentilytics/diagramas/usecase.png Graphic file (type bmp)
 <imagens/sentilytics/diagramas/usecase.png>
-[35]
+[36]
 File: imagens/sentilytics/pesquisa_sentimentos.png Graphic file (type bmp)
 <imagens/sentilytics/pesquisa_sentimentos.png>
 
-Overfull \hbox (41.92944pt too wide) in paragraph at lines 1830--1830
+Overfull \hbox (41.92944pt too wide) in paragraph at lines 1844--1844
  [] 
  []
 
-[36]
+[37]
 File: imagens/sentilytics/diagramas/DER-sentilytics.png Graphic file (type bmp)
 
 <imagens/sentilytics/diagramas/DER-sentilytics.png>
 File: imagens/sentilytics/diagramas/dicionario_dados.png Graphic file (type bmp
 )
 <imagens/sentilytics/diagramas/dicionario_dados.png>
-[37] [38]
+[38] [39]
 File: imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.pn
 g Graphic file (type bmp)
 <imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png>
 
-Overfull \hbox (20.36757pt too wide) in paragraph at lines 1965--1965
+Overfull \hbox (20.36757pt too wide) in paragraph at lines 1979--1979
  [] 
  []
 
-[39]
+[40]
 File: imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.pn
 g Graphic file (type bmp)
 <imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png>
-[40]
+[41]
 File: imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentime
 ntos.png Graphic file (type bmp)
 <imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.
 png>
-[41] [42]
+[42] [43]
 File: imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes
 .png Graphic file (type bmp)
 <imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png>
 
-[43]
+[44]
 File: imagens/sentilytics/diagramas/classes/model-classes.png Graphic file (typ
 e bmp)
 <imagens/sentilytics/diagramas/classes/model-classes.png>
-[44]
+[45]
 File: imagens/sentilytics/diagramas/classes/repository-classes.png Graphic file
  (type bmp)
 <imagens/sentilytics/diagramas/classes/repository-classes.png>
-[45]
-Overfull \hbox (1.14005pt too wide) in paragraph at lines 2291--2296
+[46]
+Overfull \hbox (1.14005pt too wide) in paragraph at lines 2305--2310
 []\T1/ptm/m/n/12 WorkflowProcessamentoRepository: Res-pon-sá-vel pelo ar-ma-ze-
 na-mento e re-cu-pe-ra-ção dos
  []
 
-[46]
+[47]
 File: imagens/sentilytics/diagramas/classes/service-classes.png Graphic file (t
 ype bmp)
 <imagens/sentilytics/diagramas/classes/service-classes.png>
-[47]
+[48]
 File: imagens/sentilytics/diagramas/classes/controller-classes.png Graphic file
  (type bmp)
 <imagens/sentilytics/diagramas/classes/controller-classes.png>
 
-Overfull \hbox (7.51979pt too wide) in paragraph at lines 2405--2405
+Overfull \hbox (7.51979pt too wide) in paragraph at lines 2419--2419
  [] 
  []
 
-[48]
-Overfull \hbox (5.67636pt too wide) in paragraph at lines 2430--2436
+[49]
+Overfull \hbox (5.67636pt too wide) in paragraph at lines 2444--2450
 []\T1/ptm/m/n/12 WorkflowProcessamentoController: Con-trola a exe-cu-ção dos wo
 rk-flows de pro-ces-sa-mento,
  []
 
-[49]
+[50]
 File: imagens/sentilytics/diagramas/diagrama_componentes.png Graphic file (type
  bmp)
 <imagens/sentilytics/diagramas/diagrama_componentes.png>
-[50]
+[51]
 File: imagens/sentilytics/interface-grafica/tela-login.png Graphic file (type b
 mp)
 <imagens/sentilytics/interface-grafica/tela-login.png>
-[51]
+[52]
 File: imagens/sentilytics/interface-grafica/listagem-pesquisas.png Graphic file
  (type bmp)
 <imagens/sentilytics/interface-grafica/listagem-pesquisas.png>
 File: imagens/sentilytics/interface-grafica/dados-pesquisa.png Graphic file (ty
 pe bmp)
 <imagens/sentilytics/interface-grafica/dados-pesquisa.png>
-[52]
+[53]
 File: imagens/sentilytics/interface-grafica/coleta-dados.png Graphic file (type
  bmp)
 <imagens/sentilytics/interface-grafica/coleta-dados.png>
-[53]
+[54]
 File: imagens/sentilytics/interface-grafica/processamento.png Graphic file (typ
 e bmp)
 <imagens/sentilytics/interface-grafica/processamento.png>
-[54]
+[55]
 File: imagens/sentilytics/interface-grafica/resultado-graficos.png Graphic file
  (type bmp)
 <imagens/sentilytics/interface-grafica/resultado-graficos.png>
-[55] [56]
+[56] [57]
 File: imagens/sentilytics/qr_code.png Graphic file (type bmp)
 <imagens/sentilytics/qr_code.png>
-[57] [58
+[58] [59
 
-] [59]
+] [60]
 Missing character: There is no 𝛼 in font ptmr8t!
 File: imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.pn
 g Graphic file (type bmp)
 <imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.png>
-[60]
-Overfull \hbox (0.11267pt too wide) in paragraph at lines 3022--3028
+[61]
+Overfull \hbox (0.11267pt too wide) in paragraph at lines 3036--3042
 []\T1/ptm/m/n/12 Esse re-sul-tado su-gere que, ape-sar da pre-do-mi-nân-cia de 
 co-men-tá-rios neu-tros, ainda existe
  []
@@ -1029,52 +1020,52 @@ co-men-tá-rios neu-tros, ainda existe
 File: imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png Grap
 hic file (type bmp)
 <imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png>
-[61]
+[62]
 File: imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png Grap
 hic file (type bmp)
 <imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png>
 File: imagens/sentilytics/estudo-caso/analise_temporal_sentimentos.png Graphic 
 file (type bmp)
 <imagens/sentilytics/estudo-caso/analise_temporal_sentimentos.png>
-[62]
+[63]
 File: imagens/sentilytics/estudo-caso/bag_of_words.png Graphic file (type bmp)
 <imagens/sentilytics/estudo-caso/bag_of_words.png>
-[63] [64]
+[64] [65]
 File: imagens/sentilytics/estudo-caso/top_posts_engajados.png Graphic file (typ
 e bmp)
 <imagens/sentilytics/estudo-caso/top_posts_engajados.png>
-[65] [66] [67
+[66] [67] [68
 
-] (./xxx-trabalho-academico.bbl [68]
+] (./xxx-trabalho-academico.bbl [69]
 bibitemlist
-[69
+[70
 
 ]) 
 AED: lastpage setting LastPage
-[70]
+[71]
 \tf@lof=\write5
 \openout5 = `xxx-trabalho-academico.lof'.
 
-\tf@lot=\write6
-\openout6 = `xxx-trabalho-academico.lot'.
+\tf@loq=\write6
+\openout6 = `xxx-trabalho-academico.loq'.
 
 \tf@toc=\write7
 \openout7 = `xxx-trabalho-academico.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3373.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3373.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3387.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3387.
 (./xxx-trabalho-academico.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3373.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3373.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3373.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 3387.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 3387.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3387.
  ) 
 Here is how much of TeX's memory you used:
- 17541 strings out of 481788
- 276240 string characters out of 5937331
+ 17538 strings out of 481788
+ 276181 string characters out of 5937331
  731035 words of memory out of 5000000
- 34236 multiletter control sequences out of 15000+600000
- 557420 words of font info for 51 fonts, out of 8000000 for 9000
+ 34233 multiletter control sequences out of 15000+600000
+ 555776 words of font info for 50 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  42i,18n,45p,568b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on xxx-trabalho-academico.xdv (71 pages, 262996 bytes).
+Output written on xxx-trabalho-academico.xdv (72 pages, 266168 bytes).

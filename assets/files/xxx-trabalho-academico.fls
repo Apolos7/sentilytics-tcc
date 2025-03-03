@@ -1,4 +1,4 @@
-PWD /tmp/TMP_69d3962a9af2fb8f21e3041393d335a8
+PWD /tmp/TMP_68177fbb02dcbf93eac3c91d42a64bcf
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -227,11 +227,10 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT xxx-trabalho-academico.lof
 INPUT xxx-trabalho-academico.lof
-INPUT xxx-trabalho-academico.lot
-INPUT xxx-trabalho-academico.lot
+INPUT xxx-trabalho-academico.loq
+INPUT xxx-trabalho-academico.loq
 INPUT xxx-trabalho-academico.toc
 INPUT xxx-trabalho-academico.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8t.tfm
@@ -270,6 +269,6 @@ INPUT imagens/sentilytics/estudo-caso/top_posts_engajados.png
 INPUT xxx-trabalho-academico.bbl
 INPUT xxx-trabalho-academico.bbl
 OUTPUT xxx-trabalho-academico.lof
-OUTPUT xxx-trabalho-academico.lot
+OUTPUT xxx-trabalho-academico.loq
 OUTPUT xxx-trabalho-academico.toc
 INPUT xxx-trabalho-academico.aux
