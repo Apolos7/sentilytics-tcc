@@ -16,26 +16,26 @@ Com essa modelagem, busca-se garantir que a aplicação seja bem estruturada, es
 
 ### Requisitos Funcionais e Não Funcionais
 
-Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade. A \autoref{requisitos_funcionais} apresenta os principais requisitos funcionais que orientaram o desenvolvimento da solução proposta.
+Para garantir que a aplicação de análise de sentimentos em redes sociais atenda aos objetivos propostos, é essencial definir os requisitos funcionais e não funcionais. Os requisitos funcionais descrevem as funcionalidades que o sistema deve oferecer, especificando as interações entre usuários e a aplicação. Já os requisitos não funcionais estabelecem critérios de qualidade, desempenho, segurança e usabilidade. O \autoref{requisitos_funcionais} apresenta os principais requisitos funcionais que orientaram o desenvolvimento da solução proposta.
 
-: Requisitos funcionais. \label{requisitos_funcionais}
+Quadro requisitos_funcionais: Requisitos funcionais.
 
-| Código | Requisito                                                                                                                                                                                                            |
-|--------|----------------------------------------------------------------------------------------------------------------------------|
-| RF01   | O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem.                                              |
-| RF02   | O sistema deve permitir como forma alternativa a importação de postagens no formato CSV para análise de sentimentos, utilizando Spring Batch para processamento da importação. |
-| RF03   | O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados.                                              |
-| RF04   | O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização.                                                   |
-| RF05   | O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta.                      |
-| RF06   | O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos.         |
-| RF07   | O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante.                                                  |
-| RF08   | O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.                                                |
-| RF09   | O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional.                                        |
-| RF10   | O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.                                                 |
+|  Código  | Requisito                                                                                                                                                                                                            |
+|:--------:|----------------------------------------------------------------------------------------------------------------------------|
+| RF01     | O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem.                                              |
+| RF02     | O sistema deve permitir como forma alternativa a importação de postagens no formato CSV para análise de sentimentos, utilizando Spring Batch para processamento da importação. |
+| RF03     | O sistema deve permitir que o usuário configure workflows e escolha quais tarefas de pré-processamento serão aplicadas aos dados coletados.                                              |
+| RF04     | O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização.                                                   |
+| RF05     | O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta.                      |
+| RF06     | O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos.         |
+| RF07     | O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante.                                                  |
+| RF08     | O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.                                                |
+| RF09     | O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional.                                        |
+| RF10     | O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.                                                 |
 
 Fonte: Autor (2025).
 
-Com os requisitos funcionais definidos, podemos visualizar como os usuário interagem com o sistema e quais as funcionalidades deveram estar disponíveis para o usuário. Para isso, vamos utilizar o diagrama de casos de uso.
+Com os requisitos funcionais definidos como mostrado no \autoref{requisitos_funcionais}, podemos visualizar como os usuários interagem com o sistema e quais as funcionalidades deveram estar disponíveis. Para isso, vamos utilizar o diagrama de casos de uso.
 
 ### Diagramas de Caso de Uso
 

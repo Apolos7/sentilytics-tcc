@@ -76,8 +76,8 @@ anexos: false
 errata: false
 referencias_sistema: alf
 lista_ilustracoes: true
-lista_quadros: false
-lista_tabelas: true
+lista_quadros: true
+lista_tabelas: false
 referencias_caminho: config/referencias.bib
 palavras_chave: 'Análise de Sentimentos, Processamento de Linguagem Natural, Redes Sociais, Bluesky'
 keywords: 'Sentiment Analysis, Natural Language Processing, Social Networks, Bluesky'
@@ -88,7 +88,7 @@ mots_cles: ''
 # Link: https://github.com/ReinanHS/limarka-render-html
 #===============================================#
 page_render:
-  published_time: '2024-09-06T00:35:50-03:00'
+  published_time: '2025-03-12T00:35:50-03:00'
   instituicao_website: 'https://www.ifs.edu.br/'
   social_networks:
     facebook: ''
