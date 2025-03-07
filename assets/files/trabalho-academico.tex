@@ -1183,7 +1183,10 @@ personalização total do fluxo de processamento, permitindo que os
 usuários configurem diferentes etapas de limpeza e transformação dos
 textos coletados. Além disso, conta com uma interface intuitiva que
 exibe os resultados de forma gráfica e interativa, facilitando a análise
-das tendências identificadas.
+das tendências identificadas. Essa interatividade permite a manipulação
+dinâmica dos gráficos, possibilitando que o usuário explore os dados de
+maneira mais detalhada, como ao visualizar informações específicas ao
+passar o cursor sobre os elementos ou aplicar filtros personalizados.
 
 A ferramenta se destaca também por possibilitar a coleta de dados
 diretamente do Bluesky, uma rede social emergente que permite acesso
@@ -1199,6 +1202,15 @@ cientistas de dados. Seu uso viabiliza monitoramento de tendências,
 análises de engajamento e tomadas de decisão estratégicas, permitindo um
 melhor entendimento do comportamento do público em redes sociais.
 
+Para garantir essa flexibilidade e escalabilidade, a aplicação foi
+projetada em módulos independentes, facilitando um escalonamento
+horizontal. O processamento mais demorado ocorre no módulo Python,
+responsável pelo pré-processamento e análise de sentimentos, permitindo
+que ele seja replicado conforme a necessidade sem que toda a aplicação
+seja replicada. Essa arquitetura modular possibilita que módulos mais
+exigentes em recursos sejam escalados de forma independente, otimizando
+o desempenho geral da aplicação.
+
 \hypertarget{tecnologias-e-ferramentas}{%
 \section{Tecnologias e Ferramentas}\label{tecnologias-e-ferramentas}}
 
@@ -1207,6 +1219,30 @@ uso de diversas tecnologias e ferramentas, as quais foram essenciais
 para a implementação eficiente da solução. A seguir, são descritas as
 principais tecnologias empregadas e os respectivos papéis que
 desempenharam na construção da aplicação.
+
+Na \autoref{diagrama_tecnologias_ferramentas}, apresentamos um diagrama
+que agrupa as tecnologias e ferramentas utilizadas no projeto em suas
+respectivas categorias. Essa organização facilita a visualização dos
+principais componentes tecnológicos empregados, permitindo uma
+compreensão clara da diversidade de soluções adotadas.
+
+\begin{figure}[htbp]
+\hypertarget{diagrama_tecnologias_ferramentas}{%
+\caption{Diagrama das Tecnologias e ferramentas utilizadas}\label{diagrama_tecnologias_ferramentas}
+\begin{center}
+\includegraphics[scale=0.5]{imagens/sentilytics/diagramas/tecnologias-ferramentas.png}
+\end{center}
+}
+\legend{Fonte: Autor (2025).}
+\end{figure}
+
+Na \autoref{diagrama_tecnologias_ferramentas}, a categorização das
+tecnologias evidencia a variedade de ferramentas que compõem o
+ecossistema do projeto. Cada categoria agrupa soluções com funções
+específicas, demonstrando a pluralidade de abordagens utilizadas no
+desenvolvimento. Com essa estrutura tecnológica bem definida, podemos
+garantir um fluxo de trabalho mais eficiente e uma base sólida para a
+implementação do sistema.
 
 \hypertarget{python}{%
 \subsection{Python}\label{python}}
@@ -1275,14 +1311,14 @@ tarefas de pré-processamento.
 \subsection{Spring Boot}\label{spring-boot}}
 
 O Spring Boot\footnote{A documentação do Spring Boot está disponível no
-  link: \url{https://spring.io/projects/spring-boot}} é um framework
-Java voltado para o desenvolvimento de aplicações web e serviços
-backend, oferecendo uma abordagem simplificada para a configuração e
-execução de sistemas baseados no ecossistema Spring. Ele possibilita a
-criação de aplicações modulares e escaláveis, reduzindo a necessidade de
-configurações manuais extensivas e proporcionando integração com
-diversas tecnologias, como bancos de dados, filas de mensagens e
-processamento em lote.
+  link: \url{https://spring.io/projects/spring-boot}} é um
+\emph{framework} Java voltado para o desenvolvimento de aplicações web e
+serviços \emph{back-end}, oferecendo uma abordagem simplificada para a
+configuração e execução de sistemas baseados no ecossistema Spring. Ele
+possibilita a criação de aplicações modulares e escaláveis, reduzindo a
+necessidade de configurações manuais extensivas e proporcionando
+integração com diversas tecnologias, como bancos de dados, filas de
+mensagens e processamento em lote.
 
 Além do suporte para APIs REST, o Spring Boot conta com o Spring Batch,
 uma extensão projetada para lidar com grandes volumes de dados por meio
@@ -1300,20 +1336,20 @@ fundamental na arquitetura da aplicação:
   Web API (Spring Boot REST API) -- Esse serviço atua como o núcleo de
   comunicação da aplicação, centralizando todas as operações e
   integrando os diferentes módulos do sistema. Ele expõe os endpoints
-  REST que permitem a interação com o frontend em Angular e gerencia a
-  inicialização dos serviços oferecidos pelo módulo em Python, como o
-  pré-processamento e a análise de sentimentos, utilizando o RabbitMQ
-  para troca de mensagens. Além disso, a API é responsável pela coleta
-  de dados no Bluesky, lidando com a autenticação necessária e
-  garantindo a ingestão segura das postagens na base de dados
-  PostgreSQL. A escolha do Bluesky como rede social integrada se deu
-  principalmente devido à política de gratuidade na coleta de postagens,
-  o que viabilizou a realização deste estudo de caso. Apesar de o
-  Bluesky ainda não ser amplamente utilizado no Brasil, sua estrutura e
-  acessibilidade tornam-no uma escolha viável para a demonstração das
-  funcionalidades do Sentilytics. A API também gerencia os workflows e
-  coordena as operações realizadas dentro da plataforma, garantindo que
-  cada requisição seja processada de maneira consistente;
+  REST que permitem a interação com o \emph{front-end} em Angular e
+  gerencia a inicialização dos serviços oferecidos pelo módulo em
+  Python, como o pré-processamento e a análise de sentimentos,
+  utilizando o RabbitMQ para troca de mensagens. Além disso, a API é
+  responsável pela coleta de dados no Bluesky, lidando com a
+  autenticação necessária e garantindo a ingestão segura das postagens
+  na base de dados PostgreSQL. A escolha do Bluesky como rede social
+  integrada justifica-se pela política de gratuidade na coleta de
+  postagens, o que viabilizou a realização deste estudo de caso. Apesar
+  de o Bluesky ainda não ser amplamente utilizado no Brasil, sua
+  estrutura e acessibilidade tornam-no uma escolha viável para a
+  demonstração das funcionalidades do Sentilytics. A API também gerencia
+  os workflows e coordena as operações realizadas dentro da plataforma,
+  garantindo que cada requisição seja processada de maneira consistente;
 \item
   Spring Batch -- A segunda aplicação desenvolvida com Spring Boot foi
   um serviço baseado no Spring Batch, utilizado para a importação e
@@ -1337,22 +1373,23 @@ do sistema conforme novas funcionalidades forem incorporadas.
 \subsection{Angular}\label{angular}}
 
 O Angular\footnote{A documentação do Angular está disponível no link:
-  \url{https://angular.dev/}} é um framework front-end baseado em
-TypeScript, desenvolvido e mantido pelo Google, voltado para a criação
-de aplicações web dinâmicas e escaláveis. Ele adota uma arquitetura
-modular baseada em componentes reutilizáveis, proporcionando um
-desenvolvimento estruturado e facilitando a manutenção do código.
+  \url{https://angular.dev/}} é um \emph{framework} \emph{front-end}
+baseado em TypeScript, desenvolvido e mantido pelo Google, voltado para
+a criação de aplicações web dinâmicas e escaláveis. Ele adota uma
+arquitetura modular baseada em componentes reutilizáveis, proporcionando
+um desenvolvimento estruturado e facilitando a manutenção do código.
 
 No desenvolvimento de interfaces, o Angular pode ser combinado com
-bibliotecas de estilização como o Tailwind CSS, um framework CSS
+bibliotecas de estilização como o Tailwind CSS, um \emph{framework} CSS
 utilitário que permite a criação de layouts responsivos e altamente
 customizáveis, reduzindo a necessidade de estilos manuais.
 
 No desenvolvimento do Sentilytics, o Angular foi utilizado como o
-framework principal para construção do frontend. Para facilitar a
-estilização e responsividade, o framework foi utilizado em conjunto com
-o Tailwind CSS, que possibilitou a criação de um design moderno e
-consistente sem a necessidade de escrever estilos CSS extensos.
+\emph{framework} principal para construção do \emph{front-end}. Para
+facilitar a estilização e responsividade, o \emph{framework} foi
+utilizado em conjunto com o Tailwind CSS, que possibilitou a criação de
+um design moderno e consistente sem a necessidade de escrever estilos
+CSS extensos.
 
 A interface foi projetada para proporcionar uma navegação intuitiva,
 organizando as diferentes etapas do fluxo da aplicação, desde o cadastro
@@ -1361,12 +1398,12 @@ visualização dos resultados da análise de sentimentos.
 
 Além disso, para garantir uma experiência em tempo real, foi
 implementado o protocolo Server-Sent Events (SSE), que permite a
-comunicação assíncrona entre o backend e o frontend. Esse mecanismo foi
-utilizado para notificar os usuários sobre o andamento de processos
-demorados, como o pré-processamento dos textos e a execução da análise
-de sentimentos. Dessa forma, os usuários podem acompanhar o progresso
-das operações sem a necessidade de recarregar a página ou realizar
-requisições manuais para obter atualizações.
+comunicação assíncrona entre o \emph{back-end} e o \emph{front-end}.
+Esse mecanismo foi utilizado para notificar os usuários sobre o
+andamento de processos demorados, como o pré-processamento dos textos e
+a execução da análise de sentimentos. Dessa forma, os usuários podem
+acompanhar o progresso das operações sem a necessidade de recarregar a
+página ou realizar requisições manuais para obter atualizações.
 
 \hypertarget{rabbitmq}{%
 \subsection{RabbitMQ}\label{rabbitmq}}
@@ -1413,7 +1450,7 @@ execução de consultas.
 Além de suas funcionalidades relacionais, o PostgreSQL permite o uso de
 índices personalizados, replicação e extensões para aprimoramento do
 desempenho e escalabilidade. Sua compatibilidade com diversas linguagens
-e frameworks possibilita a integração com diferentes tipos de
+e \emph{frameworks} possibilita a integração com diferentes tipos de
 aplicações.
 
 O PostgreSQL foi utilizado como o banco de dados relacional da
@@ -1513,15 +1550,15 @@ O IntelliJ IDEA\footnote{O Intellij IDEA está disponível para download
   no link: \url{https://www.jetbrains.com/idea/}} é um ambiente de
 desenvolvimento integrado (IDE) voltado para a criação de aplicações em
 Java e Kotlin. Desenvolvido pela JetBrains, oferece suporte a diversas
-tecnologias e frameworks, além de ferramentas de depuração e controle de
-versão que auxiliam no processo de desenvolvimento.
+tecnologias e \emph{frameworks}, além de ferramentas de depuração e
+controle de versão que auxiliam no processo de desenvolvimento.
 
 A IDE conta com recursos como autocompletar código, análise estática e
 refatoração, proporcionando um ambiente estruturado para a escrita e
-manutenção de código. Sua compatibilidade com frameworks como Spring
-Boot e ferramentas de automação como Maven facilita a configuração e o
-gerenciamento de projetos Java. O Intellij foi utilizado em todos os
-projetos java desenvolvidos nessa solução.
+manutenção de código. Sua compatibilidade com \emph{frameworks} como
+Spring Boot e ferramentas de automação como Maven facilita a
+configuração e o gerenciamento de projetos Java. O Intellij foi
+utilizado em todos os projetos java desenvolvidos nessa solução.
 
 \hypertarget{pycharm}{%
 \subsection{PyCharm}\label{pycharm}}
@@ -1529,7 +1566,7 @@ projetos java desenvolvidos nessa solução.
 O PyCharm\footnote{O Pycharm está disponível para download no link:
   \url{https://www.jetbrains.com/pycharm/}} é um ambiente de
 desenvolvimento integrado (IDE) voltado para aplicações em Python,
-desenvolvido pela JetBrains. Ele oferece suporte a frameworks e
+desenvolvido pela JetBrains. Ele oferece suporte a \emph{frameworks} e
 bibliotecas da linguagem, além de ferramentas de depuração, análise de
 código e controle de versão.
 
@@ -1549,7 +1586,8 @@ sua leveza, extensibilidade e suporte a diversas linguagens de
 programação. Ele conta com recursos como realce de sintaxe, IntelliSense
 (autocompletar inteligente) e integração com ferramentas externas,
 facilitando o desenvolvimento e a depuração de código. Sendo o VS Code a
-principal ferramenta para desenvolvimento do frontend em Angular.
+principal ferramenta para desenvolvimento do \emph{front-end} em
+Angular.
 
 \hypertarget{dbeaver}{%
 \subsection{DBeaver}\label{dbeaver}}
@@ -1617,34 +1655,7 @@ O Postman foi utilizado para testar e validar todas as APIs
 desenvolvidas no Sentilytics, incluindo a API REST em Spring Boot e as
 integrações com o Bluesky. A ferramenta permitiu a realização de
 requisições HTTP, validando o funcionamento do serviços criados no
-backend e facilitando a depuração durante o desenvolvimento.
-
-\hypertarget{suxedntese-das-tecnologias-e-ferramentas-utilizadas}{%
-\subsection{Síntese das Tecnologias e Ferramentas
-utilizadas}\label{suxedntese-das-tecnologias-e-ferramentas-utilizadas}}
-
-A seguir, apresentamos um diagrama que agrupa as tecnologias e
-ferramentas utilizadas no projeto em suas respectivas categorias. Essa
-organização facilita a visualização dos principais componentes
-tecnológicos empregados, permitindo uma compreensão clara da diversidade
-de soluções adotadas.
-
-\begin{figure}[htbp]
-\hypertarget{diagrama_tecnologias_ferramentas}{%
-\caption{Diagrama das Tecnologias e ferramentas utilizadas}\label{diagrama_tecnologias_ferramentas}
-\begin{center}
-\includegraphics[scale=0.5]{imagens/sentilytics/diagramas/tecnologias-ferramentas.png}
-\end{center}
-}
-\legend{Fonte: Autor (2025).}
-\end{figure}
-
-A categorização das tecnologias evidencia a variedade de ferramentas que
-compõem o ecossistema do projeto. Cada categoria agrupa soluções com
-funções específicas, demonstrando a pluralidade de abordagens utilizadas
-no desenvolvimento. Com essa estrutura tecnológica bem definida, podemos
-garantir um fluxo de trabalho mais eficiente e uma base sólida para a
-implementação do sistema.
+\emph{back-end} e facilitando a depuração durante o desenvolvimento.
 
 Finalizada a apresentação das tecnologias e ferramentas, seguimos agora
 para a próxima etapa, onde abordaremos a modelagem da solução.
@@ -1681,9 +1692,10 @@ Diagrama Entidade-Relacionamento (DER) e do dicionário de dados.
 
 A organização dos componentes do sistema é descrita no Diagrama de
 Componentes, que ilustra a arquitetura da aplicação, destacando a
-comunicação entre os módulos do backend, frontend e serviços externos.
-Complementarmente, o Diagrama de Classes define a estrutura da lógica de
-programação, detalhando as principais classes e seus relacionamentos.
+comunicação entre os módulos do \emph{back-end}, \emph{front-end} e
+serviços externos. Complementarmente, o Diagrama de Classes define a
+estrutura da lógica de programação, detalhando as principais classes e
+seus relacionamentos.
 
 Por fim, as interfaces gráficas são apresentadas para demonstrar a
 experiência do usuário e a forma como as funcionalidades da aplicação
@@ -1757,7 +1769,7 @@ O sistema deve permitir a consulta dos resultados da análise de sentimentos, fi
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF08\strut
 \end{minipage} & \begin{minipage}[t]{0.87\columnwidth}\raggedright
-O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.\strut
+O sistema deve permitir a comunicação entre o \emph{back-end} em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF09\strut
@@ -1800,7 +1812,7 @@ Sentilytics.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-Como podemos visualizar na Figura \ref{usecase}, o diagrama apresenta as
+Como podemos visualizar na \autoref{usecase}, o diagrama apresenta as
 interações entre o usuário e o sistema Sentilytics, destacando as
 principais funcionalidades disponíveis. Cada caso de uso representa uma
 ação que pode ser realizada dentro da aplicação, organizando de forma
@@ -1845,11 +1857,10 @@ diagrama BPMN relacionado ao funcionamento do Sentilytics.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{bpmn_pesquisa} apresenta o fluxo principal para a
-realização de uma pesquisa completa no Sentilytics, representado por
-meio do Diagrama BPMN. Esse fluxo descreve as etapas envolvidas desde a
-criação da pesquisa até a visualização dos resultados da análise de
-sentimentos.
+A \autoref{bpmn_pesquisa} apresenta o fluxo principal para a realização
+de uma pesquisa completa no Sentilytics, representado por meio do
+Diagrama BPMN. Esse fluxo descreve as etapas envolvidas desde a criação
+da pesquisa até a visualização dos resultados da análise de sentimentos.
 
 O processo inicia-se quando o usuário decide realizar uma nova pesquisa,
 cadastrando-a e configurando os parâmetros necessários. Em seguida, é
@@ -1937,10 +1948,9 @@ consolidando a documentação do banco de dados. Após a modelagem da base
 de dados, foi possível avançar com os diagramas de sequência/atividade
 dos principais fluxos que foram mostrados nos requisitos.
 
-\hypertarget{diagrama-de-sequuxeanciaatividades-do-pruxe9-processamento-e-anuxe1lise-de-sentimentos}{%
-\subsection{Diagrama de Sequência/Atividades do pré-processamento e
-análise de
-sentimentos}\label{diagrama-de-sequuxeanciaatividades-do-pruxe9-processamento-e-anuxe1lise-de-sentimentos}}
+\hypertarget{diagrama-de-sequuxeancia-do-pruxe9-processamento-e-anuxe1lise-de-sentimentos}{%
+\subsection{Diagrama de Sequência do pré-processamento e análise de
+sentimentos}\label{diagrama-de-sequuxeancia-do-pruxe9-processamento-e-anuxe1lise-de-sentimentos}}
 
 Os diagramas de sequência são utilizados para representar a interação
 entre diferentes componentes de um sistema ao longo do tempo. Eles
@@ -1955,13 +1965,13 @@ que descrevem processos essenciais para o funcionamento da aplicação:
 \begin{itemize}
 \tightlist
 \item
-  Figura \ref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta
-  de dados;
+  \autoref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta de
+  dados;
 \item
-  Figura \ref{seq_cadastro_configuracao_workflow}: Cadastro e
-  configuração do workflow;
+  \autoref{seq_cadastro_configuracao_workflow}: Cadastro e configuração
+  do workflow;
 \item
-  Figura \ref{seq_processamento_analise}: Sequência de processamento,
+  \autoref{seq_processamento_analise}: Sequência de processamento,
   incluindo o pré-processamento do workflow e da análise de sentimentos.
 \end{itemize}
 
@@ -1980,8 +1990,8 @@ gráficas.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{seq_pesquisa_coleta_dados} apresenta o Diagrama de
-Sequência que descreve o fluxo de criação de uma pesquisa de análise de
+A \autoref{seq_pesquisa_coleta_dados} apresenta o Diagrama de Sequência
+que descreve o fluxo de criação de uma pesquisa de análise de
 sentimentos e a coleta de dados a partir da plataforma Bluesky. Esse
 diagrama detalha a interação entre o usuário e os principais componentes
 do sistema durante esse processo.
@@ -2020,11 +2030,11 @@ dados são coletados e armazenados para posterior análise.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{seq_cadastro_configuracao_workflow} apresenta o Diagrama
-de Sequência referente ao processo de cadastro e configuração do
-workflow dentro do Sentilytics. Esse diagrama descreve a interação entre
-o usuário e os principais componentes responsáveis pelo gerenciamento
-dos workflows de processamento de dados.
+A \autoref{seq_cadastro_configuracao_workflow} apresenta o Diagrama de
+Sequência referente ao processo de cadastro e configuração do workflow
+dentro do Sentilytics. Esse diagrama descreve a interação entre o
+usuário e os principais componentes responsáveis pelo gerenciamento dos
+workflows de processamento de dados.
 
 O fluxo se inicia quando o usuário solicita a criação de um novo
 workflow. Essa requisição é encaminhada ao
@@ -2063,12 +2073,12 @@ ajustar o fluxo de análise de acordo com suas necessidades específicas.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{seq_processamento_analise} apresenta o Diagrama de
-Sequência que descreve o fluxo de execução de um workflow de
-processamento, que representa o fluxo utilizado tanto para o
-pré-processamento do texto quanto para a análise de sentimentos dentro
-do Sentilytics. Esse diagrama detalha a interação entre o usuário e os
-serviços responsáveis pelo envio, processamento e retorno dos dados.
+A \autoref{seq_processamento_analise} apresenta o Diagrama de Sequência
+que descreve o fluxo de execução de um workflow de processamento, que
+representa o fluxo utilizado tanto para o pré-processamento do texto
+quanto para a análise de sentimentos dentro do Sentilytics. Esse
+diagrama detalha a interação entre o usuário e os serviços responsáveis
+pelo envio, processamento e retorno dos dados.
 
 O fluxo inicia-se quando o usuário solicita a execução de um workflow.
 Essa requisição é encaminhada ao WorkflowProcessamentoController, que
@@ -2134,8 +2144,8 @@ Os diagramas são organizados da seguinte forma:
   regras da aplicação;
 \item
   Pacote Controller: Representa os controladores da API, responsáveis
-  por expor os endpoints e intermediar a comunicação entre o frontend e
-  a lógica de negócio.
+  por expor os endpoints e intermediar a comunicação entre o
+  \emph{front-end} e a lógica de negócio.
 \end{itemize}
 
 A seguir, cada diagrama será apresentado e analisado individualmente,
@@ -2152,9 +2162,9 @@ camada do sistema.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{diagrama_classe_geral} apresenta a visão geral dos pacotes
-da Web API desenvolvida em Spring Boot, destacando sua estrutura modular
-e a organização das classes. Esse diagrama ilustra a separação dos
+A \autoref{diagrama_classe_geral} apresenta a visão geral dos pacotes da
+Web API desenvolvida em Spring Boot, destacando sua estrutura modular e
+a organização das classes. Esse diagrama ilustra a separação dos
 componentes do sistema, facilitando a compreensão das responsabilidades
 de cada pacote e a interação entre eles.
 
@@ -2165,9 +2175,9 @@ descrito a seguir:
 \tightlist
 \item
   Pacote controller: Contém as classes responsáveis por expor os
-  endpoints da API, intermediando a comunicação entre o frontend e a
-  lógica de negócio da aplicação. Cada classe representa um controlador
-  correspondente a um serviço específico;
+  endpoints da API, intermediando a comunicação entre o \emph{front-end}
+  e a lógica de negócio da aplicação. Cada classe representa um
+  controlador correspondente a um serviço específico;
 \item
   Pacote service: Implementa a lógica de negócio do sistema, processando
   dados e aplicando as regras definidas. Essa camada interage
@@ -2184,15 +2194,15 @@ descrito a seguir:
   estrutura dos dados utilizados na aplicação;
 \item
   Pacote config: Reúne configurações essenciais da aplicação, incluindo
-  segurança, serialização e tratamento de exceções;
-\item
-  A comunicação entre os pacotes ocorre de forma estruturada: a camada
-  de controle interage com os serviços, que, por sua vez, realizam
-  operações no banco de dados por meio dos repositórios. O pacote de
-  model é utilizado pelos repositórios para representar os dados
-  persistidos, garantindo uma separação clara das responsabilidades
-  dentro da aplicação.
+  segurança, serialização e tratamento de exceções.
 \end{itemize}
+
+A comunicação entre os pacotes ocorre de forma estruturada: a camada de
+controle interage com os serviços, que, por sua vez, realizam operações
+no banco de dados por meio dos repositórios. O pacote de model é
+utilizado pelos repositórios para representar os dados persistidos,
+garantindo uma separação clara das responsabilidades dentro da
+aplicação.
 
 A seguir, será apresentada uma análise detalhada do Diagrama do Pacote
 Model, que contém as entidades responsáveis pelo armazenamento e
@@ -2208,7 +2218,7 @@ manipulação dos dados no sistema.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{diagrama_classe_model} apresenta o Diagrama de Classes do
+A \autoref{diagrama_classe_model} apresenta o Diagrama de Classes do
 Pacote Model, que define as entidades utilizadas na Web API Spring Boot
 do Sentilytics. Essas entidades representam as tabelas do banco de dados
 e são responsáveis pelo armazenamento das informações essenciais para o
@@ -2279,7 +2289,7 @@ aplicação.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{diagram_repository} apresenta o Diagrama da Camada
+A \autoref{diagram_repository} apresenta o Diagrama da Camada
 Repository, responsável pelo acesso e manipulação dos dados no banco de
 dados dentro da Web API Spring Boot do Sentilytics. Essa camada
 implementa interfaces que utilizam o Spring Data JPA, facilitando a
@@ -2332,10 +2342,6 @@ aplicação. Entre os principais repositórios, destacam-se:
   valores associados às configurações definidas pelo usuário.
 \end{itemize}
 
-A separação da camada Repository garante que a lógica de persistência
-dos dados fique desacoplada das demais partes do sistema, facilitando a
-manutenção e reutilização do código.
-
 Para processar os dados e aplicar as regras de negócio da aplicação, os
 repositórios são utilizados pela camada Service, que implementa a lógica
 necessária para a manipulação dessas informações. A seguir, será
@@ -2353,7 +2359,7 @@ Sentilytics.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{diagram_service} apresenta o Diagrama da Camada Service,
+A \autoref{diagram_service} apresenta o Diagrama da Camada Service,
 responsável por implementar a lógica de negócio da Web API Spring Boot
 do Sentilytics. Essa camada é responsável pelo processamento das
 operações da aplicação, garantindo a manipulação dos dados, a aplicação
@@ -2404,7 +2410,7 @@ A camada de serviços é essencial para garantir que a lógica da aplicação
 esteja desacoplada da camada de persistência e dos controladores,
 promovendo organização, reusabilidade e escalabilidade.
 
-Para expor essas funcionalidades aos usuários e ao frontend da
+Para expor essas funcionalidades aos usuários e ao \emph{front-end} da
 aplicação, a camada Service se conecta diretamente com a Camada
 Controller, que será abordada a seguir. O próximo diagrama apresentará
 os controladores da API, responsáveis por receber requisições, validar
@@ -2420,11 +2426,12 @@ os dados de entrada e encaminhar as chamadas aos serviços apropriados.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A Figura \ref{diagram_controller} apresenta o Diagrama da Camada
+A \autoref{diagram_controller} apresenta o Diagrama da Camada
 Controller, responsável por gerenciar as requisições HTTP e expor os
-endpoints da API. Essa camada atua como intermediária entre o frontend e
-a lógica de negócio, direcionando as requisições recebidas para os
-serviços apropriados e retornando as respostas processadas ao cliente.
+endpoints da API. Essa camada atua como intermediária entre o
+\emph{front-end} e a lógica de negócio, direcionando as requisições
+recebidas para os serviços apropriados e retornando as respostas
+processadas ao cliente.
 
 Os controladores seguem a estrutura RESTful, organizando os endpoints de
 acordo com as funcionalidades da aplicação. A seguir, destacam-se os
@@ -2473,9 +2480,9 @@ na compreensão da arquitetura do sistema.
 
 No Sentilytics, a solução é composta por diferentes serviços que atuam
 de forma conjunta para viabilizar o fluxo de análise de sentimentos. A
-Figura \ref{diagrama_componentes} apresenta essa composição:
+\autoref{diagrama_componentes} apresenta essa composição:
 
-A Figura \ref{diagrama_componentes} a seguir apresenta a organização e a
+A \autoref{diagrama_componentes} a seguir apresenta a organização e a
 comunicação entre esses componentes.
 
 \begin{figure}[htbp]
@@ -2510,7 +2517,7 @@ funcionamento e a responsabilidade de cada módulo:
   Web API Spring Boot -- Exposição dos serviços da aplicação via API
   REST para o Angular, interligando todos os módulos;
 \item
-  Frontend Angular -- Interface do usuário para interação com a
+  Front-end Angular -- Interface do usuário para interação com a
   plataforma;
 \item
   Banco de Dados PostgreSQL -- Armazena pesquisas, postagens e
@@ -2523,7 +2530,7 @@ funcionamento e a responsabilidade de cada módulo:
 A interface gráfica é um dos principais pontos de interação entre os
 usuários e a aplicação, sendo responsável por garantir uma experiência
 intuitiva na utilização do Sentilytics. Para o desenvolvimento da
-interface, foi utilizado o framework Angular.
+interface, foi utilizado o \emph{framework} Angular.
 
 A interface foi projetada para oferecer um fluxo de navegação claro e
 acessível, permitindo que os usuários cadastrem e configurem pesquisas,
@@ -2601,7 +2608,7 @@ dados coletados.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A tela da pesquisa mostrada na figura \ref{tela_dados_pesquisa} é a
+A tela da pesquisa mostrada na \autoref{tela_dados_pesquisa} é a
 interface central para o gerenciamento de uma análise de sentimentos
 dentro do Sentilytics. Essa tela organiza o fluxo do usuário em quatro
 etapas, representadas por botões dispostos em sequência:
@@ -2645,17 +2652,13 @@ Cada uma das próximas etapas é liberada de acordo com a sequência do
 fluxo, garantindo que o usuário siga um processo estruturado para a
 realização da pesquisa.
 
-A etapa atual exibida na figura \ref{tela_dados_pesquisa} é a ``Dados da
+A etapa atual exibida na \autoref{tela_dados_pesquisa} é a ``Dados da
 Pesquisa'', nesse momento o usuário pode visualizar e modificar as
 informações da pesquisa. Esses dados serão utilizados caso o usuário
 opte por realizar a coleta automática de postagens através da rede
 social Bluesky. Essa configuração permite definir os critérios de busca
 que serão aplicados na obtenção dos posts, garantindo que a análise de
 sentimentos seja realizada com base em conteúdos relevantes.
-
-Após definir os dados da pesquisa, o próximo passo é a coleta de
-postagens, onde o usuário pode importar dados manualmente ou realizar a
-busca automática via Bluesky.
 
 \begin{figure}[htbp]
 \hypertarget{tela_coleta_dados_pesquisa}{%
@@ -2667,11 +2670,13 @@ busca automática via Bluesky.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-Na figura \ref{tela_coleta_dados_pesquisa} é mostrada a etapa de coleta
-dos dados, nessa fase o usuário pode gerenciar as postagens que serão
-analisadas no Sentilytics. O usuário pode visualizar os posts já
-armazenados no sistema e optar por adicionar novos dados por meio de
-duas opções de coleta:
+Após definir os dados da pesquisa, o próximo passo é a coleta de
+postagens, onde o usuário pode importar dados manualmente ou realizar a
+busca automática via Bluesky. Na \autoref{tela_coleta_dados_pesquisa} é
+mostrada a etapa de coleta dos dados, nessa fase o usuário pode
+gerenciar as postagens que serão analisadas no Sentilytics. O usuário
+pode visualizar os posts já armazenados no sistema e optar por adicionar
+novos dados por meio de duas opções de coleta:
 
 \begin{itemize}
 \tightlist
@@ -2704,9 +2709,9 @@ para a análise de sentimentos.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A figura \ref{tela_processamento} mostra a etapa de processamento, onde
-o usuário pode configurar e executar as etapas necessárias para preparar
-e analisar as postagens coletadas. Nessa passo, o usuário pode criar um
+A \autoref{tela_processamento} mostra a etapa de processamento, onde o
+usuário pode configurar e executar as etapas necessárias para preparar e
+analisar as postagens coletadas. Nessa passo, o usuário pode criar um
 workflow, que define a sequência de tarefas de pré-processamento
 aplicadas aos textos antes da análise de sentimentos.
 
@@ -2759,8 +2764,8 @@ estruturada.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A etapa de resultados mostrado na figura \ref{etapa_resultados} permite
-ao usuário visualizar e interpretar os dados processados a partir da
+A etapa de resultados mostrado na \autoref{etapa_resultados} permite ao
+usuário visualizar e interpretar os dados processados a partir da
 análise de sentimentos. Para acessar essa etapa, é necessário selecionar
 um workflow que já tenha passado pelo processo completo de
 pré-processamento e análise de sentimentos. Após a seleção do workflow,
@@ -2799,13 +2804,13 @@ principais para exploração dos resultados:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \item
-  Aba de Nuvem de Palavras Nesta aba, é exibida uma nuvem de palavras
+  Aba de Nuvem de Palavras - Nesta aba, é exibida uma nuvem de palavras
   gerada a partir dos textos processados. Essa visualização destaca as
   palavras mais frequentes nas postagens analisadas, permitindo uma
   análise rápida dos termos mais relevantes dentro do contexto dos
   dados;
 \item
-  Aba de Top Posts Engajados Essa aba apresenta uma listagem dos posts
+  Aba de Top Posts Engajados - Essa aba apresenta uma listagem dos posts
   mais engajados, ranqueados com base no número de curtidas, respostas,
   reposts e citações. Além disso, há um filtro por sentimento,
   permitindo que o usuário explore os posts de acordo com suas
@@ -2833,10 +2838,9 @@ detalhada todas as etapas da criação de uma pesquisa de análise de
 sentimentos no Sentilytics, desde a autenticação até a visualização dos
 resultados.
 
-\hypertarget{anuxe1lise-de-sentimento-da-opiniuxe3o-puxfablica-sobre-a-escala-de-trabalho-6x1-com-sentilytics-um-estudo-de-caso}{%
-\chapter{Análise de sentimento da opinião pública sobre a escala de
-trabalho 6x1 com Sentilytics: um estudo de
-caso}\label{anuxe1lise-de-sentimento-da-opiniuxe3o-puxfablica-sobre-a-escala-de-trabalho-6x1-com-sentilytics-um-estudo-de-caso}}
+\hypertarget{escala-de-trabalho-6x1-um-estudo-de-caso-com-o-sentilytics}{%
+\chapter{Escala de trabalho 6x1: um estudo de caso com o
+Sentilytics}\label{escala-de-trabalho-6x1-um-estudo-de-caso-com-o-sentilytics}}
 
 A jornada de trabalho é um dos principais temas debatidos no contexto
 organizacional, influenciando diretamente a qualidade de vida dos
@@ -2854,10 +2858,9 @@ de trabalho por meio de ferramentas de análise de sentimentos.
 
 O presente estudo tem como objetivo aplicar a ferramenta Sentilytics
 para realizar uma análise de sentimentos sobre a escala 6x1, utilizando
-dados extraídos da rede social Bluesky, que já possui integração com a
-ferramenta. O foco será examinar a polaridade dos sentimentos (positivo,
-negativo ou neutro) relacionados às experiências e percepções da
-população sobre esse regime de trabalho.
+dados extraídos da rede social Bluesky. O foco será examinar a
+polaridade dos sentimentos (positivo, negativo ou neutro) relacionados
+às experiências e percepções da população sobre esse regime de trabalho.
 
 \hypertarget{muxe9todologia-do-estudo}{%
 \section{Métodologia do estudo}\label{muxe9todologia-do-estudo}}
@@ -2881,41 +2884,74 @@ sobre as percepções dos usuários a respeito da escala 6x1.
 \subsection{Coleta de Dados}\label{coleta-de-dados}}
 
 A coleta de dados foi realizada por meio da integração da ferramenta
-Sentilytics com o Bluesky. Para a busca, foi utilizada a query ``Escala
-6x1'', sem a aplicação de filtros de intervalo de datas. As postagens
-foram ordenadas de acordo com sua popularidade, priorizando as mais
-relevantes dentro da plataforma.
+Sentilytics com o Bluesky. Com a pesquisa já criada, será necessário
+configurar os parâmetros que serão utilizados para a busca, podemos
+visualizar essa tela na \autoref{configuracao_pesquisa}.
 
-No total, foram coletadas 4880 postagens. Esse volume de dados permite
-uma análise representativa das percepções sobre a escala 6x1, abrangendo
-diferentes perspectivas e experiências compartilhadas pelos usuários.
+\begin{figure}[htbp]
+\hypertarget{configuracao_pesquisa}{%
+\caption{Configuração da pesquisa}\label{configuracao_pesquisa}
+\begin{center}
+\includegraphics[scale=0.35]{imagens/sentilytics/estudo-caso/dados_pesquisa.png}
+\end{center}
+}
+\legend{Fonte: Autor (2025).}
+\end{figure}
+
+Como podemos visualizar na \autoref{configuracao_pesquisa}, os
+parâmetros de busca utilizados foram a query ``Escala 6x1'', sem a
+aplicação de filtros de intervalo de datas. As postagens foram ordenadas
+de acordo com sua popularidade, priorizando as mais relevantes dentro da
+plataforma.
+
+A pesquisa foi executada no dia 7 de fevereiro de 2025, onde no total
+foram coletadas 4880 postagens. Esse volume de dados permite uma análise
+representativa das percepções sobre a escala 6x1, abrangendo diferentes
+perspectivas e experiências compartilhadas pelos usuários.
 
 \hypertarget{pruxe9-processamento-dos-dados}{%
 \subsection{Pré-processamento dos
 Dados}\label{pruxe9-processamento-dos-dados}}
 
 Após a coleta, os textos das postagens passaram por uma sequência de
-tarefas de pré-processamento para garantir maior qualidade na análise. O
-pipeline de processamento incluiu as seguintes etapas:
+tarefas de pré-processamento para garantir maior qualidade na análise.
+Para isso um workflow foi criado com as tarefas que serão usadas para
+realizar o pré-processamento, que podemos visualizar na
+\autoref{pipeline_processamento}.
+
+\begin{figure}[htbp]
+\hypertarget{pipeline_processamento}{%
+\caption{Workflow de pré-processamento}\label{pipeline_processamento}
+\begin{center}
+\includegraphics[scale=0.35]{imagens/sentilytics/estudo-caso/workflow.png}
+\end{center}
+}
+\legend{Fonte: Autor (2025).}
+\end{figure}
+
+A \autoref{pipeline_processamento} mostra um conjunto de tarefas
+organizadas em ordem, cada postagem vai passar por essas tarefas em
+sequência, as tarefas são:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \tightlist
 \item
-  Lowercase: Transformação de todo o texto para minúsculas, garantindo
+  Minúsculas: Transformação de todo o texto para minúsculas, garantindo
   uniformidade;
 \item
-  Remove URLs: Remove URLs do texto;
+  Removedor URLs Regex: Remove URLs do texto;
 \item
-  Enelvo Normaliser: Normalização do texto para corrigir erros
+  Normalizador Enelvo: Normalização do texto para corrigir erros
   ortográficos e abreviações comuns;
 \item
-  Word Tokenizer: Segmentação do texto em palavras individuais (tokens);
+  Tokenização por Palavra \textbar{} NLTK: Segmentação do texto em
+  palavras individuais (tokens);
 \item
-  Stopwords Remover: Remoção de palavras irrelevantes que não contribuem
-  para a análise do sentimento;
+  Removedor Stopwords: Remoção de palavras irrelevantes que não
+  contribuem para a análise do sentimento;
 \item
-  Join Tokens: Os tokens são unidos novamente formando uma frase
+  Tokens para Texto: Os tokens são unidos novamente formando uma frase
   novamente com os tokens separados por um espaço em branco.
 \end{enumerate}
 
@@ -2923,11 +2959,14 @@ pipeline de processamento incluiu as seguintes etapas:
 \subsection{Análise de Sentimentos}\label{anuxe1lise-de-sentimentos}}
 
 Após o pré-processamento, as postagens foram submetidas ao modelo de
-análise de sentimentos do Sentilytics, que utiliza o VADER (Valence
-Aware Dictionary and sEntiment Reasoner), uma ferramenta da biblioteca
-NLTK (Natural Language Toolkit). O VADER é um modelo baseado em regras e
-léxicos, projetado especificamente para a análise de sentimentos em
-textos informais.
+análise de sentimentos do Sentilytics, que utiliza o VADER\footnote{A
+  documentação do VADER está disponível no link:
+  \url{https://www.nltk.org/_modules/nltk/sentiment/vader.html}}
+(Valence Aware Dictionary and sEntiment Reasoner), uma ferramenta da
+biblioteca NLTK\footnote{O site do NLTK está disponível no link:
+  \url{https://www.nltk.org/}} (Natural Language Toolkit). O VADER é um
+modelo baseado em regras e léxicos, projetado especificamente para a
+análise de sentimentos em textos informais.
 
 Cada postagem recebeu uma pontuação de polaridade, categorizada em:
 
@@ -2947,7 +2986,7 @@ Cada postagem recebeu uma pontuação de polaridade, categorizada em:
 
 A pontuação composta é calculada a partir da soma das valências das
 palavras presentes no texto. Essas valências são determinadas por um
-léxico de sentimentos, que associa palavras a escores de polaridade
+léxico de sentimentos, que associa palavras ao score de polaridade
 positiva e negativa. Além disso, a análise considera uma série de
 heurísticas que ajustam o impacto dessas palavras com base no contexto
 em que aparecem, como a presença de negações ou intensificadores.
@@ -2964,8 +3003,9 @@ soma das valências é normalizada usando a seguinte fórmula:
 \item
   sum\_s é a soma das valências das palavras no texto;
 \item
-  𝛼 é um fator de suavização que evita que textos muito longos tenham
-  scores excessivamente altos ou baixos (o valor padrão no VADER é 15).
+  \(\alpha\) é um fator de suavização que evita que textos muito longos
+  tenham scores excessivamente altos ou baixos (o valor padrão no VADER
+  é 15).
 \end{itemize}
 
 Com base nessa normalização, o sentilytics consegue interpretar o
@@ -3025,8 +3065,8 @@ da opinião pública quanto à possibilidade de alteração ou extinção da
 escala 6x1, refletindo um possível apoio da população a mudanças na
 organização da jornada de trabalho.
 
-O Sentilytics também gerou um insight baseado em AI para analisar o
-resultado do gráfico, interpretando a predominância do sentimento de
+O Sentilytics também gerou um \emph{insight} baseado em AI para analisar
+o resultado do gráfico, interpretando a predominância do sentimento de
 neutralidade da seguinte forma: ``Em suma, a análise de sentimentos
 revela uma necessidade de explorar mais a fundo as razões subjacentes ao
 otimismo ou pessimismo contidos nos 512 comentários positivos e nos 105
@@ -3038,7 +3078,9 @@ neutros, ainda existe a necessidade de entender melhor os sentimentos
 positivos e negativos expressos pela população. O alto número de
 postagens neutras pode ser interpretado como uma cautela do público em
 relação ao tema, especialmente considerando que mudanças trabalhistas
-costumam gerar incertezas.
+costumam gerar incertezas. Esses \emph{insights} foram gerados
+utilizando a API do ChatGPT, na qual os dados do gráfico em questão são
+enviados para o modelo, que então realiza uma análise.
 
 Embora os resultados apresentados forneçam uma visão geral sobre a
 distribuição dos sentimentos, é importante considerar as limitações
@@ -3067,8 +3109,7 @@ A análise desse gráfico permite identificar qual categoria de sentimento
 gera maior engajamento geral, bem como tendências específicas por tipo
 de interação. Por exemplo, é possível observar se posts com sentimentos
 negativos recebem mais repostagens, indicando maior disseminação de
-conteúdos críticos, ou se postagens neutras geram mais respostas,
-sugerindo uma maior propensão ao debate e à troca de informações.
+conteúdos críticos.
 
 A análise do gráfico da \autoref{grafico_media_engajamento} revela que
 os sentimentos negativos geraram o maior engajamento geral,
@@ -3091,7 +3132,7 @@ O gráfico apresentado na \autoref{grafico_total_engajamento} exibe o
 total de interações por sentimento, podemos interpretar esse gráfico
 observando quais sentimentos geram o maior volume absoluto de
 engajamento, bem como identificar padrões na distribuição das interações
-por tipo. ao contrário do gráfico da \autoref{grafico_media_engajamento}
+por tipo. Ao contrário do gráfico da \autoref{grafico_media_engajamento}
 que mostra a média, este gráfico analisa o impacto acumulado das
 interações em cada categoria de sentimento.
 
@@ -3156,13 +3197,12 @@ e ``6x1'' (5.020 ocorrências) sendo os termos mais frequentes, seguidos
 por ``fim'' (2.229 ocorrências). Isso demonstra o foco principal no
 impacto e nas mudanças associadas à proposta.
 
-Os termos ``contra'' (894 ocorrências) e ``pra'' (982 ocorrências)
-sugerem uma oposição ou apoio ativo à pauta, indicando que a comunidade
-está dividida entre grupos que defendem ou rejeitam o fim da escala.
-Além disso, palavras como ``trabalho'' (529 ocorrências),
-``trabalhadores'' (268 ocorrências) e ``jornada'' (134 ocorrências)
-indicam que a discussão também foca nos impactos diretos sobre a rotina
-e os direitos dos trabalhadores.
+Os termos ``contra'' (894 ocorrências) sugere uma oposição ou apoio
+ativo à pauta, indicando que a comunidade está dividida entre grupos que
+defendem ou rejeitam o fim da escala. Além disso, palavras como
+``trabalho'' (529 ocorrências), ``trabalhadores'' (268 ocorrências) e
+``jornada'' (134 ocorrências) indicam que a discussão também foca nos
+impactos diretos sobre a rotina e os direitos dos trabalhadores.
 
 A presença de palavras como ``governo'' (257 ocorrências), ``direita''
 (230 ocorrências) e ``esquerda'' (256 ocorrências) sugere que o debate
@@ -3181,7 +3221,7 @@ fornecendo \emph{insights} sobre como o público está reagindo ao debate.
 \hypertarget{top_posts_engajados}{%
 \caption{Top posts Engajados}\label{top_posts_engajados}
 \begin{center}
-\includegraphics[scale=0.2]{imagens/sentilytics/estudo-caso/top_posts_engajados.png}
+\includegraphics[scale=0.3]{imagens/sentilytics/estudo-caso/top_posts_engajados.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -3224,13 +3264,13 @@ caso, e incluem:
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi})}
 \item
-  Integração limitada à rede social Bluesky: Atualmente, o Sentilytics
-  está integrado apenas à rede social Bluesky, uma plataforma que ainda
-  não possui grande relevância no Brasil e é pouco utilizada em
-  comparação com outras redes sociais, como X (Antigo Twitter) e
-  Facebook. Essa limitação reduz a representatividade da análise, já que
-  os dados coletados refletem um público menor e potencialmente menos
-  diversificado;
+  \textbf{Integração limitada à rede social Bluesky}: Atualmente, o
+  Sentilytics está integrado apenas à rede social Bluesky, uma
+  plataforma que ainda não possui grande relevância no Brasil e é pouco
+  utilizada em comparação com outras redes sociais, como X (Antigo
+  Twitter) e Facebook. Essa limitação reduz a representatividade da
+  análise, já que os dados coletados refletem um público menor e
+  potencialmente menos diversificado;
 \item
   Opções limitadas de pré-processamento e análise de sentimentos: O
   Sentilytics oferece atualmente um número reduzido de tarefas de
@@ -3253,7 +3293,11 @@ caso, e incluem:
   que é comum em postagens de redes sociais. Isso pode ter levado a uma
   classificação imprecisa em alguns casos, especialmente nas postagens
   que dependem de contextos mais complexos para serem interpretadas
-  corretamente.
+  corretamente;
+\item
+  Dados reais não rotulado para comparação: Os dados são reais e obtidos
+  diretamente da rede social, portanto, não foram rotulados por
+  especialistas, a fim de analisar a acurácia e precisão dos resultados.
 \end{enumerate}
 
 Essas limitações não comprometem os objetivos gerais do estudo, mas

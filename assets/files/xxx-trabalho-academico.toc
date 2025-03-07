@@ -22,40 +22,39 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Sentilytics}}{25}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Tecnologias e Ferramentas}{25}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Python}{25}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Spring Boot}{26}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Angular}{28}{subsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.1.4}RabbitMQ}{28}{subsection.3.1.4}%
-\contentsline {subsection}{\numberline {3.1.5}PostgreSQL}{29}{subsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.1.6}Git e GitHub}{29}{subsection.3.1.6}%
-\contentsline {subsection}{\numberline {3.1.7}Docker e Docker Compose}{30}{subsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.1.8}Intellij IDEA}{31}{subsection.3.1.8}%
-\contentsline {subsection}{\numberline {3.1.9}PyCharm}{31}{subsection.3.1.9}%
-\contentsline {subsection}{\numberline {3.1.10}Visual Studio Code (VS Code)}{31}{subsection.3.1.10}%
-\contentsline {subsection}{\numberline {3.1.11}DBeaver}{32}{subsection.3.1.11}%
-\contentsline {subsection}{\numberline {3.1.12}Vertabelo}{32}{subsection.3.1.12}%
-\contentsline {subsection}{\numberline {3.1.13}Postman}{32}{subsection.3.1.13}%
-\contentsline {subsection}{\numberline {3.1.14}Síntese das Tecnologias e Ferramentas utilizadas}{33}{subsection.3.1.14}%
+\contentsline {subsection}{\numberline {3.1.1}Python}{26}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Spring Boot}{28}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Angular}{29}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}RabbitMQ}{29}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}PostgreSQL}{30}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Git e GitHub}{30}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Docker e Docker Compose}{31}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Intellij IDEA}{32}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}PyCharm}{32}{subsection.3.1.9}%
+\contentsline {subsection}{\numberline {3.1.10}Visual Studio Code (VS Code)}{32}{subsection.3.1.10}%
+\contentsline {subsection}{\numberline {3.1.11}DBeaver}{33}{subsection.3.1.11}%
+\contentsline {subsection}{\numberline {3.1.12}Vertabelo}{33}{subsection.3.1.12}%
+\contentsline {subsection}{\numberline {3.1.13}Postman}{33}{subsection.3.1.13}%
 \contentsline {section}{\numberline {3.2}Modelagem da solução}{34}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Requisitos Funcionais e Não Funcionais}{35}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Diagramas de Caso de Uso}{36}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}BPMN}{37}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Diagrama Entidade-Relacionamento (DER) e Dicionário de dados}{38}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Diagrama de Sequência/Atividades do pré-processamento e análise de sentimentos}{39}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.5}Diagrama de Sequência do pré-processamento e análise de sentimentos}{39}{subsection.3.2.5}%
 \contentsline {subsection}{\numberline {3.2.6}Diagrama de Classe}{43}{subsection.3.2.6}%
 \contentsline {subsection}{\numberline {3.2.7}Diagrama de Componentes}{51}{subsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.2.8}Interfaces gráfica}{52}{subsection.3.2.8}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Análise de sentimento da opinião pública sobre a escala de trabalho 6x1 com Sentilytics: um estudo de caso}}{59}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Escala de trabalho 6x1: um estudo de caso com o Sentilytics}}{59}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Métodologia do estudo}{59}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Coleta de Dados}{60}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.1}Coleta de Dados}{59}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Pré-processamento dos Dados}{60}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Análise de Sentimentos}{60}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Análise gráfica e textual do Sentilytics}{61}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Limitações do Estudo de Caso}{66}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.1.3}Análise de Sentimentos}{61}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Análise gráfica e textual do Sentilytics}{62}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Limitações do Estudo de Caso}{68}{subsection.4.2.1}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{68}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{70}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{70}{section*.15}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{72}{section*.15}%

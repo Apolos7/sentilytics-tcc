@@ -1,4 +1,4 @@
-PWD /tmp/TMP_68177fbb02dcbf93eac3c91d42a64bcf
+PWD /tmp/TMP_373c578bfeba4c8297dbc01f5618535d
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -260,6 +260,8 @@ INPUT imagens/sentilytics/interface-grafica/coleta-dados.png
 INPUT imagens/sentilytics/interface-grafica/processamento.png
 INPUT imagens/sentilytics/interface-grafica/resultado-graficos.png
 INPUT imagens/sentilytics/qr_code.png
+INPUT imagens/sentilytics/estudo-caso/dados_pesquisa.png
+INPUT imagens/sentilytics/estudo-caso/workflow.png
 INPUT imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.png
 INPUT imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png
 INPUT imagens/sentilytics/estudo-caso/media_engajamento_por_sentimento.png
