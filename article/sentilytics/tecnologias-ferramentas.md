@@ -2,6 +2,14 @@
 
 O desenvolvimento da aplicação de análise de sentimentos contou com o uso de diversas tecnologias e ferramentas, as quais foram essenciais para a implementação eficiente da solução. A seguir, são descritas as principais tecnologias empregadas e os respectivos papéis que desempenharam na construção da aplicação.
 
+Na \autoref{diagrama_tecnologias_ferramentas}, apresentamos um diagrama que agrupa as tecnologias e ferramentas utilizadas no projeto em suas respectivas categorias. Essa organização facilita a visualização dos principais componentes tecnológicos empregados, permitindo uma compreensão clara da diversidade de soluções adotadas.
+
+![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.5}
+
+Fonte: Autor (2025).
+
+Na \autoref{diagrama_tecnologias_ferramentas}, a categorização das tecnologias evidencia a variedade de ferramentas que compõem o ecossistema do projeto. Cada categoria agrupa soluções com funções específicas, demonstrando a pluralidade de abordagens utilizadas no desenvolvimento. Com essa estrutura tecnológica bem definida, podemos garantir um fluxo de trabalho mais eficiente e uma base sólida para a implementação do sistema.
+
 ### Python
 
 O Python[^python] é uma linguagem de programação amplamente utilizada para tarefas de Processamento de Linguagem Natural (PLN) devido à sua sintaxe acessível e ao amplo suporte de bibliotecas voltadas para esse domínio. Entre os recursos disponíveis, destacam-se ferramentas como o *Natural Language Toolkit* (NLTK), que fornece funcionalidades para tokenização, remoção de *stopwords*, *stemming* e lematização, e o Enelvo, uma biblioteca voltada para a normalização de textos em português \cite{bertaglia2016exploring}. Essas bibliotecas possibilitam a manipulação eficiente de textos, sendo frequentemente aplicadas em soluções que envolvem análise automática de conteúdos.
@@ -24,14 +32,14 @@ Embora atualmente apenas o VADER esteja integrado à solução, a arquitetura do
 
 ### Spring Boot
 
-O Spring Boot[^spring_boot] é um framework Java voltado para o desenvolvimento de aplicações web e serviços backend, oferecendo uma abordagem simplificada para a configuração e execução de sistemas baseados no ecossistema Spring. Ele possibilita a criação de aplicações modulares e escaláveis, reduzindo a necessidade de configurações manuais extensivas e proporcionando integração com diversas tecnologias, como bancos de dados, filas de mensagens e processamento em lote.
+O Spring Boot[^spring_boot] é um *framework* Java voltado para o desenvolvimento de aplicações web e serviços *back-end*, oferecendo uma abordagem simplificada para a configuração e execução de sistemas baseados no ecossistema Spring. Ele possibilita a criação de aplicações modulares e escaláveis, reduzindo a necessidade de configurações manuais extensivas e proporcionando integração com diversas tecnologias, como bancos de dados, filas de mensagens e processamento em lote.
 
 Além do suporte para APIs REST, o Spring Boot conta com o Spring Batch, uma extensão projetada para lidar com grandes volumes de dados por meio de processamento assíncrono e em lote. Esse módulo é amplamente utilizado em cenários que exigem a importação e transformação de grandes conjuntos de informações de forma eficiente e estruturada.
 
 No desenvolvimento do Sentilytics, o Spring Boot foi utilizado para construir dois serviços principais, cada um desempenhando um papel fundamental na arquitetura da aplicação:
 
-1. Web API (Spring Boot REST API) – Esse serviço atua como o núcleo de comunicação da aplicação, centralizando todas as operações e integrando os diferentes módulos do sistema. Ele expõe os endpoints REST que permitem a interação com o frontend em Angular e gerencia a inicialização dos serviços oferecidos pelo módulo em Python, como o pré-processamento e a análise de sentimentos, utilizando o RabbitMQ para troca de mensagens.
-Além disso, a API é responsável pela coleta de dados no Bluesky, lidando com a autenticação necessária e garantindo a ingestão segura das postagens na base de dados PostgreSQL. A escolha do Bluesky como rede social integrada se deu principalmente devido à política de gratuidade na coleta de postagens, o que viabilizou a realização deste estudo de caso. Apesar de o Bluesky ainda não ser amplamente utilizado no Brasil, sua estrutura e acessibilidade tornam-no uma escolha viável para a demonstração das funcionalidades do Sentilytics.
+1. Web API (Spring Boot REST API) – Esse serviço atua como o núcleo de comunicação da aplicação, centralizando todas as operações e integrando os diferentes módulos do sistema. Ele expõe os endpoints REST que permitem a interação com o *front-end* em Angular e gerencia a inicialização dos serviços oferecidos pelo módulo em Python, como o pré-processamento e a análise de sentimentos, utilizando o RabbitMQ para troca de mensagens.
+Além disso, a API é responsável pela coleta de dados no Bluesky, lidando com a autenticação necessária e garantindo a ingestão segura das postagens na base de dados PostgreSQL. A escolha do Bluesky como rede social integrada justifica-se pela política de gratuidade na coleta de postagens, o que viabilizou a realização deste estudo de caso. Apesar de o Bluesky ainda não ser amplamente utilizado no Brasil, sua estrutura e acessibilidade tornam-no uma escolha viável para a demonstração das funcionalidades do Sentilytics.
 A API também gerencia os workflows e coordena as operações realizadas dentro da plataforma, garantindo que cada requisição seja processada de maneira consistente.
 
 1. Spring Batch – A segunda aplicação desenvolvida com Spring Boot foi um serviço baseado no Spring Batch, utilizado para a importação e processamento de dados a partir de arquivos CSV. Esse recurso permite que os usuários superem a limitação atual de depender exclusivamente do Bluesky como fonte de dados, possibilitando a análise de qualquer conjunto de textos formatados em arquivos CSV. Dessa forma, a plataforma se torna mais versátil e capaz de atender a diferentes necessidades analíticas, independentemente da origem dos dados.
@@ -43,15 +51,15 @@ A utilização do Spring Boot no projeto possibilitou uma estrutura modular, esc
 
 ### Angular
 
-O Angular[^angular] é um framework front-end baseado em TypeScript, desenvolvido e mantido pelo Google, voltado para a criação de aplicações web dinâmicas e escaláveis. Ele adota uma arquitetura modular baseada em componentes reutilizáveis, proporcionando um desenvolvimento estruturado e facilitando a manutenção do código.
+O Angular[^angular] é um *framework* *front-end* baseado em TypeScript, desenvolvido e mantido pelo Google, voltado para a criação de aplicações web dinâmicas e escaláveis. Ele adota uma arquitetura modular baseada em componentes reutilizáveis, proporcionando um desenvolvimento estruturado e facilitando a manutenção do código.
 
-No desenvolvimento de interfaces, o Angular pode ser combinado com bibliotecas de estilização como o Tailwind CSS, um framework CSS utilitário que permite a criação de layouts responsivos e altamente customizáveis, reduzindo a necessidade de estilos manuais.
+No desenvolvimento de interfaces, o Angular pode ser combinado com bibliotecas de estilização como o Tailwind CSS, um *framework* CSS utilitário que permite a criação de layouts responsivos e altamente customizáveis, reduzindo a necessidade de estilos manuais.
 
-No desenvolvimento do Sentilytics, o Angular foi utilizado como o framework principal para construção do frontend. Para facilitar a estilização e responsividade, o framework foi utilizado em conjunto com o Tailwind CSS, que possibilitou a criação de um design moderno e consistente sem a necessidade de escrever estilos CSS extensos.
+No desenvolvimento do Sentilytics, o Angular foi utilizado como o *framework* principal para construção do *front-end*. Para facilitar a estilização e responsividade, o *framework* foi utilizado em conjunto com o Tailwind CSS, que possibilitou a criação de um design moderno e consistente sem a necessidade de escrever estilos CSS extensos.
 
 A interface foi projetada para proporcionar uma navegação intuitiva, organizando as diferentes etapas do fluxo da aplicação, desde o cadastro da pesquisa, passando pela coleta e processamento dos dados, até a visualização dos resultados da análise de sentimentos.
 
-Além disso, para garantir uma experiência em tempo real, foi implementado o protocolo Server-Sent Events (SSE), que permite a comunicação assíncrona entre o backend e o frontend. Esse mecanismo foi utilizado para notificar os usuários sobre o andamento de processos demorados, como o pré-processamento dos textos e a execução da análise de sentimentos. Dessa forma, os usuários podem acompanhar o progresso das operações sem a necessidade de recarregar a página ou realizar requisições manuais para obter atualizações.
+Além disso, para garantir uma experiência em tempo real, foi implementado o protocolo Server-Sent Events (SSE), que permite a comunicação assíncrona entre o *back-end* e o *front-end*. Esse mecanismo foi utilizado para notificar os usuários sobre o andamento de processos demorados, como o pré-processamento dos textos e a execução da análise de sentimentos. Dessa forma, os usuários podem acompanhar o progresso das operações sem a necessidade de recarregar a página ou realizar requisições manuais para obter atualizações.
 
 [^angular]: A documentação do Angular está disponível no link: <https://angular.dev/>
 
@@ -71,7 +79,7 @@ O RabbitMQ foi utilizado como broker de mensagens para possibilitar a comunicaç
 
 O PostgreSQL[^postgresql] é um sistema de gerenciamento de banco de dados relacional (SGBD) de código aberto, reconhecido por sua conformidade com padrões SQL e suporte a transações ACID (Atomicidade, Consistência, Isolamento e Durabilidade). Ele oferece mecanismos para garantir a integridade dos dados e eficiência na execução de consultas.
 
-Além de suas funcionalidades relacionais, o PostgreSQL permite o uso de índices personalizados, replicação e extensões para aprimoramento do desempenho e escalabilidade. Sua compatibilidade com diversas linguagens e frameworks possibilita a integração com diferentes tipos de aplicações.
+Além de suas funcionalidades relacionais, o PostgreSQL permite o uso de índices personalizados, replicação e extensões para aprimoramento do desempenho e escalabilidade. Sua compatibilidade com diversas linguagens e *frameworks* possibilita a integração com diferentes tipos de aplicações.
 
 O PostgreSQL foi utilizado como o banco de dados relacional da aplicação, armazenando informações essenciais como pesquisas, postagens coletadas, workflows de processamento e resultados das análises de sentimentos. Sendo a principal fonte de armazenamento de Sentilytics.
 
@@ -113,15 +121,15 @@ A utilização do Docker e Docker Compose no projeto trouxe benefícios como pad
 
 ### Intellij IDEA
 
-O IntelliJ IDEA[^intellij] é um ambiente de desenvolvimento integrado (IDE) voltado para a criação de aplicações em Java e Kotlin. Desenvolvido pela JetBrains, oferece suporte a diversas tecnologias e frameworks, além de ferramentas de depuração e controle de versão que auxiliam no processo de desenvolvimento.
+O IntelliJ IDEA[^intellij] é um ambiente de desenvolvimento integrado (IDE) voltado para a criação de aplicações em Java e Kotlin. Desenvolvido pela JetBrains, oferece suporte a diversas tecnologias e *frameworks*, além de ferramentas de depuração e controle de versão que auxiliam no processo de desenvolvimento.
 
-A IDE conta com recursos como autocompletar código, análise estática e refatoração, proporcionando um ambiente estruturado para a escrita e manutenção de código. Sua compatibilidade com frameworks como Spring Boot e ferramentas de automação como Maven facilita a configuração e o gerenciamento de projetos Java. O Intellij foi utilizado em todos os projetos java desenvolvidos nessa solução.
+A IDE conta com recursos como autocompletar código, análise estática e refatoração, proporcionando um ambiente estruturado para a escrita e manutenção de código. Sua compatibilidade com *frameworks* como Spring Boot e ferramentas de automação como Maven facilita a configuração e o gerenciamento de projetos Java. O Intellij foi utilizado em todos os projetos java desenvolvidos nessa solução.
 
 [^intellij]: O Intellij IDEA está disponível para download no link: <https://www.jetbrains.com/idea/>
 
 ### PyCharm
 
-O PyCharm[^pycharm] é um ambiente de desenvolvimento integrado (IDE) voltado para aplicações em Python, desenvolvido pela JetBrains. Ele oferece suporte a frameworks e bibliotecas da linguagem, além de ferramentas de depuração, análise de código e controle de versão.
+O PyCharm[^pycharm] é um ambiente de desenvolvimento integrado (IDE) voltado para aplicações em Python, desenvolvido pela JetBrains. Ele oferece suporte a *frameworks* e bibliotecas da linguagem, além de ferramentas de depuração, análise de código e controle de versão.
 
 A IDE conta com recursos como autocompletar de código, refatoração automatizada e suporte a testes unitários, facilitando a escrita e manutenção de código. No Sentilytics, o PyCharm foi utilizado como a IDE principal para o desenvolvimento do serviço Python.
 
@@ -129,7 +137,7 @@ A IDE conta com recursos como autocompletar de código, refatoração automatiza
 
 ### Visual Studio Code (VS Code)
 
-O Visual Studio Code (VS Code)[^vscode] é um editor de código-fonte desenvolvido pela Microsoft, amplamente utilizado devido à sua leveza, extensibilidade e suporte a diversas linguagens de programação. Ele conta com recursos como realce de sintaxe, IntelliSense (autocompletar inteligente) e integração com ferramentas externas, facilitando o desenvolvimento e a depuração de código. Sendo o VS Code a principal ferramenta para desenvolvimento do frontend em Angular.
+O Visual Studio Code (VS Code)[^vscode] é um editor de código-fonte desenvolvido pela Microsoft, amplamente utilizado devido à sua leveza, extensibilidade e suporte a diversas linguagens de programação. Ele conta com recursos como realce de sintaxe, IntelliSense (autocompletar inteligente) e integração com ferramentas externas, facilitando o desenvolvimento e a depuração de código. Sendo o VS Code a principal ferramenta para desenvolvimento do *front-end* em Angular.
 
 [^vscode]: O VS Code está disponível para download no link: <https://code.visualstudio.com/>
 
@@ -159,18 +167,8 @@ O Postman[^postman] é uma ferramenta utilizada para desenvolvimento, teste e do
 
 A ferramenta também permite a visualização de dados em formatos como JSON e XML, além de oferecer recursos para organização de coleções de requisições e automação de testes. Outra funcionalidade relevante é o gerenciamento de variáveis de ambiente, facilitando a adaptação de requisições para diferentes contextos, como desenvolvimento e produção.
 
-O Postman foi utilizado para testar e validar todas as APIs desenvolvidas no Sentilytics, incluindo a API REST em Spring Boot e as integrações com o Bluesky. A ferramenta permitiu a realização de requisições HTTP, validando o funcionamento do serviços criados no backend e facilitando a depuração durante o desenvolvimento.
+O Postman foi utilizado para testar e validar todas as APIs desenvolvidas no Sentilytics, incluindo a API REST em Spring Boot e as integrações com o Bluesky. A ferramenta permitiu a realização de requisições HTTP, validando o funcionamento do serviços criados no *back-end* e facilitando a depuração durante o desenvolvimento.
 
 [^postman]: O postman está disponível para download no link: <https://www.postman.com/>
-
-### Síntese das Tecnologias e Ferramentas utilizadas
-
-A seguir, apresentamos um diagrama que agrupa as tecnologias e ferramentas utilizadas no projeto em suas respectivas categorias. Essa organização facilita a visualização dos principais componentes tecnológicos empregados, permitindo uma compreensão clara da diversidade de soluções adotadas.
-
-![Diagrama das Tecnologias e ferramentas utilizadas](imagens/sentilytics/diagramas/tecnologias-ferramentas.png){#diagrama_tecnologias_ferramentas escala=0.5}
-
-Fonte: Autor (2025).
-
-A categorização das tecnologias evidencia a variedade de ferramentas que compõem o ecossistema do projeto. Cada categoria agrupa soluções com funções específicas, demonstrando a pluralidade de abordagens utilizadas no desenvolvimento. Com essa estrutura tecnológica bem definida, podemos garantir um fluxo de trabalho mais eficiente e uma base sólida para a implementação do sistema.
 
 Finalizada a apresentação das tecnologias e ferramentas, seguimos agora para a próxima etapa, onde abordaremos a modelagem da solução.

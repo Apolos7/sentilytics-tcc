@@ -8,7 +8,7 @@ Inicialmente, são definidos os requisitos funcionais e não funcionais, que est
 
 Para representar o fluxo de execução dos processos dentro da aplicação, são utilizados diagramas BPMN (Business Process Model and Notation) e diagramas de sequência/atividades, que detalham as etapas do pré-processamento e da análise de sentimentos. Além disso, a estrutura de dados e as relações entre entidades são documentadas por meio do Diagrama Entidade-Relacionamento (DER) e do dicionário de dados.
 
-A organização dos componentes do sistema é descrita no Diagrama de Componentes, que ilustra a arquitetura da aplicação, destacando a comunicação entre os módulos do backend, frontend e serviços externos. Complementarmente, o Diagrama de Classes define a estrutura da lógica de programação, detalhando as principais classes e seus relacionamentos.
+A organização dos componentes do sistema é descrita no Diagrama de Componentes, que ilustra a arquitetura da aplicação, destacando a comunicação entre os módulos do *back-end*, *front-end* e serviços externos. Complementarmente, o Diagrama de Classes define a estrutura da lógica de programação, detalhando as principais classes e seus relacionamentos.
 
 Por fim, as interfaces gráficas são apresentadas para demonstrar a experiência do usuário e a forma como as funcionalidades da aplicação são disponibilizadas. Essas interfaces são projetadas para garantir usabilidade, responsividade e uma experiência intuitiva, permitindo que os usuários explorem as análises de sentimentos de maneira eficiente.
 
@@ -29,7 +29,7 @@ Quadro requisitos_funcionais: Requisitos funcionais.
 | RF05     | O sistema deve calcular a pontuação de sentimentos de cada comentário, classificando-os como positivos, negativos ou neutros com base em regras de pontuação composta.                      |
 | RF06     | O sistema deve armazenar os resultados da análise de sentimentos em uma tabela de banco de dados, incluindo a quantidade total de comentários e a distribuição de sentimentos.         |
 | RF07     | O sistema deve permitir a consulta dos resultados da análise de sentimentos, filtrando por período, rede social e sentimento predominante.                                                  |
-| RF08     | O sistema deve permitir a comunicação entre o backend em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.                                                |
+| RF08     | O sistema deve permitir a comunicação entre o *back-end* em Spring Boot e o serviço de análise de sentimentos em Python por meio de RabbitMQ.                                                |
 | RF09     | O sistema deve permitir que usuários se autentiquem utilizando suas credenciais da rede social Bluesky, sem a necessidade de cadastro adicional.                                        |
 | RF10     | O sistema deve fornecer uma interface web baseada em Angular para que os usuários possam interagir com as funcionalidades de análise de sentimentos.                                                 |
 
@@ -45,7 +45,7 @@ Os diagramas de caso de uso são representações gráficas que demonstram as in
 
 Fonte: Autor (2025).
 
-Como podemos visualizar na Figura \ref{usecase}, o diagrama apresenta as interações entre o usuário e o sistema Sentilytics, destacando as principais funcionalidades disponíveis. Cada caso de uso representa uma ação que pode ser realizada dentro da aplicação, organizando de forma clara os processos fundamentais do sistema.
+Como podemos visualizar na \autoref{usecase}, o diagrama apresenta as interações entre o usuário e o sistema Sentilytics, destacando as principais funcionalidades disponíveis. Cada caso de uso representa uma ação que pode ser realizada dentro da aplicação, organizando de forma clara os processos fundamentais do sistema.
 
 O usuário pode realizar operações relacionadas à gestão de pesquisas, como cadastrar, excluir e importar postagens diretamente via CSV e realizar a busca de postagens na plataforma Bluesky. Também há funcionalidades voltadas para a administração de workflows, permitindo o cadastro, configuração das tarefas de
 pré-processamento e seus parâmetros e exclusão desses componentes, que são essenciais para a organização do processamento das postagens.
@@ -62,7 +62,7 @@ A Business Process Model and Notation (BPMN) é uma notação padronizada para m
 
 Fonte: Autor (2025).
 
-A Figura \ref{bpmn_pesquisa} apresenta o fluxo principal para a realização de uma pesquisa completa no  Sentilytics, representado por meio do  Diagrama BPMN. Esse fluxo descreve as etapas envolvidas desde a criação da pesquisa até a visualização dos resultados da análise de sentimentos.
+A \autoref{bpmn_pesquisa} apresenta o fluxo principal para a realização de uma pesquisa completa no  Sentilytics, representado por meio do  Diagrama BPMN. Esse fluxo descreve as etapas envolvidas desde a criação da pesquisa até a visualização dos resultados da análise de sentimentos.
 
 O processo inicia-se quando o usuário decide realizar uma nova pesquisa, cadastrando-a e configurando os parâmetros necessários. Em seguida, é necessário definir o  método de coleta de dados , onde duas abordagens podem ser utilizadas de forma independente ou simultânea: importação de dados via arquivo CSV ou a busca automatizada de postagens na plataforma Bluesky .
 
@@ -92,15 +92,15 @@ Fonte: Autor (2025).
 
 Assim como o DER, o Dicionário de Dados do Sentilytics foi gerado na ferramenta Vertabelo, que permite a exportação e documentação estruturada dos elementos do banco. A \autoref{dicionario_dados} apresenta esse documento, refletindo a modelagem realizada e consolidando a documentação do banco de dados. Após a modelagem da base de dados, foi possível avançar com os diagramas de sequência/atividade dos principais fluxos que foram mostrados nos requisitos.
 
-### Diagrama de Sequência/Atividades do pré-processamento e análise de sentimentos
+### Diagrama de Sequência do pré-processamento e análise de sentimentos
 
 Os diagramas de sequência são utilizados para representar a interação entre diferentes componentes de um sistema ao longo do tempo. Eles detalham a ordem das mensagens trocadas entre os elementos envolvidos, permitindo a visualização do fluxo de execução de um processo específico. Essa abordagem facilita a compreensão da dinâmica do sistema e auxilia na identificação de dependências entre os componentes.
 
 No contexto do Sentilytics, foram elaborados três diagramas de sequência que descrevem processos essenciais para o funcionamento da aplicação:
 
-- Figura \ref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta de dados.
-- Figura \ref{seq_cadastro_configuracao_workflow}: Cadastro e configuração do workflow.
-- Figura \ref{seq_processamento_analise}: Sequência de processamento, incluindo o pré-processamento do workflow e da análise de sentimentos.
+- \autoref{seq_pesquisa_coleta_dados}: Cadastro da pesquisa e coleta de dados.
+- \autoref{seq_cadastro_configuracao_workflow}: Cadastro e configuração do workflow.
+- \autoref{seq_processamento_analise}: Sequência de processamento, incluindo o pré-processamento do workflow e da análise de sentimentos.
 
 Cada um desses diagramas detalha a troca de informações entre os elementos do sistema, evidenciando os passos necessários para a execução dessas funcionalidades. A seguir, apresentam-se essas representações gráficas.
 
@@ -108,7 +108,7 @@ Cada um desses diagramas detalha a troca de informações entre os elementos do 
 
 Fonte: Autor (2025).
 
-A Figura \ref{seq_pesquisa_coleta_dados} apresenta o Diagrama de Sequência que descreve o fluxo de criação de uma pesquisa de análise de sentimentos e a coleta de dados a partir da plataforma  Bluesky. Esse diagrama detalha a interação entre o usuário e os principais componentes do sistema durante esse processo.
+A \autoref{seq_pesquisa_coleta_dados} apresenta o Diagrama de Sequência que descreve o fluxo de criação de uma pesquisa de análise de sentimentos e a coleta de dados a partir da plataforma  Bluesky. Esse diagrama detalha a interação entre o usuário e os principais componentes do sistema durante esse processo.
 
 O fluxo se inicia quando o usuário solicita a criação de uma nova pesquisa. Essa requisição é recebida pelo PesquisaAnaliseSentimentoController, que encaminha os dados para o PesquisaAnaliseSentimentoService, responsável pelo gerenciamento da lógica de negócio associada à pesquisa.
 
@@ -122,7 +122,7 @@ Esse diagrama ilustra de forma clara a sequência de interações entre os compo
 
 Fonte: Autor (2025).
 
-A Figura \ref{seq_cadastro_configuracao_workflow} apresenta o Diagrama de Sequência referente ao processo de cadastro e configuração do workflow dentro do Sentilytics. Esse diagrama descreve a interação entre o usuário e os principais componentes responsáveis pelo gerenciamento dos workflows de processamento de dados.
+A \autoref{seq_cadastro_configuracao_workflow} apresenta o Diagrama de Sequência referente ao processo de cadastro e configuração do workflow dentro do Sentilytics. Esse diagrama descreve a interação entre o usuário e os principais componentes responsáveis pelo gerenciamento dos workflows de processamento de dados.
 
 O fluxo se inicia quando o usuário solicita a criação de um novo workflow. Essa requisição é encaminhada ao WorkflowProcessamentoController, que repassa os dados ao WorkflowProcessamentoService, responsável por registrar o workflow no banco de dados. Após a conclusão dessa etapa, uma confirmação de criação é enviada ao usuário.
 
@@ -136,7 +136,7 @@ Esse diagrama demonstra a estrutura do processo de cadastro e configuração do 
 
 Fonte: Autor (2025).
 
-A Figura \ref{seq_processamento_analise} apresenta o Diagrama de Sequência que descreve o fluxo de execução de um workflow de processamento, que representa o fluxo utilizado tanto para o pré-processamento do texto quanto para a análise de sentimentos dentro do Sentilytics. Esse diagrama detalha a interação entre o usuário e os serviços responsáveis pelo envio, processamento e retorno dos dados.
+A \autoref{seq_processamento_analise} apresenta o Diagrama de Sequência que descreve o fluxo de execução de um workflow de processamento, que representa o fluxo utilizado tanto para o pré-processamento do texto quanto para a análise de sentimentos dentro do Sentilytics. Esse diagrama detalha a interação entre o usuário e os serviços responsáveis pelo envio, processamento e retorno dos dados.
 
 O fluxo inicia-se quando o usuário solicita a execução de um workflow. Essa requisição é encaminhada ao WorkflowProcessamentoController, que direciona o processamento ao WorkflowProcessamentoService, responsável por gerenciar a execução. Para iniciar o processamento, o serviço encaminha a solicitação ao MessageBrokerProducer, que publica uma mensagem na fila do RabbitMQ contendo a identificação do workflow a ser processado.
 
@@ -158,7 +158,7 @@ Os diagramas são organizados da seguinte forma:
 - Pacote Model: Representa as entidades do domínio, definindo os objetos que compõem o modelo de dados e seus relacionamentos.
 - Pacote Repository: Demonstra os repositórios responsáveis pela persistência dos dados, conectando a aplicação ao banco de dados.
 - Pacote Service: Contém as classes que implementam a lógica de negócio, garantindo o processamento e a manipulação dos dados conforme as regras da aplicação.
-- Pacote Controller: Representa os controladores da API, responsáveis por expor os endpoints e intermediar a comunicação entre o frontend e a lógica de negócio.
+- Pacote Controller: Representa os controladores da API, responsáveis por expor os endpoints e intermediar a comunicação entre o *front-end* e a lógica de negócio.
 
 A seguir, cada diagrama será apresentado e analisado individualmente, detalhando a estrutura e os relacionamentos das classes dentro de cada camada do sistema.
 
@@ -166,16 +166,17 @@ A seguir, cada diagrama será apresentado e analisado individualmente, detalhand
 
 Fonte: Autor (2025).
 
-A Figura \ref{diagrama_classe_geral} apresenta a visão geral dos pacotes da Web API desenvolvida em Spring Boot, destacando sua estrutura modular e a organização das classes. Esse diagrama ilustra a separação dos componentes do sistema, facilitando a compreensão das responsabilidades de cada pacote e a interação entre eles.
+A \autoref{diagrama_classe_geral} apresenta a visão geral dos pacotes da Web API desenvolvida em Spring Boot, destacando sua estrutura modular e a organização das classes. Esse diagrama ilustra a separação dos componentes do sistema, facilitando a compreensão das responsabilidades de cada pacote e a interação entre eles.
 
 A arquitetura segue uma estrutura organizada em camadas, conforme descrito a seguir:
 
-- Pacote controller: Contém as classes responsáveis por expor os endpoints da API, intermediando a comunicação entre o frontend e a lógica de negócio da aplicação. Cada classe representa um controlador correspondente a um serviço específico.
+- Pacote controller: Contém as classes responsáveis por expor os endpoints da API, intermediando a comunicação entre o *front-end* e a lógica de negócio da aplicação. Cada classe representa um controlador correspondente a um serviço específico.
 - Pacote service: Implementa a lógica de negócio do sistema, processando dados e aplicando as regras definidas. Essa camada interage diretamente com os repositórios para manipulação dos dados e com a camada de controle para fornecer respostas às requisições.
 - Pacote repository: Define os repositórios da aplicação, responsáveis pelo acesso e manipulação dos dados no banco de dados. As interfaces dessa camada utilizam o Spring Data JPA para abstrair operações de persistência.
 - Pacote model: Contém as entidades do domínio, que representam as tabelas do banco de dados e seus relacionamentos. Essa camada define a estrutura dos dados utilizados na aplicação.
 - Pacote config: Reúne configurações essenciais da aplicação, incluindo segurança, serialização e tratamento de exceções.
-- A comunicação entre os pacotes ocorre de forma estruturada: a camada de controle interage com os serviços, que, por sua vez, realizam operações no banco de dados por meio dos repositórios. O pacote de model é utilizado pelos repositórios para representar os dados persistidos, garantindo uma separação clara das responsabilidades dentro da aplicação.
+
+A comunicação entre os pacotes ocorre de forma estruturada: a camada de controle interage com os serviços, que, por sua vez, realizam operações no banco de dados por meio dos repositórios. O pacote de model é utilizado pelos repositórios para representar os dados persistidos, garantindo uma separação clara das responsabilidades dentro da aplicação.
 
 A seguir, será apresentada uma análise detalhada do Diagrama do Pacote Model, que contém as entidades responsáveis pelo armazenamento e manipulação dos dados no sistema.
 
@@ -183,7 +184,7 @@ A seguir, será apresentada uma análise detalhada do Diagrama do Pacote Model, 
 
 Fonte: Autor (2025).
 
-A Figura \ref{diagrama_classe_model} apresenta o Diagrama de Classes do Pacote Model, que define as entidades utilizadas na Web API Spring Boot do Sentilytics. Essas entidades representam as tabelas do banco de dados e são responsáveis pelo armazenamento das informações essenciais para o funcionamento da aplicação.
+A \autoref{diagrama_classe_model} apresenta o Diagrama de Classes do Pacote Model, que define as entidades utilizadas na Web API Spring Boot do Sentilytics. Essas entidades representam as tabelas do banco de dados e são responsáveis pelo armazenamento das informações essenciais para o funcionamento da aplicação.
 
 As classes do modelo seguem uma estrutura relacional, onde cada entidade contém atributos que refletem as colunas da respectiva tabela no banco de dados. Entre as principais entidades, destacam-se:
 
@@ -205,7 +206,7 @@ Para possibilitar a manipulação e persistência dessas entidades no banco de d
 
 Fonte: Autor (2025).
 
-A Figura \ref{diagram_repository} apresenta o Diagrama da Camada Repository, responsável pelo acesso e manipulação dos dados no banco de dados dentro da Web API Spring Boot do Sentilytics. Essa camada implementa interfaces que utilizam o Spring Data JPA, facilitando a execução de operações de persistência sem a necessidade de implementar consultas SQL manualmente.
+A \autoref{diagram_repository} apresenta o Diagrama da Camada Repository, responsável pelo acesso e manipulação dos dados no banco de dados dentro da Web API Spring Boot do Sentilytics. Essa camada implementa interfaces que utilizam o Spring Data JPA, facilitando a execução de operações de persistência sem a necessidade de implementar consultas SQL manualmente.
 
 Cada repositório representa uma interface que permite a consulta, inserção, atualização e remoção de registros no banco de dados, fornecendo métodos específicos para manipulação das entidades da aplicação. Entre os principais repositórios, destacam-se:
 
@@ -218,15 +219,13 @@ Cada repositório representa uma interface que permite a consulta, inserção, a
 - UsuarioRepository: Responsável pela recuperação das informações de usuários, permitindo buscas por identificador descentralizado (DID) ou login.
 - ValorParametroTarefaRepository: Manipula os parâmetros personalizados das tarefas do workflow, possibilitando consultas e exclusões de valores associados às configurações definidas pelo usuário.
 
-A separação da camada Repository garante que a lógica de persistência dos dados fique desacoplada das demais partes do sistema, facilitando a manutenção e reutilização do código.
-
 Para processar os dados e aplicar as regras de negócio da aplicação, os repositórios são utilizados pela camada Service, que implementa a lógica necessária para a manipulação dessas informações. A seguir, será apresentado o Diagrama da Camada Service, detalhando os serviços responsáveis pelo processamento e gestão das regras de negócio do Sentilytics.
 
 ![Diagrama de classes do pacote Services](imagens/sentilytics/diagramas/classes/service-classes.png){#diagram_service escala=0.2}
 
 Fonte: Autor (2025).
 
-A Figura \ref{diagram_service} apresenta o Diagrama da Camada Service, responsável por implementar a lógica de negócio da Web API Spring Boot do Sentilytics. Essa camada é responsável pelo processamento das operações da aplicação, garantindo a manipulação dos dados, a aplicação das regras de negócio e a interação entre os controladores e os repositórios.
+A \autoref{diagram_service} apresenta o Diagrama da Camada Service, responsável por implementar a lógica de negócio da Web API Spring Boot do Sentilytics. Essa camada é responsável pelo processamento das operações da aplicação, garantindo a manipulação dos dados, a aplicação das regras de negócio e a interação entre os controladores e os repositórios.
 
 As classes de serviço estendem a classe BaseService, que fornece funcionalidades comuns para gerenciamento de usuários autenticados e outras operações compartilhadas. A seguir, destacam-se algumas das principais responsabilidades dessa camada:
 
@@ -240,13 +239,13 @@ As classes de serviço estendem a classe BaseService, que fornece funcionalidade
 
 A camada de serviços é essencial para garantir que a lógica da aplicação esteja desacoplada da camada de persistência e dos controladores, promovendo organização, reusabilidade e escalabilidade.
 
-Para expor essas funcionalidades aos usuários e ao frontend da aplicação, a camada Service se conecta diretamente com a Camada Controller, que será abordada a seguir. O próximo diagrama apresentará os controladores da API, responsáveis por receber requisições, validar os dados de entrada e encaminhar as chamadas aos serviços apropriados.
+Para expor essas funcionalidades aos usuários e ao *front-end* da aplicação, a camada Service se conecta diretamente com a Camada Controller, que será abordada a seguir. O próximo diagrama apresentará os controladores da API, responsáveis por receber requisições, validar os dados de entrada e encaminhar as chamadas aos serviços apropriados.
 
 ![Diagrama de classes do pacote controllers](imagens/sentilytics/diagramas/classes/controller-classes.png){#diagram_controller escala=0.2}
 
 Fonte: Autor (2025).
 
-A Figura \ref{diagram_controller} apresenta o Diagrama da Camada Controller, responsável por gerenciar as requisições HTTP e expor os endpoints da API. Essa camada atua como intermediária entre o frontend e a lógica de negócio, direcionando as requisições recebidas para os serviços apropriados e retornando as respostas processadas ao cliente.
+A \autoref{diagram_controller} apresenta o Diagrama da Camada Controller, responsável por gerenciar as requisições HTTP e expor os endpoints da API. Essa camada atua como intermediária entre o *front-end* e a lógica de negócio, direcionando as requisições recebidas para os serviços apropriados e retornando as respostas processadas ao cliente.
 
 Os controladores seguem a estrutura RESTful, organizando os endpoints de acordo com as funcionalidades da aplicação. A seguir, destacam-se os principais componentes dessa camada:
 
@@ -262,9 +261,9 @@ Os controladores utilizam ResponseEntity para padronizar as respostas da API, ga
 
 O Diagrama de Componentes é uma representação da estrutura da aplicação, destacando os principais serviços que a compõem e suas interações. Ele permite visualizar a separação dos módulos, auxiliando na manutenção e na compreensão da arquitetura do sistema.
 
-No Sentilytics, a solução é composta por diferentes serviços que atuam de forma conjunta para viabilizar o fluxo de análise de sentimentos. A Figura \ref{diagrama_componentes} apresenta essa composição:
+No Sentilytics, a solução é composta por diferentes serviços que atuam de forma conjunta para viabilizar o fluxo de análise de sentimentos. A \autoref{diagrama_componentes} apresenta essa composição:
 
-A Figura \ref{diagrama_componentes} a seguir apresenta a organização e a comunicação entre esses componentes.
+A \autoref{diagrama_componentes} a seguir apresenta a organização e a comunicação entre esses componentes.
 
 ![Diagrama de Componentes da Solução](imagens/sentilytics/diagramas/diagrama_componentes.png){#diagrama_componentes escala=0.4}
 
@@ -276,12 +275,12 @@ Cada um dos componentes desempenha um papel essencial dentro da arquitetura do S
 - RabbitMQ – Atua como broker de mensagens, permitindo comunicação assíncrona entre a aplicação Python e a Web API Spring Boot.
 - Aplicação Spring Batch – Processa o arquivo CSV que contem as postagens em lote e faz a carga das postagens importadas no banco de dados.
 - Web API Spring Boot – Exposição dos serviços da aplicação via API REST para o Angular, interligando todos os módulos.
-- Frontend Angular – Interface do usuário para interação com a plataforma.
+- Front-end Angular – Interface do usuário para interação com a plataforma.
 - Banco de Dados PostgreSQL – Armazena pesquisas, postagens e resultados da análise de sentimentos.
 
 ### Interfaces gráfica
 
-A interface gráfica é um dos principais pontos de interação entre os usuários e a aplicação, sendo responsável por garantir uma experiência intuitiva na utilização do Sentilytics. Para o desenvolvimento da interface, foi utilizado o framework Angular.
+A interface gráfica é um dos principais pontos de interação entre os usuários e a aplicação, sendo responsável por garantir uma experiência intuitiva na utilização do Sentilytics. Para o desenvolvimento da interface, foi utilizado o *framework* Angular.
 
 A interface foi projetada para oferecer um fluxo de navegação claro e acessível, permitindo que os usuários cadastrem e configurem pesquisas, acompanhem o processamento dos dados e analisem os resultados da análise de sentimentos.
 
@@ -313,7 +312,7 @@ Para acessar os detalhes de uma pesquisa já cadastrada, o usuário pode selecio
 
 Fonte: Autor (2025).
 
-A tela da pesquisa mostrada na figura \ref{tela_dados_pesquisa} é a interface central para o gerenciamento de uma análise de sentimentos dentro do Sentilytics. Essa tela organiza o fluxo do usuário em quatro etapas, representadas por botões dispostos em sequência:
+A tela da pesquisa mostrada na \autoref{tela_dados_pesquisa} é a interface central para o gerenciamento de uma análise de sentimentos dentro do Sentilytics. Essa tela organiza o fluxo do usuário em quatro etapas, representadas por botões dispostos em sequência:
 
 1. Dados da Pesquisa;
 1. Coleta de Dados;
@@ -330,15 +329,13 @@ No primeiro acesso, o usuário visualiza a aba "Dados da Pesquisa", onde pode co
 
 Cada uma das próximas etapas é liberada de acordo com a sequência do fluxo, garantindo que o usuário siga um processo estruturado para a realização da pesquisa.
 
-A etapa atual exibida na figura \ref{tela_dados_pesquisa} é a "Dados da Pesquisa", nesse momento o usuário pode visualizar e modificar as informações da pesquisa. Esses dados serão utilizados caso o usuário opte por realizar a coleta automática de postagens através da rede social Bluesky. Essa configuração permite definir os critérios de busca que serão aplicados na obtenção dos posts, garantindo que a análise de sentimentos seja realizada com base em conteúdos relevantes.
-
-Após definir os dados da pesquisa, o próximo passo é a coleta de postagens, onde o usuário pode importar dados manualmente ou realizar a busca automática via Bluesky.
+A etapa atual exibida na \autoref{tela_dados_pesquisa} é a "Dados da Pesquisa", nesse momento o usuário pode visualizar e modificar as informações da pesquisa. Esses dados serão utilizados caso o usuário opte por realizar a coleta automática de postagens através da rede social Bluesky. Essa configuração permite definir os critérios de busca que serão aplicados na obtenção dos posts, garantindo que a análise de sentimentos seja realizada com base em conteúdos relevantes.
 
 ![Etapa de Coleta de Dados](imagens/sentilytics/interface-grafica/coleta-dados.png){#tela_coleta_dados_pesquisa escala=0.2}
 
 Fonte: Autor (2025).
 
-Na figura \ref{tela_coleta_dados_pesquisa} é mostrada a etapa de coleta dos dados, nessa fase o usuário pode gerenciar as postagens que serão analisadas no Sentilytics. O usuário pode visualizar os posts já armazenados no sistema e optar por adicionar novos dados por meio de duas opções de coleta:
+Após definir os dados da pesquisa, o próximo passo é a coleta de postagens, onde o usuário pode importar dados manualmente ou realizar a busca automática via Bluesky. Na \autoref{tela_coleta_dados_pesquisa} é mostrada a etapa de coleta dos dados, nessa fase o usuário pode gerenciar as postagens que serão analisadas no Sentilytics. O usuário pode visualizar os posts já armazenados no sistema e optar por adicionar novos dados por meio de duas opções de coleta:
 
 - Busca automática no Bluesky – O sistema realiza uma pesquisa na rede social Bluesky, coletando postagens conforme os critérios definidos na etapa anterior.
 - Importação via CSV – O usuário pode carregar um arquivo contendo postagens previamente coletadas. Para auxiliar nesse processo, a interface exibe um tutorial explicativo, orientando como preparar o arquivo corretamente.
@@ -351,7 +348,7 @@ Com os posts devidamente coletados e organizados, o usuário pode avançar para 
 
 Fonte: Autor (2025).
 
-A figura \ref{tela_processamento} mostra a etapa de processamento, onde o usuário pode configurar e executar as etapas necessárias para preparar e analisar as postagens coletadas. Nessa passo, o usuário pode criar um workflow, que define a sequência de tarefas de pré-processamento aplicadas aos textos antes da análise de sentimentos.
+A \autoref{tela_processamento} mostra a etapa de processamento, onde o usuário pode configurar e executar as etapas necessárias para preparar e analisar as postagens coletadas. Nessa passo, o usuário pode criar um workflow, que define a sequência de tarefas de pré-processamento aplicadas aos textos antes da análise de sentimentos.
 
 As principais ações disponíveis nesta etapa incluem:
 
@@ -370,7 +367,7 @@ Com o workflow finalizado, o usuário pode avançar para a última etapa do proc
 
 Fonte: Autor (2025).
 
-A etapa de resultados mostrado na figura \ref{etapa_resultados} permite ao usuário visualizar e interpretar os dados processados a partir da análise de sentimentos. Para acessar essa etapa, é necessário selecionar um workflow que já tenha passado pelo processo completo de pré-processamento e análise de sentimentos. Após a seleção do workflow, o restante do conteúdo da tela é exibido, oferecendo três abas principais para exploração dos resultados:
+A etapa de resultados mostrado na \autoref{etapa_resultados} permite ao usuário visualizar e interpretar os dados processados a partir da análise de sentimentos. Para acessar essa etapa, é necessário selecionar um workflow que já tenha passado pelo processo completo de pré-processamento e análise de sentimentos. Após a seleção do workflow, o restante do conteúdo da tela é exibido, oferecendo três abas principais para exploração dos resultados:
 
 1. Aba de Gráficos
 Essa aba apresenta quatro gráficos interativos, que auxiliam na compreensão da distribuição dos sentimentos e do impacto das postagens analisadas:
@@ -380,11 +377,9 @@ Essa aba apresenta quatro gráficos interativos, que auxiliam na compreensão da
 - Total de Engajamento por Sentimentos – Um gráfico de barras verticais que exibe o total acumulado de interações (likes, reposts, respostas e citações) para cada sentimento.
 - Análise Temporal de Sentimentos – Um gráfico que acompanha a variação dos sentimentos ao longo do tempo, permitindo identificar tendências e padrões emocionais nos dados coletados.
 
-1. Aba de Nuvem de Palavras
-Nesta aba, é exibida uma nuvem de palavras gerada a partir dos textos processados. Essa visualização destaca as palavras mais frequentes nas postagens analisadas, permitindo uma análise rápida dos termos mais relevantes dentro do contexto dos dados.
+1. Aba de Nuvem de Palavras - Nesta aba, é exibida uma nuvem de palavras gerada a partir dos textos processados. Essa visualização destaca as palavras mais frequentes nas postagens analisadas, permitindo uma análise rápida dos termos mais relevantes dentro do contexto dos dados.
 
-1. Aba de Top Posts Engajados
-Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no número de curtidas, respostas, reposts e citações. Além disso, há um filtro por sentimento, permitindo que o usuário explore os posts de acordo com suas classificações emocionais.
+1. Aba de Top Posts Engajados - Essa aba apresenta uma listagem dos posts mais engajados, ranqueados com base no número de curtidas, respostas, reposts e citações. Além disso, há um filtro por sentimento, permitindo que o usuário explore os posts de acordo com suas classificações emocionais.
 
 Cada post exibido nesta listagem pode ser visualizado em sua forma original e após o pré-processamento, permitindo que o usuário compreenda como as transformações realizadas impactaram o conteúdo analisado.
 
