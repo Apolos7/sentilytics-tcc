@@ -11,6 +11,8 @@ Este repositório contém meu Trabalho de Conclusão de Curso (TCC) desenvolvido
 ![Data](https://img.shields.io/badge/Publica%C3%A7%C3%A3o-31%2C%20Fev%20de%202025-green)
 ![Linguagem](https://img.shields.io/badge/Linguagem-Portugu%C3%AAs%20brasileiro-green)
 
+[O documento e o slide estão disponíveis aqui](https://apolos7.github.io/sentilytics-tcc/)
+
 </div>
 
 ## Resumo
