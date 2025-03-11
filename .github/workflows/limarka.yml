@@ -74,7 +74,7 @@ jobs:
       - name: Marp Build (PDF)
         uses: docker://marpteam/marp-cli:v3.3.0
         with:
-          args: slide-deck.md --theme academic.css --allow-local-files -o dist-slide/xxx-slide.pdf
+          args: slide-deck.md --theme academic.css --allow-local-files --pdf-wait 90000 -o dist-slide/xxx-slide.pdf
         env:
           MARP_USER: root:root
           LANG: "pt_BR.UTF-8"
