@@ -35,7 +35,7 @@ Orientador: Prof. Dr. Gilson Pereira dos Santos Júnior
 <!-- _header: SUMÁRIO -->
 
 - Sentilytics
-  - Técnologias e Ferramentas
+  - Diagrama de componentes
   - BPMN: Do Cadastro da Pesquisa à Visualização dos Resultados
   - Dicionário de Dados
   - Demonstração Visual da Aplicação
@@ -49,30 +49,31 @@ Orientador: Prof. Dr. Gilson Pereira dos Santos Júnior
 
 <!-- _header: CONTEXTUALIZAÇÃO DO TEMA -->
 
-As redes sociais são um ambiente digital dinâmico, onde milhões de pessoas expressam opiniões e sentimentos diariamente.
+As redes sociais são um ambiente digital dinâmico, onde milhões de pessoas expressam suas percepções sobre temas variados.
 
 - Expressão de **opiniões**, **sentimentos** e **tendências**;
-- Compreensão da **opinião pública** e **articulação política**;
-- Monitoramento de mercado por empresas;
-- Entretenimento, mobilização e conscientização social.
+- Discussão de temas políticos e a **articulação política**;
+- Conta com a presença de empresas;
+- Utilizada por jovens para o entretenimento, mobilização e conscientização social.
 
 ---
 
 <!-- _header: CONTEXTUALIZAÇÃO DO TEMA -->
 
-A análise de sentimentos permite interpretar emoções expressas em textos, identificando padrões e tendências.
+A análise de sentimentos permite interpretar emoções expressas em textos.
 
 - Compreensão de tendências e comportamentos;
 - Identificação de polarizações em debates públicos;
 - **Apoio à tomada de decisões** em comunicação, política e negócios.
 
+Na literatura, podemos encontrar diversas ferramentas que aplicam a análise de sentimentos em redes sociais.
+
 ---
 
 <!-- _header: PROBLEMA DE PESQUISA -->
 
-A análise de sentimentos em redes sociais enfrenta desafios significativos.
+As aplicações desenvolvidas para a análise de sentimentos em redes sociais enfrentam desafios significativos.
 
-- Volume de dados torna a análise manual inviável;
 - Soluções desenvolvidas geralmente não são intuitivas;
 - Não oferecem processamento de ponta a ponta;
 - Falta ou dificuldade na personalização;
@@ -111,99 +112,77 @@ Analisar sentimentos de forma automatizada em redes sociais por meio de uma solu
 
 ---
 
-<!-- _header: ANÁLISE DE SENTIMENTOS EM REDES SOCIAIS -->
-
-A **análise de sentimentos** em **redes sociais** enfrenta desafios significativos.
-
-- **Volume de dados** torna a análise manual inviável;
-- **Soluções pouco intuitivas** dificultam o uso;
-- **Falta de processamento de ponta a ponta**;
-- **Limitações na personalização** do fluxo de análise;
-- **Dificuldade de integração** com redes sociais.
-
----
-
 <!-- _header: PROCESSO DE ANÁLISE DE SENTIMENTOS EM APLICAÇÕES -->
 
 ![bg w:1200 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/processo_analise_sentimentos.png)
 
 ---
 
-<!-- _header: TECNOLOGIAS E FERRAMENTAS -->
+<!-- _header: ANÁLISE DE SENTIMENTOS EM REDES SOCIAIS -->
 
-![bg w:470 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/tecnologias-ferramentas.png)
+A **análise de sentimentos** em **redes sociais** enfrenta desafios.
+
+- **Volume de dados** torna a análise manual inviável;
+- Elementos visuais (imagens, vídeo);
+- Simbólicos (emojis, hashtags);
+- Gírias e sarcasmo;
+- Erros de ortografia.
 
 ---
 
-<!-- _header: BPMN: Do Cadastro da Pesquisa à Visualização dos Resultados -->
+<!-- _header: SENTILYTICS: DIAGRAMA DE COMPONENTES -->
 
-![bg w:1200 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/pesquisa_sentimentos.png)
+![center w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/diagrama_componentes.png)
 
 ---
 
-<!-- _header: DIAGRAMA DE COMPONENTES -->
+<!-- _header: DO CADASTRO DA PESQUISA À VISUALIZAÇÃO DOS RESULTADOS -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/diagrama_componentes.png)
+![center w:1200 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/pesquisa_sentimentos.png)
 
 ---
 
 <!-- _header: DIAGRAMA ENTIDADE RELACIONAMENTO -->
 
-![bg w:670 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/DER-sentilytics.png)
+![center w:670 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/DER-sentilytics.png)
 
 ---
 
 <!-- _header: DICIONÁRIO DE DADOS -->
 
-![bg w:800 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/dicionario_dados.png)
+![center w:800 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/diagramas/dicionario_dados.png)
 
 ---
 
 <!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/tela-login.png)
+![center w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/listagem-pesquisas.png)
 
 ---
 
 <!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/listagem-pesquisas.png)
+![center w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/dados-pesquisa.png)
 
 ---
 
 <!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/dados-pesquisa.png)
+Os dados que serão analisados podem ser importados da rede social Bluesky e/ou arquivo CSV.
+
+![center w:900 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/coleta-dados.png)
 
 ---
 
 <!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/coleta-dados.png)
+![center w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/tarefas_workflow.png)
 
 ---
 
 <!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
 
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/processamento.png)
-
----
-
-<!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
-
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/tarefas_workflow.png)
-
----
-
-<!-- _header: DEMONSTRAÇÃO VISUAL DA APLICAÇÃO -->
-
-![bg w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/resultado-graficos.png)
-
----
-
-<!-- _header: VÍDEO DEMONSTRATIVO -->
-
-![bg w:500 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/qr_code.png)
+![center w:1000 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/interface-grafica/resultado-graficos.png)
 
 ---
 
@@ -243,7 +222,7 @@ Sentilytics: Automatizou coleta, pré-processamento e análise dos dados.
 **Diferenciais:**
 
 - **Coleta, pré-processamento e classificação** personalizáveis
-- **Integração com redes sociais** (Bluesky)
+- Integração com a rede social Bluesky
 - **Acesso intuitivo**, mesmo sem experiência técnica
 
 **Impacto:** Monitoramento de redes, pesquisas acadêmicas e decisões estratégicas.
@@ -263,20 +242,9 @@ O Sentilytics pode ser aprimorado e expandido para tornar a análise de sentimen
 
 <!-- _header: REFERÊNCIAS -->
 
-BERTAGLIA, T. F. C.; NUNES, M. d. G. V. Exploring word embeddings for unsupervised
-textual user-generated content normalization. In: *Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT)*. [S.l.: s.n.], 2016. p. 112–120.
-
-BILO, H. A. Ferramenta para análise de sentimentos em postagens no moodle. 2023.
+BERTAGLIA, T. F. C.; NUNES, M. d. G. V. Exploring word embeddings for unsupervised textual user-generated content normalization. In: *Proceedings of the 2nd Workshop on Noisy User-generated Text (WNUT)*. [S.l.: s.n.], 2016. p. 112–120.
 
 CARVALHO, L. B. d. D. A democracia frustrada: fake news, política e liberdade de expressão nas redes sociais. *Internet e Sociedade,[S. l.]*, v. 1, n. 1, p. 172–199, 2020.
-
----
-
-<!-- _header: REFERÊNCIAS -->
-
-GAMALLO, P.; GARCIA, M. Linguakit: uma ferramenta multilingue para a análise linguística e a extração de informação. *Linguamática*, v. 9, n. 1, p. 19–28, 2017.
-
-JESUS, E. L. de; FERREIRA, D. C. M. Aplicando pln para análise de sentimentos do twitter. 2020.
 
 LIMA, P. R. S. et al. Redes sociais como ferramentas de transparência em tempos de covid-19: uma análise das publicações dos boletins epidemiológicos do estado de alagoas. *Logeion: Filosofia da Informação*, v. 7, n. 2, p. 88–107, 2021.
 
@@ -284,53 +252,57 @@ LIMA, P. R. S. et al. Redes sociais como ferramentas de transparência em tempos
 
 <!-- _header: REFERÊNCIAS -->
 
-LOPES, A. C. Otimização de aplicações de processamento de linguagem natural para análise de sentimentos. Universidade Estadual Paulista (Unesp), 2024.
-
-MALHEIROS, Y. Emotte: Uma ferramenta de análise de sentimentos para o twitter. In: SBC. *Anais Estendidos do XX Simpósio Brasileiro de Sistemas Multimídia e Web.* [S.l.], 2014. p. 62–65.
-
-MALHEIROS, Y.; LIMA, G. Uma ferramenta para análise de sentimentos em redes sociais
-utilizando o senticnet. In: SBC. *Simpósio Brasileiro de Sistemas de Informação (SBSI)*. [S.l.], 2013. p. 517–522.
-
----
-
-<!-- _header: REFERÊNCIAS -->
-
-MIGUEL, R. dos S.; BARBOSA, Y. d. A. M. Uma ferramenta para análise de sentimentos de tweets em português. 2018.
-
-MOREIRA, B. G. et al. Análise de sentimentos e emoções com o uso da ferramenta orange datamining: uma avaliação a partir da tradução dos textos do português. *Anais do Computer on the Beach*, v. 15, p. 352–354, 2024.
-
 POMPEI, T.; GOUVEIA, L. M. B.; RAMOS, P. F. M. d. S. Redes sociais: influência,
 identidade e diferença na contemporaneidade. *Revista em Sociedade, Belo Horizonte*, v. 3, n. 2, p. 93–111, 2021.
 
----
-
-<!-- _header: REFERÊNCIAS -->
-
 SANTANA, B. S.; FREITAS, L. A. de. Capítulo 23 pln em redes sociais. 2023.
-
-SILVA, N. G. R. da. *Bestchoice*: Classificação de sentimento em ferramentas de expressão de opinião. Tese (Doutorado) — Tese de graduação, Universidade Federal de Pernambuco Recife, 2010. 7, 17, 2010.
 
 SIQUEIRA, L. F. et al. O impacto das mídias sociais na saúde mental de adolescentes e jovens adultos. *Brazilian Journal of Implantology and Health Sciences*, v. 6, n. 10, p. 1384–1390, 2024.
 
 ---
 
-<!-- _header: ACESSO AO DOCUMENTO E APRESENTAÇÃO  -->
-
-![bg w:550 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/qr-code-link-trabalho.png)
-
----
-
 <style>
-.center-text {
+.thank-you {
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom:0px;
+}
+
+.qr-container {
   display: flex;
   justify-content: center;
+  gap: 50px;
   align-items: center;
-  height: 100%;
-  font-size: 80px;
-  font-weight: bold
+}
+
+.qr-item {
+  text-align: center;
+  font-size: 24px;
 }
 </style>
 
-<div class="center-text">
-  Obrigado!
+<div class="thank-you">Obrigado!</div>
+
+<div class="qr-container">
+  <div class="qr-item">
+    <img src="imagens/qr-code-link-trabalho.png" width="400">
+    <p>Acesso ao documento</p>
+  </div>
+  <div class="qr-item">
+    <img src="imagens/sentilytics/qr_code.png" width="400">
+    <p>Vídeo demonstrativo da aplicação</p>
+  </div>
 </div>
+
+---
+
+<!-- _header: ACESSO AO DOCUMENTO -->
+
+![center w:600 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/qr-code-link-trabalho.png)
+
+---
+
+<!-- _header: VÍDEO DEMONSTRATIVO DA APLICAÇÃO -->
+
+![center w:600 drop-shadow:0,5px,10px,rgba(0,0,0,.4)](imagens/sentilytics/qr_code.png)
