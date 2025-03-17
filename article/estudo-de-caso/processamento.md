@@ -11,9 +11,9 @@ A \autoref{pipeline_processamento} mostra um conjunto de tarefas organizadas em 
 1. Minúsculas: Transformação de todo o texto para minúsculas, garantindo uniformidade;
 1. Removedor URLs Regex: Remove URLs do texto;
 1. Normalizador Enelvo: Normalização do texto para corrigir erros ortográficos e abreviações comuns;
-1. Tokenização por Palavra | NLTK: Segmentação do texto em palavras individuais (tokens);
-1. Removedor Stopwords: Remoção de palavras irrelevantes que não contribuem para a análise do sentimento;
-1. Tokens para Texto: Os tokens são unidos novamente formando uma frase novamente com os tokens separados por um espaço em branco.
+1. Tokenização por Palavra | NLTK: Segmentação do texto em palavras individuais (*tokens*);
+1. Removedor *Stopwords*: Remoção de palavras irrelevantes que não contribuem para a análise do sentimento;
+1. *Tokens* para Texto: Os *tokens* são unidos novamente formando uma frase novamente com os *tokens* separados por um espaço em branco.
 
 ### Análise de Sentimentos
 
@@ -24,7 +24,7 @@ Cada postagem recebeu uma pontuação de polaridade, categorizada em:
 - Positivo: O quanto a postagem é positiva;
 - Neutro: O quanto a postagem é neutra;
 - Negativo: O quanto a postagem é negativa;
-- Composta: A pontuação composta consiste em um valor que representa a polaridade geral do texto, onde esse valor varia entre entre -1 (muito negativo) e +1 (muito positivo).
+- Composta: A pontuação composta consiste em um valor que representa a polaridade geral do texto, onde esse valor varia entre -1 (muito negativo) e +1 (muito positivo).
 
 A pontuação composta é calculada a partir da soma das valências das palavras presentes no texto. Essas valências são determinadas por um léxico de sentimentos, que associa palavras ao score de polaridade positiva e negativa. Além disso, a análise considera uma série de heurísticas que ajustam o impacto dessas palavras com base no contexto em que aparecem, como a presença de negações ou intensificadores.
 

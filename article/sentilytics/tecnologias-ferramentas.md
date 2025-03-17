@@ -18,7 +18,7 @@ No desenvolvimento do Sentilytics, o Python foi utilizado para implementar o ser
 
 O pré-processamento é iniciado quando o serviço recebe uma mensagem pelo RabbitMQ, indicando que deve buscar na base de dados os textos brutos e as tarefas de pré-processamento configuradas pelo usuário. Após essa busca, o serviço aplica as tarefas selecionadas aos textos coletados. Essas tarefas podem incluir:
 
-- Remoção de stopwords: Eliminação de palavras irrelevantes para a análise, como "de", "o", "para".
+- Remoção de *stopwords*: Eliminação de palavras irrelevantes para a análise, como "de", "o", "para".
 - Normalização e lematização: Ajuste dos textos para uniformidade e redução de palavras à sua forma base.
 - Correção ortográfica: Identificação e ajuste de erros ortográficos nos textos.
 
@@ -123,7 +123,7 @@ A utilização do Docker e Docker Compose no projeto trouxe benefícios como pad
 
 O IntelliJ IDEA[^intellij] é um ambiente de desenvolvimento integrado (IDE) voltado para a criação de aplicações em Java e Kotlin. Desenvolvido pela JetBrains, oferece suporte a diversas tecnologias e *frameworks*, além de ferramentas de depuração e controle de versão que auxiliam no processo de desenvolvimento.
 
-A IDE conta com recursos como autocompletar código, análise estática e refatoração, proporcionando um ambiente estruturado para a escrita e manutenção de código. Sua compatibilidade com *frameworks* como Spring Boot e ferramentas de automação como Maven facilita a configuração e o gerenciamento de projetos Java. O Intellij foi utilizado em todos os projetos java desenvolvidos nessa solução.
+A IDE conta com recursos como autocompletar código, análise estática e refatoração, proporcionando um ambiente estruturado para a escrita e manutenção de código. Sua compatibilidade com *frameworks* como Spring Boot e ferramentas de automação como Maven facilita a configuração e o gerenciamento de projetos Java. O IntelliJ foi utilizado no desenvolvimento de duas aplicações Java com Spring Boot: o módulo de processamento de arquivos CSV, que utiliza o Spring Batch, e a Web API, que atua como módulo centralizador.
 
 [^intellij]: O Intellij IDEA está disponível para download no link: <https://www.jetbrains.com/idea/>
 
