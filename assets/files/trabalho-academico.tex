@@ -523,7 +523,7 @@ Bluesky
 \hypertarget{introduuxe7uxe3o}{%
 \chapter{Introdução}\label{introduuxe7uxe3o}}
 
-As redes sociais é o ambiente, no meio digital, em que os indivíduos
+As redes sociais são o ambiente, no meio digital, em que os indivíduos
 expressam suas percepções e sentimentos sobre temas variados, desde
 questões cotidianas até debates complexos de relevância nacional, como
 mudanças trabalhistas ou propostas legislativas. É um espaço que
@@ -606,10 +606,11 @@ realização do estudo de caso.
   à aplicação;
 \item
   Desenvolver um módulo de pré-processamento customizável para
-  normalização e remoção de stopwords;
+  normalização e remoção de \emph{stopwords};
 \item
-  Integrar o modelo de análise de sentimentos VADER à aplicação para
-  classificar sentimentos;
+  Integrar o modelo de análise de sentimentos VADER (Valence Aware
+  Dictionary and sEntiment Reasoner) à aplicação para classificar
+  sentimentos;
 \item
   Exibir os resultados da análise de sentimentos por meio de gráficos,
   tabelas e nuvens de palavras;
@@ -833,17 +834,18 @@ diversas técnicas e algoritmos para pré-processar o texto de modo a
 obter o melhor resultado possível. Atualmente podemos encontrar diversas
 tarefas que podem ser utilizadas. \citeonline{lopes2024otimizaccao}
 define 10 tarefas de pré-processamento para melhorar a qualidade dos
-resultados obtidos na análise de sentimentos, são elas: tokenização, PoS
-Tagging, Stop Words, Normalização de texto, Correção ortográfica,
-Stemming, Lematização, Reconhecimento de Entidades Nomeadas (REN),
-Desambiguação do sentido da palavra e Detecção de limite de sentença.
+resultados obtidos na análise de sentimentos, são elas: tokenização,
+\emph{PoS Tagging}, \emph{Stopwords}, Normalização de texto, Correção
+ortográfica, \emph{Stemming}, Lematização, Reconhecimento de Entidades
+Nomeadas (REN), Desambiguação do sentido da palavra e Detecção de limite
+de sentença.
 
 Cada etapa desempenha um papel fundamental na preparação do texto para a
 análise de sentimentos. A tokenização, por exemplo, divide o texto em
 unidades menores, como palavras ou frases, facilitando sua interpretação
 pelos algoritmos. O PoS Tagging classifica cada palavra segundo sua
 função gramatical, permitindo entender a estrutura da sentença. Já a
-remoção de \emph{stop words} exclui palavras comuns que não carregam
+remoção de \emph{stopwords} exclui palavras comuns que não carregam
 significado relevante para o contexto da análise. Além disso, processos
 como normalização de texto e correção ortográfica ajudam a uniformizar
 os dados, reduzindo inconsistências que podem comprometer a precisão dos
@@ -914,7 +916,7 @@ redes sociais pode ser definida como um conteúdo textual, geralmente
 curto, publicado por um usuário para expressar uma ideia ou opinião.
 Essas postagens podem conter texto, elementos visuais (imagens, vídeos)
 e simbólicos (emojis, hashtags), que enriquecem o significado da
-mensagem. Exemplos incluem tweets no X (antigo Twitter), posts no
+mensagem. Exemplos incluem tweets no X (antigo Twitter), postagens no
 Reddit, publicações no Facebook e postagens no Bluesky.
 
 \begin{figure}[htbp]
@@ -966,8 +968,8 @@ tarefas executadas nessa fase podem variar conforme a fonte dos dados e
 o classificador utilizado, adaptando-se às particularidades de cada
 contexto. No caso das redes sociais, onde os textos costumam ser curtos,
 informais, repletos de gírias, links e menções, algumas das técnicas
-mais comuns incluem a remoção de stopwords, correção ortográfica e
-tokenização (seja por palavras ou sentenças). Essas etapas são
+mais comuns incluem a remoção de \emph{stopwords}, correção ortográfica
+e tokenização (seja por palavras ou sentenças). Essas etapas são
 fundamentais para reduzir ruídos e melhorar a precisão dos algoritmos de
 análise de sentimentos.
 
@@ -1021,6 +1023,21 @@ pagos. Como consequência, o uso de alternativas que não dependam
 exclusivamente dessa API torna-se uma consideração relevante para
 garantir maior flexibilidade na análise de dados em redes sociais.
 
+O trabalho de \citeonline{da2010bestchoice} apresenta o BestChoice, um
+sistema desenvolvido para análise de sentimentos em textos extraídos da
+web, com foco na classificação automática de opiniões sobre produtos e
+serviços. A abordagem proposta utiliza técnicas de Processamento de
+Linguagem Natural (PLN) e o SentiWordNet para atribuir polaridade aos
+textos, permitindo que as avaliações sejam classificadas sem a
+necessidade de intervenção manual. Essa solução visa otimizar o processo
+de análise de sentimentos. Todavia, apesar de sua eficiência para o
+contexto de avaliações online, a ferramenta apresenta algumas
+restrições, como a dependência exclusiva do SentiWordNet, o que pode
+limitar sua capacidade de adaptação a novos domínios e idiomas. Além do
+mais, o sistema foi projetado para a análise de sentimentos em
+avaliações de produtos e serviços, o que reduz sua aplicabilidade em
+cenários mais amplos, como redes sociais e discussões informais.
+
 No trabalho de \citeonline{malheiros2013ferramenta}, é apresentada uma
 ferramenta de análise de sentimentos em mensagens de redes sociais
 utilizando o SenticNet como base de conhecimento. A abordagem proposta
@@ -1043,36 +1060,6 @@ como a aplicação de um conjunto fixo de tarefas de pré-processamento,
 sem oferecer aos usuários a flexibilidade de personalizá-las de forma
 simplificada.
 
-\citeonline{vaillant2022ferramenta} também aborda a análise de
-sentimentos no X, nesta caso, utilizando um modelo de aprendizado de
-máquina supervisionado para a classificação de sentimentos. Todavia, sua
-aplicação depende de um conjunto de dados previamente rotulado para
-treinamento, o que pode limitar sua flexibilidade. Além do mais, não há
-suporte para personalização do fluxo de pré-processamento.
-
-No trabalho de \citeonline{moreira2024analise}, é apresentada uma
-abordagem para a análise de sentimentos utilizando a ferramenta Orange
-Datamining, essa ferramenta permite por meio de addons realizar a
-análise de sentimentos, explorando diferentes métodos baseados em
-léxico, como VADER, Liu \& Hu, SentiArt e Multilingual Sentiment. O
-estudo avalia a eficácia da ferramenta ao analisar respostas discursivas
-de alunos sobre uma disciplina de programação, incluindo a comparação
-entre resultados obtidos em português e suas traduções para o inglês.
-Embora a ferramenta ofereça suporte a múltiplos métodos, sua aplicação
-apresenta algumas limitações, como a necessidade de tradução dos textos
-para o inglês em algumas abordagens, o que pode introduzir distorções na
-classificação emocional. Além de tudo, a ferramenta não possui uma
-integração direta para coleta automatizada de dados, restringindo sua
-aplicabilidade para estudos que exigem análise em grandes volumes de
-texto.
-
-O trabalho de \citeonline{dosferramenta} propõe uma ferramenta para
-análise de sentimentos de tweets em português, com foco na coleta e
-classificação automática das postagens em categorias de sentimentos
-positivo e negativo. A abordagem adotada utiliza um classificador
-baseado no Naïve Bayes, treinado com um conjunto de dados previamente
-rotulado, além de realizar a coleta das postagens por meio da API do X.
-
 O trabalho de \citeonline{gamallo2017linguakit} apresenta o LinguaKit,
 uma suíte de ferramentas multilingues para análise linguística e
 extração de informações, que inclui módulos para lematização,
@@ -1089,14 +1076,21 @@ e não dispõe de integração direta com redes sociais para coleta
 automatizada de dados, o que pode dificultar sua aplicação em análises
 contínuas e em larga escala.
 
+O trabalho de \citeonline{dosferramenta} propõe uma ferramenta para
+análise de sentimentos de tweets em português, com foco na coleta e
+classificação automática das postagens em categorias de sentimentos
+positivo e negativo. A abordagem adotada utiliza um classificador
+baseado no Naïve Bayes, treinado com um conjunto de dados previamente
+rotulado, além de realizar a coleta das postagens por meio da API do X.
+
 O trabalho de \citeonline{deaplicando} propõe uma abordagem diferenciada
 para a análise de sentimentos no X, utilizando a API da plataforma para
 coletar os dados, aplicar o pré-processamento e exibir os resultados.
 Para isso, a implementação foi realizada no Google Colab, uma ferramenta
 que permite a execução de código Python de forma estruturada e
-interativa. A análise dos sentimentos foi conduzida dentro do ambiente
-do Colab, por meio da geração de nuvens de palavras e da exibição de
-gráficos gerais.
+interativa, como mostrado na \autoref{google_colab}. A análise dos
+sentimentos foi conduzida dentro do ambiente do Colab, por meio da
+geração de nuvens de palavras e da exibição de gráficos gerais.
 
 \begin{figure}[htbp]
 \hypertarget{google_colab}{%
@@ -1121,6 +1115,13 @@ estruturado, exige um nível intermediário de familiaridade com Python e
 com o ambiente do Google Colab, o que pode representar uma barreira para
 pesquisadores sem experiência prévia em programação.
 
+\citeonline{vaillant2022ferramenta} também aborda a análise de
+sentimentos no X, nesta caso, utilizando um modelo de aprendizado de
+máquina supervisionado para a classificação de sentimentos. Todavia, sua
+aplicação depende de um conjunto de dados previamente rotulado para
+treinamento, o que pode limitar sua flexibilidade. Além do mais, não há
+suporte para personalização do fluxo de pré-processamento.
+
 O trabalho de \citeonline{bilo2023ferramenta} apresenta uma ferramenta
 desenvolvida para análise de sentimentos em postagens realizadas no
 ambiente virtual de aprendizagem Moodle. O objetivo principal da solução
@@ -1144,20 +1145,21 @@ sistema exige a instalação local nos dispositivos dos professores, o que
 pode representar uma barreira para usuários com menos experiência
 técnica.
 
-O trabalho de \citeonline{da2010bestchoice} apresenta o BestChoice, um
-sistema desenvolvido para análise de sentimentos em textos extraídos da
-web, com foco na classificação automática de opiniões sobre produtos e
-serviços. A abordagem proposta utiliza técnicas de Processamento de
-Linguagem Natural (PLN) e o SentiWordNet para atribuir polaridade aos
-textos, permitindo que as avaliações sejam classificadas sem a
-necessidade de intervenção manual. Essa solução visa otimizar o processo
-de análise de sentimentos. Todavia, apesar de sua eficiência para o
-contexto de avaliações online, a ferramenta apresenta algumas
-restrições, como a dependência exclusiva do SentiWordNet, o que pode
-limitar sua capacidade de adaptação a novos domínios e idiomas. Além do
-mais, o sistema foi projetado para a análise de sentimentos em
-avaliações de produtos e serviços, o que reduz sua aplicabilidade em
-cenários mais amplos, como redes sociais e discussões informais.
+No trabalho de \citeonline{moreira2024analise}, é apresentada uma
+abordagem para a análise de sentimentos utilizando a ferramenta Orange
+Datamining, essa ferramenta permite por meio de addons realizar a
+análise de sentimentos, explorando diferentes métodos baseados em
+léxico, como VADER, Liu \& Hu, SentiArt e Multilingual Sentiment. O
+estudo avalia a eficácia da ferramenta ao analisar respostas discursivas
+de alunos sobre uma disciplina de programação, incluindo a comparação
+entre resultados obtidos em português e suas traduções para o inglês.
+Embora a ferramenta ofereça suporte a múltiplos métodos, sua aplicação
+apresenta algumas limitações, como a necessidade de tradução dos textos
+para o inglês em algumas abordagens, o que pode introduzir distorções na
+classificação emocional. Além de tudo, a ferramenta não possui uma
+integração direta para coleta automatizada de dados, restringindo sua
+aplicabilidade para estudos que exigem análise em grandes volumes de
+texto.
 
 A partir dos conceitos e desafios abordados, percebe-se a necessidade de
 soluções que automatizem a análise de sentimentos de forma acessível.
@@ -1276,8 +1278,8 @@ Essas tarefas podem incluir:
 \begin{itemize}
 \tightlist
 \item
-  Remoção de stopwords: Eliminação de palavras irrelevantes para a
-  análise, como ``de'', ``o'', ``para'';
+  Remoção de \emph{stopwords}: Eliminação de palavras irrelevantes para
+  a análise, como ``de'', ``o'', ``para'';
 \item
   Normalização e lematização: Ajuste dos textos para uniformidade e
   redução de palavras à sua forma base;
@@ -1557,8 +1559,10 @@ A IDE conta com recursos como autocompletar código, análise estática e
 refatoração, proporcionando um ambiente estruturado para a escrita e
 manutenção de código. Sua compatibilidade com \emph{frameworks} como
 Spring Boot e ferramentas de automação como Maven facilita a
-configuração e o gerenciamento de projetos Java. O Intellij foi
-utilizado em todos os projetos java desenvolvidos nessa solução.
+configuração e o gerenciamento de projetos Java. O IntelliJ foi
+utilizado no desenvolvimento de duas aplicações Java com Spring Boot: o
+módulo de processamento de arquivos CSV, que utiliza o Spring Batch, e a
+Web API, que atua como módulo centralizador.
 
 \hypertarget{pycharm}{%
 \subsection{PyCharm}\label{pycharm}}
@@ -1734,7 +1738,7 @@ Requisito\strut
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF01\strut
 \end{minipage} & \begin{minipage}[t]{0.87\columnwidth}\raggedright
-O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, query de busca e linguagem.\strut
+O sistema deve permitir a coleta de postagens da rede social Bluesky, respeitando parâmetros de data inicial, data final, \emph{query} de busca e linguagem.\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF02\strut
@@ -1749,7 +1753,7 @@ O sistema deve permitir que o usuário configure workflows e escolha quais taref
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF04\strut
 \end{minipage} & \begin{minipage}[t]{0.87\columnwidth}\raggedright
-O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de stopwords, lematização e tokenização.\strut
+O sistema deve possibilitar a limpeza e normalização dos textos coletados, incluindo remoção de \emph{stopwords}, lematização e tokenização.\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.07\columnwidth}\centering
 RF05\strut
@@ -1788,7 +1792,7 @@ O sistema deve fornecer uma interface web baseada em Angular para que os usuári
 
 Com os requisitos funcionais definidos como mostrado no
 \autoref{requisitos_funcionais}, podemos visualizar como os usuários
-interagem com o sistema e quais as funcionalidades deveram estar
+interagem com o sistema e quais as funcionalidades deverão estar
 disponíveis. Para isso, vamos utilizar o diagrama de casos de uso.
 
 \hypertarget{diagramas-de-caso-de-uso}{%
@@ -1851,7 +1855,7 @@ diagrama BPMN relacionado ao funcionamento do Sentilytics.
 \hypertarget{bpmn_pesquisa}{%
 \caption{Modelagem BPMN do Processo de Pesquisa no Sentilytics}\label{bpmn_pesquisa}
 \begin{center}
-\includegraphics[scale=0.3]{imagens/sentilytics/pesquisa_sentimentos.png}
+\includegraphics[scale=0.27]{imagens/sentilytics/pesquisa_sentimentos.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -2011,10 +2015,10 @@ persistência das informações no banco de dados.
 
 Após a conclusão do armazenamento, o PostRepository confirma a operação,
 retornando uma notificação ao PesquisaAnaliseSentimentoService. O
-serviço, por sua vez, informa ao controller que a pesquisa e os posts
-foram armazenados com sucesso. Por fim, o usuário recebe uma confirmação
-da criação da pesquisa, sinalizando que o processo foi concluído
-corretamente.
+serviço, por sua vez, informa ao controller que a pesquisa e os
+postagens foram armazenados com sucesso. Por fim, o usuário recebe uma
+confirmação da criação da pesquisa, sinalizando que o processo foi
+concluído corretamente.
 
 Esse diagrama ilustra de forma clara a sequência de interações entre os
 componentes do sistema, destacando como a pesquisa é cadastrada e os
@@ -2048,9 +2052,9 @@ workflow, definindo as funções de pré-processamento e análise de
 sentimentos que serão aplicadas aos dados coletados. Essa configuração
 permite que o usuário ordene e selecione diferentes tarefas de
 pré-processamento, como capitalização de texto, conversão para caixa
-baixa, remoção de stopwords, correção ortográfica, entre outras. A ordem
-dessas tarefas é um fator determinante para o processamento, pois
-impacta diretamente os resultados da análise de sentimentos.
+baixa, remoção de \emph{stopwords}, correção ortográfica, entre outras.
+A ordem dessas tarefas é um fator determinante para o processamento,
+pois impacta diretamente os resultados da análise de sentimentos.
 
 Quando o usuário finaliza a configuração, o
 WorkflowProcessamentoController encaminha os dados ao
@@ -2067,7 +2071,7 @@ ajustar o fluxo de análise de acordo com suas necessidades específicas.
 \hypertarget{seq_processamento_analise}{%
 \caption{Diagrama de sequência do pré-processamento e análise}\label{seq_processamento_analise}
 \begin{center}
-\includegraphics[scale=0.2]{imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png}
+\includegraphics[scale=0.35]{imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -2133,19 +2137,19 @@ Os diagramas são organizados da seguinte forma:
   Visão Geral dos Pacotes: Exibe a estrutura principal da aplicação,
   destacando os pacotes e suas respectivas classes;
 \item
-  Pacote Model: Representa as entidades do domínio, definindo os objetos
-  que compõem o modelo de dados e seus relacionamentos;
+  Pacote \emph{Model}: Representa as entidades do domínio, definindo os
+  objetos que compõem o modelo de dados e seus relacionamentos;
 \item
-  Pacote Repository: Demonstra os repositórios responsáveis pela
+  Pacote \emph{Repository}: Demonstra os repositórios responsáveis pela
   persistência dos dados, conectando a aplicação ao banco de dados;
 \item
-  Pacote Service: Contém as classes que implementam a lógica de negócio,
-  garantindo o processamento e a manipulação dos dados conforme as
-  regras da aplicação;
+  Pacote \emph{Service}: Contém as classes que implementam a lógica de
+  negócio, garantindo o processamento e a manipulação dos dados conforme
+  as regras da aplicação;
 \item
-  Pacote Controller: Representa os controladores da API, responsáveis
-  por expor os endpoints e intermediar a comunicação entre o
-  \emph{front-end} e a lógica de negócio.
+  Pacote \emph{Controller}: Representa os controladores da API,
+  responsáveis por expor os endpoints e intermediar a comunicação entre
+  o \emph{front-end} e a lógica de negócio.
 \end{itemize}
 
 A seguir, cada diagrama será apresentado e analisado individualmente,
@@ -2153,36 +2157,61 @@ detalhando a estrutura e os relacionamentos das classes dentro de cada
 camada do sistema.
 
 \begin{figure}[htbp]
-\hypertarget{diagrama_classe_geral}{%
-\caption{Diagrama de classes com visão geral dos pacotes}\label{diagrama_classe_geral}
+\hypertarget{diagrama_classe_geral_part1}{%
+\caption{Diagrama de classes com visão geral dos pacotes - Parte 1}\label{diagrama_classe_geral_part1}
 \begin{center}
-\includegraphics[scale=0.2]{imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png}
+\includegraphics[scale=0.5]{imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes-part1.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A \autoref{diagrama_classe_geral} apresenta a visão geral dos pacotes da
-Web API desenvolvida em Spring Boot, destacando sua estrutura modular e
-a organização das classes. Esse diagrama ilustra a separação dos
+A \autoref{diagrama_classe_geral_part1} apresenta a visão geral dos
+pacotes \emph{config}, \emph{controller} e \emph{service} da Web API
+desenvolvida em Spring Boot, destacando sua estrutura modular e a
+organização das classes. Esse diagrama ilustra a separação dos
 componentes do sistema, facilitando a compreensão das responsabilidades
-de cada pacote e a interação entre eles.
-
-A arquitetura segue uma estrutura organizada em camadas, conforme
-descrito a seguir:
+de cada pacote e a interação entre eles. Cada pacote possui seu papel
+definido, descrito a seguir:
 
 \begin{itemize}
 \tightlist
 \item
-  Pacote controller: Contém as classes responsáveis por expor os
+  Pacote \emph{config}: Reúne configurações essenciais da aplicação,
+  incluindo segurança, serialização e tratamento de exceções;
+\item
+  Pacote \emph{controller}: Contém as classes responsáveis por expor os
   endpoints da API, intermediando a comunicação entre o \emph{front-end}
   e a lógica de negócio da aplicação. Cada classe representa um
   controlador correspondente a um serviço específico;
 \item
-  Pacote service: Implementa a lógica de negócio do sistema, processando
-  dados e aplicando as regras definidas. Essa camada interage
-  diretamente com os repositórios para manipulação dos dados e com a
-  camada de controle para fornecer respostas às requisições;
+  Pacote \emph{service}: Implementa a lógica de negócio do sistema,
+  processando dados e aplicando as regras definidas. Essa camada
+  interage diretamente com os repositórios para manipulação dos dados e
+  com a camada de controle para fornecer respostas às requisições.
+\end{itemize}
+
+Complementando essa estrutura de pacotes, a
+\autoref{diagrama_classe_geral_part2} apresenta os pacotes repository e
+model.
+
+\begin{figure}[htbp]
+\hypertarget{diagrama_classe_geral_part2}{%
+\caption{Diagrama de classes com visão geral dos pacotes - Parte 2}\label{diagrama_classe_geral_part2}
+\begin{center}
+\includegraphics[scale=0.43]{imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes-part2.png}
+\end{center}
+}
+\legend{Fonte: Autor (2025).}
+\end{figure}
+
+A \autoref{diagrama_classe_geral_part2} apresenta a estrutura dos
+pacotes repository e model, responsáveis pela persistência e organização
+dos dados na aplicação. A seguir, são descritas as funções e
+responsabilidades de cada um desses pacotes.
+
+\begin{itemize}
+\tightlist
 \item
   Pacote repository: Define os repositórios da aplicação, responsáveis
   pelo acesso e manipulação dos dados no banco de dados. As interfaces
@@ -2191,10 +2220,7 @@ descrito a seguir:
 \item
   Pacote model: Contém as entidades do domínio, que representam as
   tabelas do banco de dados e seus relacionamentos. Essa camada define a
-  estrutura dos dados utilizados na aplicação;
-\item
-  Pacote config: Reúne configurações essenciais da aplicação, incluindo
-  segurança, serialização e tratamento de exceções.
+  estrutura dos dados utilizados na aplicação.
 \end{itemize}
 
 A comunicação entre os pacotes ocorre de forma estruturada: a camada de
@@ -2212,7 +2238,7 @@ manipulação dos dados no sistema.
 \hypertarget{diagrama_classe_model}{%
 \caption{Diagrama de classes da camada Model}\label{diagrama_classe_model}
 \begin{center}
-\includegraphics[scale=0.3]{imagens/sentilytics/diagramas/classes/model-classes.png}
+\includegraphics[scale=0.4]{imagens/sentilytics/diagramas/classes/model-classes.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -2353,7 +2379,7 @@ Sentilytics.
 \hypertarget{diagram_service}{%
 \caption{Diagrama de classes do pacote Services}\label{diagram_service}
 \begin{center}
-\includegraphics[scale=0.2]{imagens/sentilytics/diagramas/classes/service-classes.png}
+\includegraphics[scale=0.23]{imagens/sentilytics/diagramas/classes/service-classes.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -2381,7 +2407,7 @@ principais responsabilidades dessa camada:
 \item
   PostService: Responsável pela manipulação das postagens coletadas,
   oferecendo funcionalidades para listagem, exclusão de duplicatas e
-  importação de posts via CSV;
+  importação de postagens via CSV;
 \item
   WorkflowProcessamentoService: Controla os workflows de processamento,
   permitindo cadastrar, atualizar e excluir workflows, além de iniciar
@@ -2389,7 +2415,7 @@ principais responsabilidades dessa camada:
 \item
   ResultadosAnaliseWorkflowService: Gerencia a recuperação dos
   resultados das análises, fornecendo consultas sobre frequência de
-  palavras, engajamento e posts processados;
+  palavras, engajamento e postagens processados;
 \item
   TarefaPreProcessamentoService: Implementa as regras para gerenciamento
   das tarefas dentro dos workflows, permitindo o cadastro, atualização e
@@ -2420,7 +2446,7 @@ os dados de entrada e encaminhar as chamadas aos serviços apropriados.
 \hypertarget{diagram_controller}{%
 \caption{Diagrama de classes do pacote controllers}\label{diagram_controller}
 \begin{center}
-\includegraphics[scale=0.2]{imagens/sentilytics/diagramas/classes/controller-classes.png}
+\includegraphics[scale=0.23]{imagens/sentilytics/diagramas/classes/controller-classes.png}
 \end{center}
 }
 \legend{Fonte: Autor (2025).}
@@ -2456,7 +2482,7 @@ principais componentes dessa camada:
 \item
   ResultadosAnaliseWorkflowController: Disponibiliza os resultados
   gerados pela análise de sentimentos, incluindo frequência de palavras,
-  análise temporal, engajamento médio e posts processados por
+  análise temporal, engajamento médio e postagens processados por
   sentimento;
 \item
   TarefaPreProcessamentoController: Permite a gestão das tarefas de
@@ -2559,13 +2585,22 @@ funcionalidades.
 A tela de login é a porta de entrada para o acesso ao Sentilytics,
 permitindo apenas a autenticação. Para manter a segurança e a
 simplicidade no gerenciamento de contas, o sistema utiliza o serviço do
-Bluesky como principal método de autenticação. Dessa forma, toda a
-criação ou administração de contas ocorre diretamente no Bluesky.
+Bluesky como principal método de autenticação. Dessa forma, o usuário
+precisa ter uma conta criada no Bluesky e toda a administração da conta
+ocorre diretamente no Bluesky.
 
 Ao inserir as credenciais corretas, o sistema valida as informações
 diretamente com a API do Bluesky, garantindo a autenticação segura. Caso
 as credenciais sejam inválidas, o usuário recebe um aviso para revisar
 os dados informados.
+
+Após a autenticação, um token de acesso exclusivo é gerado para cada
+usuário, permitindo que ele realize buscas de postagens dentro dos
+limites definidos pela API do Bluesky. Esse modelo garante que eventuais
+restrições de requisições sejam aplicadas individualmente a cada
+usuário, evitando que um único limite global afete toda a aplicação.
+Caso um usuário atinja o limite de buscas, isso impactará apenas sua
+conta, enquanto os demais continuarão a utilizar o sistema normalmente.
 
 Essa abordagem proporciona uma experiência simplificada para o usuário,
 eliminando a necessidade de criar e lembrar novas senhas, ao mesmo tempo
@@ -2590,8 +2625,9 @@ sentimentos já criadas.
 
 Nesta tela, o usuário tem a opção de cadastrar ou deletar uma pesquisa,
 onde ao clicar no botão ``Cadastrar Pesquisa'', uma janela modal é
-exibida solicitando o nome da pesquisa e a query inicial de busca. Após
-a confirmação do cadastro, a nova pesquisa é adicionada à lista.
+exibida solicitando o nome da pesquisa e a \emph{query} inicial de
+busca. Após a confirmação do cadastro, a nova pesquisa é adicionada à
+lista.
 
 Para acessar os detalhes de uma pesquisa já cadastrada, o usuário pode
 selecioná-la na listagem, sendo automaticamente redirecionado para a
@@ -2657,8 +2693,8 @@ Pesquisa'', nesse momento o usuário pode visualizar e modificar as
 informações da pesquisa. Esses dados serão utilizados caso o usuário
 opte por realizar a coleta automática de postagens através da rede
 social Bluesky. Essa configuração permite definir os critérios de busca
-que serão aplicados na obtenção dos posts, garantindo que a análise de
-sentimentos seja realizada com base em conteúdos relevantes.
+que serão aplicados na obtenção das postagens, garantindo que a análise
+de sentimentos seja realizada com base em conteúdos relevantes.
 
 \begin{figure}[htbp]
 \hypertarget{tela_coleta_dados_pesquisa}{%
@@ -2675,8 +2711,8 @@ postagens, onde o usuário pode importar dados manualmente ou realizar a
 busca automática via Bluesky. Na \autoref{tela_coleta_dados_pesquisa} é
 mostrada a etapa de coleta dos dados, nessa fase o usuário pode
 gerenciar as postagens que serão analisadas no Sentilytics. O usuário
-pode visualizar os posts já armazenados no sistema e optar por adicionar
-novos dados por meio de duas opções de coleta:
+pode visualizar as postagens já armazenadas no sistema e optar por
+adicionar novos dados por meio de duas opções de coleta:
 
 \begin{itemize}
 \tightlist
@@ -2691,13 +2727,13 @@ novos dados por meio de duas opções de coleta:
   arquivo corretamente.
 \end{itemize}
 
-Além da adição de novos posts, a tela também oferece a opção de excluir
-postagens específicas, permitindo ao usuário refinar os dados que serão
-utilizados na análise.
+Além da adição de novas postagens, a tela também oferece a opção de
+excluir postagens específicas, permitindo ao usuário refinar os dados
+que serão utilizados na análise.
 
-Com os posts devidamente coletados e organizados, o usuário pode avançar
-para a próxima etapa: o processamento, onde os textos serão preparados
-para a análise de sentimentos.
+Com as postagens devidamente coletadas e organizadas, o usuário pode
+avançar para a próxima etapa: o processamento, onde os textos serão
+preparados para a análise de sentimentos.
 
 \begin{figure}[htbp]
 \hypertarget{tela_processamento}{%
@@ -2776,7 +2812,7 @@ principais para exploração dos resultados:
 \def\labelenumi{\arabic{enumi})}
 \tightlist
 \item
-  Aba de Gráficos Essa aba apresenta quatro gráficos interativos, que
+  Aba de Gráficos - Essa aba apresenta quatro gráficos interativos, que
   auxiliam na compreensão da distribuição dos sentimentos e do impacto
   das postagens analisadas:
 \end{enumerate}
@@ -2789,12 +2825,12 @@ principais para exploração dos resultados:
   cada sentimento;
 \item
   Média de Engajamento por Sentimentos -- Um gráfico de barras verticais
-  que relaciona a média de curtidas, reposts, respostas e citações para
-  cada tipo de sentimento identificado;
+  que relaciona a média de curtidas, \emph{reposts}, respostas e
+  citações para cada tipo de sentimento identificado;
 \item
   Total de Engajamento por Sentimentos -- Um gráfico de barras verticais
-  que exibe o total acumulado de interações (likes, reposts, respostas e
-  citações) para cada sentimento;
+  que exibe o total acumulado de interações (likes, \emph{reposts},
+  respostas e citações) para cada sentimento;
 \item
   Análise Temporal de Sentimentos -- Um gráfico que acompanha a variação
   dos sentimentos ao longo do tempo, permitindo identificar tendências e
@@ -2810,10 +2846,11 @@ principais para exploração dos resultados:
   análise rápida dos termos mais relevantes dentro do contexto dos
   dados;
 \item
-  Aba de Top Posts Engajados - Essa aba apresenta uma listagem dos posts
-  mais engajados, ranqueados com base no número de curtidas, respostas,
-  reposts e citações. Além disso, há um filtro por sentimento,
-  permitindo que o usuário explore os posts de acordo com suas
+  Aba de \emph{Top Posts} Engajados - Essa aba apresenta uma listagem
+  das postagens mais engajadas na comunidade sobre aquele determinado
+  assunto, sendo ranqueadas com base no número de curtidas, respostas,
+  \emph{reposts} e citações. Além disso, há um filtro por sentimento,
+  permitindo que o usuário explore as postagens de acordo com suas
   classificações emocionais.
 \end{enumerate}
 
@@ -2866,7 +2903,7 @@ polaridade dos sentimentos (positivo, negativo ou neutro) relacionados
 \section{Métodologia do estudo}\label{muxe9todologia-do-estudo}}
 
 Este estudo de caso possui uma abordagem exploratória com elementos
-descritivos. A abordagem exploratória se justifica pelo fato de que o
+descritivos. O uso dessa abordagem se justifica pelo fato de que o
 Sentilytics ainda não foi amplamente utilizado para análise de
 sentimentos relacionados a modelos de jornada de trabalho, tornando
 necessário um levantamento inicial sobre seu comportamento, desafios e
@@ -2899,10 +2936,10 @@ visualizar essa tela na \autoref{configuracao_pesquisa}.
 \end{figure}
 
 Como podemos visualizar na \autoref{configuracao_pesquisa}, os
-parâmetros de busca utilizados foram a query ``Escala 6x1'', sem a
-aplicação de filtros de intervalo de datas. As postagens foram ordenadas
-de acordo com sua popularidade, priorizando as mais relevantes dentro da
-plataforma.
+parâmetros de busca utilizados foram a \emph{query} ``Escala 6x1'', sem
+a aplicação de filtros de intervalo de datas. As postagens foram
+ordenadas de acordo com sua popularidade, priorizando as mais relevantes
+dentro da plataforma.
 
 A pesquisa foi executada no dia 7 de fevereiro de 2025, onde no total
 foram coletadas 4880 postagens. Esse volume de dados permite uma análise
@@ -2946,13 +2983,14 @@ sequência, as tarefas são:
   ortográficos e abreviações comuns;
 \item
   Tokenização por Palavra \textbar{} NLTK: Segmentação do texto em
-  palavras individuais (tokens);
+  palavras individuais (\emph{tokens});
 \item
-  Removedor Stopwords: Remoção de palavras irrelevantes que não
+  Removedor \emph{Stopwords}: Remoção de palavras irrelevantes que não
   contribuem para a análise do sentimento;
 \item
-  Tokens para Texto: Os tokens são unidos novamente formando uma frase
-  novamente com os tokens separados por um espaço em branco.
+  \emph{Tokens} para Texto: Os \emph{tokens} são unidos novamente
+  formando uma frase novamente com os \emph{tokens} separados por um
+  espaço em branco.
 \end{enumerate}
 
 \hypertarget{anuxe1lise-de-sentimentos}{%
@@ -2980,7 +3018,7 @@ Cada postagem recebeu uma pontuação de polaridade, categorizada em:
   Negativo: O quanto a postagem é negativa;
 \item
   Composta: A pontuação composta consiste em um valor que representa a
-  polaridade geral do texto, onde esse valor varia entre entre -1 (muito
+  polaridade geral do texto, onde esse valor varia entre -1 (muito
   negativo) e +1 (muito positivo).
 \end{itemize}
 
@@ -3029,16 +3067,16 @@ Sentilytics}\label{anuxe1lise-gruxe1fica-e-textual-do-sentilytics}}
 Nesta seção, são apresentados os principais resultados obtidos com o
 Sentilytics na análise de sentimentos sobre temas políticos no Bluesky.
 A ferramenta gerou diferentes representações visuais, incluindo gráficos
-de distribuição de sentimentos, nuvens de palavras e os posts mais
-engajados. Além disso, \emph{insights} gerados por inteligência
+de distribuição de sentimentos, nuvens de palavras e as postagens mais
+engajadas. Além disso, \emph{insights} gerados por inteligência
 artificial auxiliaram na interpretação dos dados, fornecendo resumos e
 tendências detectadas automaticamente. A seguir, cada gráfico é
 analisado individualmente, seguido de uma discussão geral sobre os
 padrões observados e suas possíveis implicações.
 
 \begin{figure}[htbp]
-\hypertarget{grafico_numero_comentarios_por_sentimento}{%
-\caption{Gráfico de Número de Comentários por Sentimentos}\label{grafico_numero_comentarios_por_sentimento}
+\hypertarget{grafico_percentual_comentarios_por_sentimento}{%
+\caption{Gráfico do Percentual de Comentários por Sentimentos}\label{grafico_percentual_comentarios_por_sentimento}
 \begin{center}
 \includegraphics[scale=0.3]{imagens/sentilytics/estudo-caso/quantidade_comentarios_por_sentimentos.png}
 \end{center}
@@ -3047,11 +3085,13 @@ padrões observados e suas possíveis implicações.
 \end{figure}
 
 O gráfico apresentado na
-\autoref{grafico_numero_comentarios_por_sentimento} exibe a distribuição
-dos sentimentos nas postagens analisadas. Observa-se que a maioria das
-postagens foi classificada como \textbf{neutra}, representando 87,3\% do
-total. Já os sentimentos \textbf{positivos} correspondem a 10,5\%,
-enquanto os \textbf{negativos} representam apenas 2,2\% das postagens.
+\autoref{grafico_percentual_comentarios_por_sentimento} exibe a
+distribuição dos sentimentos nas postagens analisadas. Observa-se que a
+maioria das postagens foi classificada como \textbf{neutra},
+representando 87,3\% das 4880 postagens. Já os sentimentos
+\textbf{positivos} correspondem a 10,5\% das 4880 postagens, enquanto os
+\textbf{negativos} representam apenas 2,2\% das postagens 4880
+postagens.
 
 No contexto político, o debate sobre a escala 6x1 ganhou destaque no
 último ano, impulsionado pela apresentação de uma Proposta de Emenda à
@@ -3100,23 +3140,24 @@ decorrente do uso de um modelo baseado em léxicos.
 
 Na \autoref{grafico_media_engajamento}, é apresentado um gráfico de
 barras que ilustra a média de engajamento por sentimento, considerando
-as interações dos usuários, como likes, repostagens, respostas e
-citações. Cada barra no gráfico representa a média calculada para um
+as interações dos usuários, como \emph{likes}, \emph{reposts}, respostas
+e citações. Cada barra no gráfico representa a média calculada para um
 tipo específico de interação, agrupada de acordo com os sentimentos
 Positivo, Negativo e Neutro.
 
 A análise desse gráfico permite identificar qual categoria de sentimento
 gera maior engajamento geral, bem como tendências específicas por tipo
-de interação. Por exemplo, é possível observar se posts com sentimentos
-negativos recebem mais repostagens, indicando maior disseminação de
-conteúdos críticos.
+de interação. Por exemplo, é possível observar se as postagens com
+sentimentos negativos recebem mais reposts, indicando maior disseminação
+de conteúdos críticos.
 
 A análise do gráfico da \autoref{grafico_media_engajamento} revela que
 os sentimentos negativos geraram o maior engajamento geral,
-destacando-se especialmente pela média de likes e reposts. Esse padrão
-sugere que conteúdos críticos ou de tom negativo tendem a atrair mais
-atenção e interação do público, possivelmente devido à inclinação dos
-usuários em amplificar mensagens com caráter negativo ou polarizador.
+destacando-se especialmente pela média de \emph{likes} e \emph{reposts}.
+Esse padrão sugere que conteúdos críticos ou de tom negativo tendem a
+atrair mais atenção e interação do público, possivelmente devido à
+inclinação dos usuários em amplificar mensagens com caráter negativo ou
+polarizador.
 
 \begin{figure}[htbp]
 \hypertarget{grafico_total_engajamento}{%
@@ -3142,7 +3183,7 @@ todas as métricas analisadas. Esse padrão indica que conteúdos
 classificados como neutros possuem um impacto acumulado mais alto,
 possivelmente devido à maior quantidade de postagens nesta categoria.
 Por outro lado, ao comparar os sentimentos negativos e positivos podemos
-notar que o sentimento negativo gera um volume maior de repostagens.
+notar que o sentimento negativo gera um volume maior de reposts.
 
 \begin{figure}[htbp]
 \hypertarget{grafico_analise_temporal}{%
@@ -3168,10 +3209,9 @@ graduais no tom das interações ao longo do tempo.
 
 A partir da análise do gráfico da \autoref{grafico_analise_temporal},
 podemos identificar que o sentimento neutro se mantém em uma linha
-estável, possuindo menos variações, o que é coerente com o que vimos em
-análise anteriores. Em relação a análise dos sentimentos positivos e
-negativos, podemos visualizar mais variações marcadas e pontuais, com
-picos em alguns dias específicos.
+estável, possuindo menos variações, o que . Em relação a análise dos
+sentimentos positivos e negativos, podemos visualizar mais variações
+marcadas e pontuais, com picos em alguns dias específicos.
 
 \begin{figure}[htbp]
 \hypertarget{nuvem_palavras}{%
@@ -3186,8 +3226,8 @@ picos em alguns dias específicos.
 Na \autoref{nuvem_palavras} podemos visualizar a nuvem de palavras
 gerada na aplicação, ela mostra as palavras mais frequentes nos textos
 analisados, sendo baseada no texto pré-processado. Isso significa que
-elementos irrelevantes foram removidos (como stopwords), e apenas os
-termos significativos foram mantidos. A frequência de cada palavra
+elementos irrelevantes foram removidos (como \emph{stopwords}), e apenas
+os termos significativos foram mantidos. A frequência de cada palavra
 determina o destaque que ela recebe na nuvem, permitindo identificar
 rapidamente os principais tópicos e padrões debatidos pelos usuários.
 
@@ -3219,7 +3259,7 @@ fornecendo \emph{insights} sobre como o público está reagindo ao debate.
 
 \begin{figure}[htbp]
 \hypertarget{top_posts_engajados}{%
-\caption{Top posts Engajados}\label{top_posts_engajados}
+\caption{Top postagens Engajadas}\label{top_posts_engajados}
 \begin{center}
 \includegraphics[scale=0.3]{imagens/sentilytics/estudo-caso/top_posts_engajados.png}
 \end{center}
@@ -3227,12 +3267,12 @@ fornecendo \emph{insights} sobre como o público está reagindo ao debate.
 \legend{Fonte: Autor (2025).}
 \end{figure}
 
-A tela apresentada na \autoref{top_posts_engajados} exibe os top posts
+A tela apresentada na \autoref{top_posts_engajados} exibe as postagens
 com maior engajamento, permitindo uma análise detalhada das postagens
-mais populares no contexto da pesquisa. Essa funcionalidade organiza os
-posts ranqueados com base na soma total de interações realizadas pelo
-usuário, apresentados de forma decrescente para destacar os conteúdos
-que mais mobilizaram o público.
+mais populares no contexto da pesquisa. Essa funcionalidade organiza as
+postagens ranqueadas com base na soma total de interações realizadas
+pelo usuário, apresentados de forma decrescente para destacar os
+conteúdos que mais mobilizaram o público.
 
 A aplicação também oferece a funcionalidade de aplicar filtros por
 sentimento (Positivo, Neutro e Negativo), permitindo que o usuário
@@ -3240,16 +3280,16 @@ identifique facilmente quais tipos de conteúdos geraram mais interação
 em cada categoria emocional. Além disso, é possível visualizar tanto o
 texto original do post quanto sua versão pré-processada, facilitando a
 compreensão de como as etapas de processamento (como remoção de
-stopwords ou normalização) impactaram a análise. Essa funcionalidade
-possibilita que o usuário valide os resultados obtidos e compreenda de
-forma mais aprofundada os padrões de engajamento associados a cada tipo
-de postagem.
+\emph{stopwords} ou normalização) impactaram a análise. Essa
+funcionalidade possibilita que o usuário valide os resultados obtidos e
+compreenda de forma mais aprofundada os padrões de engajamento
+associados a cada tipo de postagem.
 
-A funcionalidade de top posts engajados, com a visualização do texto
-original e pré-processado, representa uma ferramenta importante para
-analisar como a audiência responde a conteúdos emocionais, informativos
-ou polêmicos, oferecendo uma visão prática e direta dos dados
-processados pela aplicação.
+A funcionalidade de postagens mais engajadas, com a visualização do
+texto original e pré-processado, representa uma ferramenta importante
+para analisar como a audiência responde a conteúdos emocionais,
+informativos ou polêmicos, oferecendo uma visão prática e direta dos
+dados processados pela aplicação.
 
 \hypertarget{limitauxe7uxf5es-do-estudo-de-caso}{%
 \subsection{Limitações do Estudo de
@@ -3365,11 +3405,12 @@ mais clara e direta.
 
 Para trabalhos futuros, propõe-se a expansão da ferramenta com a
 integração de novos modelos de análise de sentimentos, incluindo
-técnicas baseadas em aprendizado profundo (Deep Learning), que podem
-melhorar a acurácia da classificação. Atualmente, a aplicação já permite
-a adição simplificada de novas tarefas de pré-processamento. A ideia é
-utilizar esse fluxo para incorporar diferentes modelos e algoritmos de
-análise de sentimentos, tornando o sistema mais robusto e flexível.
+técnicas baseadas em aprendizado profundo (\emph{Deep Learning}), que
+podem melhorar a acurácia da classificação. Atualmente, a aplicação já
+permite a adição simplificada de novas tarefas de pré-processamento. A
+ideia é utilizar esse fluxo para incorporar diferentes modelos e
+algoritmos de análise de sentimentos, tornando o sistema mais robusto e
+flexível.
 
 A inclusão do suporte a múltiplas redes sociais tornaria o sistema mais
 abrangente. Redes como Twitter e Reddit poderiam ser adicionadas como

@@ -1,4 +1,4 @@
-PWD /tmp/TMP_373c578bfeba4c8297dbc01f5618535d
+PWD /tmp/TMP_eb99e638b1d7082b29fc93c452340e1e
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
@@ -247,7 +247,8 @@ INPUT imagens/sentilytics/diagramas/dicionario_dados.png
 INPUT imagens/sentilytics/diagramas/sequencia-cadastro-pesquisa-coleta-dados.png
 INPUT imagens/sentilytics/diagramas/sequencia-cadastro-configuracao-workflow.png
 INPUT imagens/sentilytics/diagramas/sequencia-pre-processamento-analise-sentimentos.png
-INPUT imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes.png
+INPUT imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes-part1.png
+INPUT imagens/sentilytics/diagramas/classes/diagrama-classe-visao-geral-pacotes-part2.png
 INPUT imagens/sentilytics/diagramas/classes/model-classes.png
 INPUT imagens/sentilytics/diagramas/classes/repository-classes.png
 INPUT imagens/sentilytics/diagramas/classes/service-classes.png

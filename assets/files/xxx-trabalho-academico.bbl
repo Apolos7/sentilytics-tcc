@@ -35,14 +35,6 @@
   sentimentos do twitter.
 2020.}
 
-\bibitem[Lima et al. 2021]{lima2021redes}
-\abntrefinfo{Lima et al.}{LIMA et al.}{2021}
-{LIMA, P. R.~S. et al. Redes sociais como ferramentas de transpar{\^e}ncia em
-  tempos de covid-19: uma an{\'a}lise das publica{\c{c}}{\~o}es dos boletins
-  epidemiol{\'o}gicos do estado de alagoas.
-\emph{Logeion: Filosofia da Informa{\c{c}}{\~a}o}, v.~7, n.~2, p. 88--107,
-  2021.}
-
 \bibitem[Lopes 2024]{lopes2024otimizaccao}
 \abntrefinfo{Lopes}{LOPES}{2024}
 {LOPES, A.~C. Otimiza{\c{c}}{\~a}o de aplica{\c{c}}{\~o}es de processamento de
@@ -53,18 +45,18 @@ Universidade Estadual Paulista (Unesp), 2024.}
 \abntrefinfo{Malheiros}{MALHEIROS}{2014}
 {MALHEIROS, Y. Emotte: Uma ferramenta de an{\'a}lise de sentimentos para o
   twitter. In:  SBC. \emph{Anais Estendidos do XX Simp{\'o}sio Brasileiro de
-  Sistemas Multim{\'\i}dia e Web}. [S.l.], 2014. p. 62--65.}
+  Sistemas Multim{\'i}dia e Web}. [S.l.], 2014. p. 62--65.}
 
-\bibitem[Malheiros e Lima 2013]{malheiros2013ferramenta}
-\abntrefinfo{Malheiros e Lima}{MALHEIROS; LIMA}{2013}
-{MALHEIROS, Y.; LIMA, G. Uma ferramenta para an{\'a}lise de sentimentos em
+\bibitem[Malheiros Yuri e~Lima 2013]{malheiros2013ferramenta}
+\abntrefinfo{Malheiros Yuri e~Lima}{MALHEIROS YURI E~LIMA}{2013}
+{MALHEIROS YURI E~LIMA, G. Uma ferramenta para an{\'a}lise de sentimentos em
   redes sociais utilizando o senticnet. In:  SBC. \emph{Simp{\'o}sio Brasileiro
   de Sistemas de Informa{\c{c}}{\~a}o (SBSI)}. [S.l.], 2013. p. 517--522.}
 
-\bibitem[Miguel e Barbosa 2018]{dosferramenta}
-\abntrefinfo{Miguel e Barbosa}{MIGUEL; BARBOSA}{2018}
-{MIGUEL, R. dos S.; BARBOSA, Y. d. A.~M. Uma ferramenta para an{\'a}lise de
-  sentimentos de tweets em portugu{\^e}s.
+\bibitem[Miguel Rodrigo e~Barbosa 2018]{dosferramenta}
+\abntrefinfo{Miguel Rodrigo e~Barbosa}{MIGUEL RODRIGO E~BARBOSA}{2018}
+{MIGUEL RODRIGO E~BARBOSA, Y. d. A.~M. dos S. Uma ferramenta para an{\'a}lise
+  de sentimentos de tweets em portugu{\^e}s.
 2018.}
 
 \bibitem[Moreira et al. 2024]{moreira2024analise}
@@ -74,15 +66,25 @@ Universidade Estadual Paulista (Unesp), 2024.}
   tradu{\c{c}}{\~a}o dos textos do portugu{\^e}s.
 \emph{Anais do Computer on the Beach}, v.~15, p. 352--354, 2024.}
 
-\bibitem[Pompei, Gouveia e RAMOS 2021]{pompei2021redes}
-\abntrefinfo{Pompei, Gouveia e RAMOS}{POMPEI; GOUVEIA; RAMOS}{2021}
-{POMPEI, T.; GOUVEIA, L. M.~B.; RAMOS, P. F. M. d.~S. Redes sociais:
-  influ{\^e}ncia, identidade e diferen{\c{c}}a na contemporaneidade.
+\bibitem[REDES SOCIAIS 2021]{pompei2021redes}
+\abntrefinfo{REDES\ldots}{REDES\ldots}{2021}
+{REDES SOCIAIS: influ{\^e}ncia, identidade e diferen{\c{c}}a na
+  contemporaneidade.
 \emph{Revista em Sociedade, Belo Horizonte}, v.~3, n.~2, p. 93--111, 2021.}
 
-\bibitem[Santana e Freitas 2023]{santana2023capitulo}
-\abntrefinfo{Santana e Freitas}{SANTANA; FREITAS}{2023}
-{SANTANA, B.~S.; FREITAS, L.~A. de. Cap{\'\i}tulo 23 pln em redes sociais.
+\bibitem[Redes sociais como ferramentas de transpar{\^e}ncia em tempos de
+  covid-19 2021]{lima2021redes}
+\abntrefinfo{Redes\ldots}{REDES\ldots}{2021}
+{REDES sociais como ferramentas de transpar{\^e}ncia em tempos de covid-19: uma
+  an{\'a}lise das publica{\c{c}}{\~o}es dos boletins epidemiol{\'o}gicos do
+  estado de alagoas.
+\emph{Logeion: Filosofia da Informa{\c{c}}{\~a}o}, v.~7, n.~2, p. 88--107,
+  2021.}
+
+\bibitem[Santana Brenda S e de~Freitas 2023]{santana2023capitulo}
+\abntrefinfo{Santana Brenda S e de~Freitas}{SANTANA BRENDA S E
+  DE~FREITAS}{2023}
+{SANTANA BRENDA S E DE~FREITAS, L.~A. Cap{\'\i}tulo 23 pln em redes sociais.
 2023.}
 
 \bibitem[Silva 2010]{da2010bestchoice}

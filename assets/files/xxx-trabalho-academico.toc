@@ -41,20 +41,20 @@
 \contentsline {subsection}{\numberline {3.2.3}BPMN}{37}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Diagrama Entidade-Relacionamento (DER) e Dicionário de dados}{38}{subsection.3.2.4}%
 \contentsline {subsection}{\numberline {3.2.5}Diagrama de Sequência do pré-processamento e análise de sentimentos}{39}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Diagrama de Classe}{43}{subsection.3.2.6}%
-\contentsline {subsection}{\numberline {3.2.7}Diagrama de Componentes}{51}{subsection.3.2.7}%
-\contentsline {subsection}{\numberline {3.2.8}Interfaces gráfica}{52}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {3.2.6}Diagrama de Classe}{44}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Diagrama de Componentes}{52}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Interfaces gráfica}{53}{subsection.3.2.8}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Escala de trabalho 6x1: um estudo de caso com o Sentilytics}}{59}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Métodologia do estudo}{59}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Coleta de Dados}{59}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Pré-processamento dos Dados}{60}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Análise de Sentimentos}{61}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Análise gráfica e textual do Sentilytics}{62}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Limitações do Estudo de Caso}{68}{subsection.4.2.1}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Escala de trabalho 6x1: um estudo de caso com o Sentilytics}}{61}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Métodologia do estudo}{61}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Coleta de Dados}{61}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Pré-processamento dos Dados}{62}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Análise de Sentimentos}{63}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Análise gráfica e textual do Sentilytics}{64}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Limitações do Estudo de Caso}{70}{subsection.4.2.1}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{70}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Considerações Finais}}{71}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{72}{section*.15}%
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{73}{section*.15}%

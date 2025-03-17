@@ -3,31 +3,32 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces Processo realizado para análise de sentimentos}}{19}{figure.2.1}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Goggle Colab com algoritmo python para criação de um dataframe}}{23}{figure.2.2}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Diagrama das Tecnologias e ferramentas utilizadas}}{26}{figure.3.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Casos de Uso do Sentilytics}}{36}{figure.3.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Modelagem BPMN do Processo de Pesquisa no Sentilytics}}{37}{figure.3.5}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Casos de Uso do Sentilytics}}{37}{figure.3.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Modelagem BPMN do Processo de Pesquisa no Sentilytics}}{38}{figure.3.5}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Diagrama Entidade Relacionamento}}{39}{figure.3.6}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Dicionário de Dados}}{40}{figure.3.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Diagrama de sequência do cadastro da pesquisa e coleta de dados}}{41}{figure.3.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Diagrama de sequência do cadastro e configuração do workflow}}{42}{figure.3.9}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Diagrama de sequência do pré-processamento e análise}}{43}{figure.3.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de classes com visão geral dos pacotes}}{44}{figure.3.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de classes da camada Model}}{46}{figure.3.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de classes da camada Repository}}{47}{figure.3.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes do pacote Services}}{49}{figure.3.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de classes do pacote controllers}}{50}{figure.3.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de Componentes da Solução}}{51}{figure.3.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Tela de Login do Sentilytics}}{52}{figure.3.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Tela de Listagem de Pesquisas}}{53}{figure.3.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Tela de Exibição da Pesquisa}}{54}{figure.3.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Etapa de Coleta de Dados}}{55}{figure.3.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Etapa de Processamento}}{56}{figure.3.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Etapa de Resultados}}{57}{figure.3.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces QRCode com link para o vídeo}}{58}{figure.3.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Configuração da pesquisa}}{60}{figure.4.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Workflow de pré-processamento}}{61}{figure.4.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Gráfico de Número de Comentários por Sentimentos}}{63}{figure.4.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Gráfico da Média de Engajamento por Sentimentos}}{64}{figure.4.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Gráfico da Total de Engajamento por Sentimentos}}{65}{figure.4.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Gráfico da Análise Temporal de Sentimentos}}{65}{figure.4.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Nuvem de Palavras}}{66}{figure.4.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Top posts Engajados}}{67}{figure.4.31}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de classes com visão geral dos pacotes - Parte 1}}{45}{figure.3.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de classes com visão geral dos pacotes - Parte 2}}{46}{figure.3.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagrama de classes da camada Model}}{47}{figure.3.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Diagrama de classes da camada Repository}}{48}{figure.3.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagrama de classes do pacote Services}}{50}{figure.3.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Diagrama de classes do pacote controllers}}{51}{figure.3.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagrama de Componentes da Solução}}{52}{figure.3.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Tela de Login do Sentilytics}}{54}{figure.3.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Tela de Listagem de Pesquisas}}{55}{figure.3.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Tela de Exibição da Pesquisa}}{55}{figure.3.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Etapa de Coleta de Dados}}{57}{figure.3.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Etapa de Processamento}}{57}{figure.3.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Etapa de Resultados}}{59}{figure.3.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces QRCode com link para o vídeo}}{60}{figure.3.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Configuração da pesquisa}}{62}{figure.4.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Workflow de pré-processamento}}{63}{figure.4.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Gráfico do Percentual de Comentários por Sentimentos}}{65}{figure.4.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Gráfico da Média de Engajamento por Sentimentos}}{66}{figure.4.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Gráfico da Total de Engajamento por Sentimentos}}{67}{figure.4.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Gráfico da Análise Temporal de Sentimentos}}{67}{figure.4.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Nuvem de Palavras}}{68}{figure.4.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Top postagens Engajadas}}{69}{figure.4.32}%
