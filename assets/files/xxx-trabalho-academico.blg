@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: xxx-trabalho-academico.aux
-The style file: abntex2-alf.bst.bst
+The style file: abntex2-alf.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -24,42 +24,42 @@ Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 17 entries,
             6714 wiz_defined-function locations,
-            1285 strings with 12671 characters,
-and the built_in function-call counts, 12609 in all, are:
-= -- 1103
-> -- 319
+            1287 strings with 12900 characters,
+and the built_in function-call counts, 12829 in all, are:
+= -- 1019
+> -- 411
 < -- 26
-+ -- 184
-- -- 99
-* -- 839
-:= -- 1732
-add.period$ -- 54
++ -- 195
+- -- 126
+* -- 902
+:= -- 1796
+add.period$ -- 56
 call.type$ -- 17
-change.case$ -- 145
+change.case$ -- 164
 chr.to.int$ -- 35
 cite$ -- 16
-duplicate$ -- 599
-empty$ -- 977
-format.name$ -- 470
-if$ -- 3010
+duplicate$ -- 615
+empty$ -- 964
+format.name$ -- 601
+if$ -- 2990
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 278
+missing$ -- 283
 newline$ -- 86
-num.names$ -- 70
-pop$ -- 365
+num.names$ -- 80
+pop$ -- 378
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 62
 quote$ -- 0
-skip$ -- 817
+skip$ -- 717
 stack$ -- 1
-substring$ -- 624
-swap$ -- 278
+substring$ -- 598
+swap$ -- 288
 text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 15
+type$ -- 3
 warning$ -- 0
-while$ -- 119
+while$ -- 125
 width$ -- 0
-write$ -- 252
+write$ -- 254
